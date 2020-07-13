@@ -476,10 +476,10 @@ _config_about(Evas_Object *parent)
    img = elm_image_add(box);
    evas_object_image_size_set(elm_image_object_get(img), 100, 100);
    evas_object_size_hint_min_set(img, 200, 100);
-   evas_object_size_hint_max_set(img, 200, 100);
    elm_image_preload_disabled_set(img, EINA_FALSE);
    elm_image_file_set(img, PACKAGE_DATA_DIR "/images/ephoto.png", NULL);
    elm_box_pack_end(box, img);
+   EPHOTO_EXPAND(img);
    evas_object_show(img);
 
    snprintf(ver, PATH_MAX, "<hilight><b>Ephoto<br/>Version: %s</b></hilight>", PACKAGE_VERSION);
@@ -677,7 +677,7 @@ ephoto_config_main(Ephoto *ephoto)
    scroller = elm_scroller_add(box);
    EPHOTO_EXPAND(scroller);
    EPHOTO_FILL(scroller);
-   elm_box_pack_end(box, scroller);
+   elm_scroller_policy_set(scroller, ELM_SCROLLER_POLICY_AUTO, ELM_SCROLLER_POLICY_ON);
    evas_object_show(scroller);
 
    table = elm_table_add(scroller);
@@ -750,6 +750,7 @@ ephoto_config_main(Ephoto *ephoto)
    elm_list_item_selected_set(settingsi, EINA_TRUE);
 
    elm_object_content_set(scroller, table);
+   elm_box_pack_end(box, scroller);
 
    elm_object_content_set(popup, box);
    evas_object_data_set(popup, "ephoto", ephoto);
