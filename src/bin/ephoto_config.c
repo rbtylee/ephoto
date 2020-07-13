@@ -782,6 +782,7 @@ Eina_Bool
 ephoto_config_init(Ephoto *ephoto)
 {
    Eet_Data_Descriptor_Class eddc;
+   char *home;
 
    if (!eet_eina_stream_data_descriptor_class_set(&eddc, sizeof(eddc),
                                                   "Ephoto_Config", sizeof(Ephoto_Config)))
@@ -791,6 +792,7 @@ ephoto_config_init(Ephoto *ephoto)
 
    if (!edd)
      edd = eet_data_descriptor_stream_new(&eddc);
+
 
 #undef T
 #undef D
@@ -830,7 +832,10 @@ ephoto_config_init(Ephoto *ephoto)
         ephoto->config->fsel_hide = 0;
         ephoto->config->left_size = .25;
         ephoto->config->right_size = .25;
-        ephoto->config->open = eina_stringshare_add(eina_environment_home_get());
+        // Some systems use a symlink to the user's home directory (e.g. FreeBSD).
+        home = ecore_file_realpath(eina_environment_home_get());
+        ephoto->config->open = eina_stringshare_add(home);
+        free(home);
         ephoto->config->prompts = 1;
         ephoto->config->drop = 0;
         ephoto->config->movess = 1;
