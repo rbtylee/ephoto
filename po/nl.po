@@ -1,0 +1,920 @@
+# Dutch translation for ephoto.
+# Copyright (C) Pjotr <pjotrvertaalt@gmail.com>, 2021.
+# This file is distributed under the same license as the ephoto package.
+# Pjotr <pjotrvertaalt@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ephoto 1.5\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2017-12-05 16:33-0600\n"
+"PO-Revision-Date: 2021-04-23 19:51+0200\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
+"Language-Team: Dutch\n"
+"X-Generator: Poedit 2.3\n"
+
+#: ../src/bin/ephoto_config.c:404
+msgid ""
+"<b><hilight>General Bindings</hilight></b><br/><b>F1:</b> Settings Panel<br/"
+"><b>F5:</b> Start Slideshow<br/><b>F11:</b> Toggle Fullscreen<br/><b>Ctrl"
+"+Shift+f:</b> Toggle File Selector<br/><br/><b><hilight>Thumbnail Browser "
+"Bindings</hilight></b><br/><b>Ctrl++:</b> Zoom In<br/><b>Ctrl+-:</b> Zoom "
+"Out<br/><b>Ctrl+Tab:</b> View Image<br/><b>Ctrl+c:</b> Copy Image<br/><b>Ctrl"
+"+x:</b> Cut Image<br/><b>Ctrl+v:</b> Paste Image<br/><b>Ctrl+a:</b> Select "
+"All<br/><b>Ctrl+f:</b> Toggle Search<br/><b>Ctrl+Delete:</b> Delete Image<br/"
+"><b>F2:</b> Rename Image<br/><b>Escape:</b> Clear Selection<br/><br/"
+"><b><hilight>Single Browser Bindings</hilight></b><br/><b>Ctrl+Shift+0:</b> "
+"Zoom 1:1<br/><b>Ctrl++:</b> Zoom In<br/><b>Ctrl+-:</b> Zoom Out<br/><b>Ctrl"
+"+0:</b> Zoom Fit<br/><b>Ctrl+Shift+l:</b> Rotate Counter Clockwise<br/"
+"><b>Ctrl+l:</b> Flip Horizontal<br/><b>Ctrl+Shift+r:</b> Rotate Clockwise<br/"
+"><b>Ctrl+r:</b> Flip Vertical<br/><b>Ctrl+Shift+s:</b> Save Image As<br/"
+"><b>Ctrl+s:</b> Save Image<br/><b>Ctrl+u:</b> Reset Image<br/><b>Ctrl+y:</b> "
+"Redo<br/><b>Ctrl+Shift+z:</b> Redo<br/><b>Ctrl+z:</b> Undo<br/><b>Home:</b> "
+"Navigate First<br/><b>Left Arrow:</b> Navigate Previous<br/><b>Right Arrow:</"
+"b> Navigate Next<br/><b>Space:</b> Navigate Next<br/><b>End:</b> Navigate "
+"Last<br/><b>Ctrl+Delete:</b> Delete Image<br/><b>F2</b> Rename Image<br/"
+"><b>Escape:</b> Return to Thumbnail Browser<br/><br/><b><hilight>Slideshow "
+"Bindings</hilight></b><br/><b>Space:</b> Play/Pause Slideshow<br/><b>Home:</"
+"b> Navigate First<br/><b>Left Arrow:</b> Navigate Previous<br/><b>Right "
+"Arrow:</b> Navigate Next<br/><b>End:</b> Navigate Last<br/><b>Escape:</b> "
+"Quit Slideshow<br/>"
+msgstr ""
+"<b><hilight>Toetsbindingen algemeen</hilight></b><br/><b>F1:</b> "
+"Instellingenpaneel<br/><b>F5:</b> Diavertoning starten<br/><b>F11:</b> "
+"Schermvullend omschakelen<br/><b>Ctrl+Shift+f:</b> Bestandenkiezer "
+"omschakelen<br/><br/><b><hilight>Toetsbindingen voor miniaturenverkenner</"
+"hilight></b><br/><b>Ctrl++:</b> Vergroten<br/><b>Ctrl+-:</b> Verkleinen<br/"
+"><b>Ctrl+Tab:</b> Afbeelding bekijken<br/><b>Ctrl+c:</b> Afbeelding "
+"kopiëren<br/><b>Ctrl+x:</b> Afbeelding knippen<br/><b>Ctrl+v:</b> Afbeelding "
+"plakken<br/><b>Ctrl+a:</b> Alles kiezen<br/><b>Ctrl+f:</b> Zoekopdracht "
+"omschakelen<br/><b>Ctrl+Delete:</b> Afbeelding verwijderen<br/><b>F2:</b> "
+"Afbeelding hernoemen<br/><b>Escape:</b> Selectie wissen<br/><br/"
+"><b><hilight>Single Browser Bindings</hilight></b><br/><b>Ctrl+Shift+0:</b> "
+"Vergroting 1:1<br/><b>Ctrl++:</b> Vergroten<br/><b>Ctrl+-:</b> Verkleinen<br/"
+"><b>Ctrl+0:</b> Passende grootte<br/><b>Ctrl+Shift+l:</b> Tegen de klok in "
+"draaien<br/><b>Ctrl+l:</b> Horizontaal omklappen<br/><b>Ctrl+Shift+r:</b> "
+"Met de klok mee draaien<br/><b>Ctrl+r:</b> Verticaal omklappen<br/><b>Ctrl"
+"+Shift+s:</b> Afbeelding opslaan als<br/><b>Ctrl+s:</b> Afbeelding "
+"opslaan<br/><b>Ctrl+u:</b> Afbeelding terugzetten<br/><b>Ctrl+y:</b> Opnieuw "
+"uitvoeren<br/><b>Ctrl+Shift+z:</b> Opnieuw uitvoeren<br/><b>Ctrl+z:</b> "
+"Ongedaan maken<br/><b>Home:</b> Navigeer naar eerste<br/><b>Linkerpijl:</b> "
+"Navigeer naar vorige<br/><b>Rechterpijl:</b> Navigeer naar volgende<br/"
+"><b>Spatie:</b> Navigeer naar volgende<br/><b>End:</b> Navigeer naar "
+"laatste<br/><b>Ctrl+Delete:</b> Afbeelding verwijderen<br/><b>F2</b> "
+"Afbeelding hernoemen<br/><b>Escape:</b> Terug naar miniaturenverkenner<br/"
+"><br/><b><hilight>Toetsbindingen voor diavertoning</hilight></b><br/"
+"><b>Spatie:</b> Diavertoning afspelen/pauzeren<br/><b>Home:</b> Navigeer "
+"naar eerste<br/><b>Linkerpijl:</b> Navigeer naar vorige<br/><b>Rechterpijl:</"
+"b> Navigeer naar volgende<br/><b>End:</b> Navigeer naar laatste<br/"
+"><b>Escape:</b> Diavertoning afsluiten<br/>"
+
+#: ../src/bin/ephoto_red_eye.c:223
+msgid "<b>Click on an eye</b>"
+msgstr "<b>Klik op een oog</b>"
+
+#: ../src/bin/ephoto_config.c:735
+msgid "About"
+msgstr "Over"
+
+#: ../src/bin/ephoto_color.c:251
+msgid "Adjust Color Levels"
+msgstr "Kleurniveaus bijstellen"
+
+#: ../src/bin/ephoto_single_browser.c:1828
+msgid "Adjustable Filters"
+msgstr "Instelbare filters"
+
+#: ../src/bin/ephoto_thumb_browser.c:2114
+msgid "Alphabetical Ascending"
+msgstr "Alfabetisch oplopend"
+
+#: ../src/bin/ephoto_thumb_browser.c:2117
+msgid "Alphabetical Descending"
+msgstr "Alfabetisch aflopend"
+
+#: ../src/bin/ephoto_editor.c:69
+msgid "Apply"
+msgstr "Toepassen"
+
+#: ../src/bin/ephoto_filters.c:105
+msgid "Applying Filter"
+msgstr "Filter toepassen..."
+
+#: ../src/bin/ephoto_file.c:1701
+msgid "Are you sure you want to copy these files here?"
+msgstr "Weet u zeker dat u deze bestanden hierheen wilt kopiëren?"
+
+#: ../src/bin/ephoto_file.c:1601
+msgid "Are you sure you want to copy these files to"
+msgstr "Weet u zeker dat u deze bestanden wilt kopiëren naar"
+
+#: ../src/bin/ephoto_file.c:1759
+msgid "Are you sure you want to delete these files?"
+msgstr "Weet u zeker dat u deze bestanden wilt verwijderen?"
+
+#: ../src/bin/ephoto_file.c:1755
+msgid "Are you sure you want to delete this directory?"
+msgstr "Weet u zeker dat u deze map wilt verwijderen?"
+
+#: ../src/bin/ephoto_file.c:1813
+msgid "Are you sure you want to empty the trash?"
+msgstr "Weet u zeker dat u de prullenbak wilt ledigen?"
+
+#: ../src/bin/ephoto_file.c:1550
+msgid "Are you sure you want to move these files to"
+msgstr "Weet u zeker dat u deze bestanden wilt verplaatsen naar"
+
+#: ../src/bin/ephoto_file.c:1287 ../src/bin/ephoto_file.c:1414
+msgid "Are you sure you want to overwrite this image?"
+msgstr "Weet u zeker dat u deze afbeelding wilt overschrijven?"
+
+#: ../src/bin/ephoto_file.c:1654
+msgid "Are you sure you want to paste these files here?"
+msgstr "Weet u zeker dat u deze bestanden hier wilt plakken?"
+
+#: ../src/bin/ephoto_single_browser.c:1015
+msgid "Are you sure you want to reset your changes?"
+msgstr "Weet u zeker dat u uw veranderingen wilt terugdraaien?"
+
+#: ../src/bin/ephoto_file.c:1496
+msgid "Are you sure you want to upload this image publically to imgur.com?"
+msgstr ""
+"Weet u zeker dat u deze afbeelding publiekelijk zichtbaar wilt maken op "
+"imgur.com?"
+
+#: ../src/bin/ephoto_single_browser.c:1842
+msgid "Auto Equalize"
+msgstr "Automatisch gelijkschakelen"
+
+#: ../src/bin/ephoto_single_browser.c:143
+#: ../src/bin/ephoto_thumb_browser.c:1088
+#: ../src/bin/ephoto_thumb_browser.c:1097
+msgid "B"
+msgid_plural "B"
+msgstr[0] "B"
+msgstr[1] "B"
+
+#: ../src/bin/ephoto_directory_browser.c:464 ../src/bin/ephoto_slideshow.c:1030
+msgid "Back"
+msgstr "Terug"
+
+#: ../src/bin/ephoto_single_browser.c:1640
+msgid "Bad Image"
+msgstr "Slechte afbeelding"
+
+#: ../src/bin/ephoto_config.c:728
+msgid "Bindings"
+msgstr "Toetsbindingen"
+
+#: ../src/bin/ephoto_single_browser.c:1844
+msgid "Black and White"
+msgstr "Zwart-wit"
+
+#: ../src/bin/ephoto_color.c:257
+msgid "Blue"
+msgstr "Blauw"
+
+#: ../src/bin/ephoto_single_browser.c:1846
+msgid "Blur"
+msgstr "Vervagen"
+
+#: ../src/bin/ephoto_bcg.c:361
+msgid "Brightness"
+msgstr "Helderheid"
+
+#: ../src/bin/ephoto_bcg.c:325 ../src/bin/ephoto_single_browser.c:1831
+msgid "Brightness/Contrast/Gamma"
+msgstr "Helderheid/Contrast/Gamma"
+
+#: ../src/bin/ephoto_editor.c:84 ../src/bin/ephoto_file.c:629
+#: ../src/bin/ephoto_file.c:753
+msgid "Cancel"
+msgstr "Afbreken"
+
+#: ../src/bin/ephoto_single_browser.c:1884
+msgid "Close"
+msgstr "Sluiten"
+
+#: ../src/bin/ephoto_single_browser.c:1835
+msgid "Color Levels"
+msgstr "Kleurniveaus"
+
+#: ../src/bin/ephoto_bcg.c:346
+msgid "Contrast"
+msgstr "Contrast"
+
+#: ../src/bin/ephoto_file.c:451 ../src/bin/ephoto_thumb_browser.c:980
+msgid "Copy"
+msgstr "Kopiëren"
+
+#: ../src/bin/ephoto_file.c:1603 ../src/bin/ephoto_file.c:1700
+msgid "Copy Files"
+msgstr "Bestanden kopiëren"
+
+#: ../src/bin/ephoto_config.c:378
+msgid "Copy Link"
+msgstr "Koppeling kopiëren"
+
+#: ../src/bin/ephoto_file.c:932
+msgid "Copying Files"
+msgstr "Bestanden kopiëren..."
+
+#: ../src/bin/ephoto_single_browser.c:1818
+msgid "Crop"
+msgstr "Bijknippen"
+
+#: ../src/bin/ephoto_cropper.c:702
+msgid "Crop Image"
+msgstr "Afbeelding bijknippen"
+
+#: ../src/bin/ephoto_config.c:83 ../src/bin/ephoto_config.c:174
+#: ../src/bin/ephoto_config.c:187
+msgid "Custom Directory"
+msgstr "Aangepaste map"
+
+#: ../src/bin/ephoto_thumb_browser.c:978
+msgid "Cut"
+msgstr "Knippen"
+
+#: ../src/bin/ephoto_directory_browser.c:684
+#: ../src/bin/ephoto_single_browser.c:1915
+#: ../src/bin/ephoto_thumb_browser.c:998
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: ../src/bin/ephoto_file.c:1754
+msgid "Delete Directory"
+msgstr "Map verwijderen"
+
+#: ../src/bin/ephoto_file.c:1758
+msgid "Delete Files"
+msgstr "Bestanden verwijderen"
+
+#: ../src/bin/ephoto_file.c:1069
+msgid "Deleting Directory"
+msgstr "Map verwijderen..."
+
+#: ../src/bin/ephoto_file.c:1009
+msgid "Deleting Files"
+msgstr "Bestanden verwijderen..."
+
+#: ../src/bin/ephoto_single_browser.c:1848
+msgid "Dither"
+msgstr "Kleurbenadering"
+
+#: ../src/bin/ephoto_single_browser.c:1850
+msgid "Edge Detect"
+msgstr "Randen bespeuren"
+
+#: ../src/bin/ephoto_single_browser.c:1780
+#: ../src/bin/ephoto_single_browser.c:1908
+#: ../src/bin/ephoto_single_browser.c:2531
+#: ../src/bin/ephoto_single_browser.c:2533
+msgid "Edit"
+msgstr "Bewerken"
+
+#: ../src/bin/ephoto_single_browser.c:1852
+msgid "Emboss"
+msgstr "Reliëf aanbrengen"
+
+#: ../src/bin/ephoto_directory_browser.c:679 ../src/bin/ephoto_file.c:1812
+#: ../src/bin/ephoto_thumb_browser.c:993
+msgid "Empty Trash"
+msgstr "Prullenbak ledigen"
+
+#: ../src/bin/ephoto_file.c:1108
+msgid "Emptying Trash"
+msgstr "Prullenbak ledigen..."
+
+#: ../src/bin/ephoto_config.c:499
+msgid ""
+"Ephoto is a comprehensive image viewer based on the EFL. For "
+"moreinformation, please visit the Ephoto project page:<br/><a href=http://"
+"www.smhouston.us/ephoto/>http://www.smhouston.us/ephoto/</a><br/><br/>Ephoto "
+"also has a page on the Enlightenment wiki:<br/><a href=https://phab."
+"enlightenment.org/w/projects/ephoto>https://phab.enlightenment.org/w/"
+"projects/ephoto</a><br/><br/>Ephoto's source can be found through "
+"Enlightenment's git:<br/><a href=http://git.enlightenment.org/apps/ephoto."
+"git>http://git.enlightenment.org/apps/ephoto.git</a><br/><br/><b>Authors:</"
+"b><br/>"
+msgstr ""
+"Ephoto is een uitgebreide afbeeldingenkijker gebaseerd op de EFL. Voor meer "
+"informatie kunt u de projectpagina van Ephoto bezoeken:<br/><a href=http://"
+"www.smhouston.us/ephoto/>http://www.smhouston.us/ephoto/</a><br/><br/>Ephoto "
+"heeft ook een pagina op de Enlightenment wiki:<br/><a href=https://phab."
+"enlightenment.org/w/projects/ephoto>https://phab.enlightenment.org/w/"
+"projects/ephoto</a><br/><br/>Ephoto's broncode kan worden gevonden op "
+"Enlightenment's git:<br/><a href=http://git.enlightenment.org/apps/ephoto."
+"git>http://git.enlightenment.org/apps/ephoto.git</a><br/><br/><b>Makers:</"
+"b><br/>"
+
+#: ../src/bin/ephoto_file.c:564 ../src/bin/ephoto_file.c:668
+#: ../src/bin/ephoto_file.c:671 ../src/bin/ephoto_file.c:810
+msgid "Error"
+msgstr "Fout"
+
+#: ../src/bin/ephoto_file.c:309 ../src/bin/ephoto_file.c:321
+#: ../src/bin/ephoto_file.c:338 ../src/bin/ephoto_file.c:1202
+#: ../src/bin/ephoto_file.c:1214 ../src/bin/ephoto_file.c:1230
+#: ../src/bin/ephoto_file.c:1331 ../src/bin/ephoto_file.c:1409
+msgid "Error: Image could not be saved here!"
+msgstr "Fout: afbeelding kon niet hier worden opgeslagen."
+
+#: ../src/bin/ephoto_main.c:606 ../src/bin/ephoto_main.c:609
+#: ../src/bin/ephoto_slideshow.c:1052
+msgid "Exit"
+msgstr "Afsluiten"
+
+#: ../src/bin/ephoto_single_browser.c:1906
+msgid "File"
+msgstr "Bestand"
+
+#: ../src/bin/ephoto_config.c:142
+msgid "File Panel Size"
+msgstr "Grootte van bestandenbalk"
+
+#: ../src/bin/ephoto_single_browser.c:126
+msgid "File Size"
+msgstr "Bestandsgrootte"
+
+#: ../src/bin/ephoto_slideshow.c:1032
+msgid "First"
+msgstr "Eerste"
+
+#: ../src/bin/ephoto_single_browser.c:1824
+#: ../src/bin/ephoto_single_browser.c:1929
+msgid "Flip Horizontal"
+msgstr "Horizontaal omklappen"
+
+#: ../src/bin/ephoto_single_browser.c:1826
+#: ../src/bin/ephoto_single_browser.c:1931
+msgid "Flip Vertical"
+msgstr "Verticaal omklappen"
+
+#: ../src/bin/ephoto_slideshow.c:774 ../src/bin/ephoto_slideshow.c:1046
+#: ../src/bin/ephoto_slideshow.c:1161
+msgid "Fullscreen"
+msgstr "Schermvullend"
+
+#: ../src/bin/ephoto_single_browser.c:162
+#: ../src/bin/ephoto_thumb_browser.c:1116
+msgid "GB"
+msgid_plural "GB"
+msgstr[0] "GB"
+msgstr[1] "GB"
+
+#: ../src/bin/ephoto_bcg.c:331
+msgid "Gamma"
+msgstr "Gamma"
+
+#: ../src/bin/ephoto_config.c:714
+msgid "General"
+msgstr "Algemeen"
+
+#: ../src/bin/ephoto_color.c:272
+msgid "Green"
+msgstr "Groen"
+
+#: ../src/bin/ephoto_cropper.c:712
+msgid "Height"
+msgstr "Hoogte"
+
+#: ../src/bin/ephoto_main.c:298 ../src/bin/ephoto_main.c:299
+#: ../src/bin/ephoto_main.c:360 ../src/bin/ephoto_main.c:361
+#: ../src/bin/ephoto_main.c:695 ../src/bin/ephoto_main.c:696
+msgid "Hide Folders"
+msgstr "Mappen verbergen"
+
+#: ../src/bin/ephoto_directory_browser.c:662
+msgid "Home"
+msgstr "Thuismap"
+
+#: ../src/bin/ephoto_config.c:25 ../src/bin/ephoto_config.c:170
+msgid "Home Directory"
+msgstr "Thuismap"
+
+#: ../src/bin/ephoto_hsv.c:368
+msgid "Hue"
+msgstr "Waas"
+
+#: ../src/bin/ephoto_hsv.c:332 ../src/bin/ephoto_single_browser.c:1833
+msgid "Hue/Saturation/Value"
+msgstr "Waas/Verzadiging/Waarde"
+
+#: ../src/bin/ephoto_file.c:1474
+msgid "Image Files"
+msgstr "Afbeeldingsbestanden"
+
+#: ../src/bin/ephoto_file.c:160
+msgid "Image Properties"
+msgstr "Eigenschappen van afbeelding"
+
+#: ../src/bin/ephoto_thumb_browser.c:2126
+msgid "Image Simalarity"
+msgstr "Gelijkendheid van afbeeldingen"
+
+#: ../src/bin/ephoto_file.c:407
+msgid "Image Uploaded"
+msgstr "Afbeelding opgestuurd"
+
+#: ../src/bin/ephoto_main.c:549
+msgid "Information"
+msgstr "Informatie"
+
+#: ../src/bin/ephoto_single_browser.c:1854
+msgid "Invert Colors"
+msgstr "Kleuren omdraaien"
+
+#: ../src/bin/ephoto_single_browser.c:150
+#: ../src/bin/ephoto_thumb_browser.c:1104
+msgid "KB"
+msgid_plural "KB"
+msgstr[0] "KB"
+msgstr[1] "KB"
+
+#: ../src/bin/ephoto_scale.c:223
+msgid "Keep Aspect"
+msgstr "Verhoudingen behouden"
+
+#: ../src/bin/ephoto_config.c:134
+msgid "Keep Aspect on Thumbnails"
+msgstr "Verhoudingen behouden bij miniaturen"
+
+#: ../src/bin/ephoto_slideshow.c:1043
+msgid "Last"
+msgstr "Laatste"
+
+#: ../src/bin/ephoto_config.c:27 ../src/bin/ephoto_config.c:172
+msgid "Last Open Directory"
+msgstr "Laatst geopende map"
+
+#: ../src/bin/ephoto_single_browser.c:156
+#: ../src/bin/ephoto_thumb_browser.c:1110
+msgid "MB"
+msgid_plural "MB"
+msgstr[0] "MB"
+msgstr[1] "MB"
+
+#: ../src/bin/ephoto_single_browser.c:541
+#: ../src/bin/ephoto_single_browser.c:2365
+msgid "MODIFIED"
+msgstr "AANGEPAST"
+
+#: ../src/bin/ephoto_thumb_browser.c:2120
+msgid "Modification Time Ascending"
+msgstr "Wijzigingstijdstip oplopend"
+
+#: ../src/bin/ephoto_thumb_browser.c:2123
+msgid "Modification Time Descending"
+msgstr "Wijzigingstijdstip aflopend"
+
+#: ../src/bin/ephoto_file.c:1552
+msgid "Move Files"
+msgstr "Bestanden verplaatsen"
+
+#: ../src/bin/ephoto_config.c:118
+msgid "Move Files When Dropped"
+msgstr "Bestanden verplaatsen bij verslepen"
+
+#: ../src/bin/ephoto_file.c:870
+msgid "Moving Files"
+msgstr "Bestanden verplaatsen..."
+
+#: ../src/bin/ephoto_config.c:257
+msgid "Moving Slideshow"
+msgstr "Bewegende diavertoning"
+
+#: ../src/bin/ephoto_file.c:588 ../src/bin/ephoto_file.c:603
+msgid "New Directory"
+msgstr "Nieuwe map"
+
+#: ../src/bin/ephoto_directory_browser.c:666
+msgid "New Folder"
+msgstr "Nieuwe map"
+
+#: ../src/bin/ephoto_single_browser.c:2483
+#: ../src/bin/ephoto_single_browser.c:2485 ../src/bin/ephoto_slideshow.c:1040
+msgid "Next"
+msgstr "Volgende"
+
+#: ../src/bin/ephoto_file.c:1308 ../src/bin/ephoto_file.c:1432
+#: ../src/bin/ephoto_file.c:1515 ../src/bin/ephoto_file.c:1573
+#: ../src/bin/ephoto_file.c:1624 ../src/bin/ephoto_file.c:1675
+#: ../src/bin/ephoto_file.c:1722 ../src/bin/ephoto_file.c:1780
+#: ../src/bin/ephoto_file.c:1834 ../src/bin/ephoto_single_browser.c:1037
+msgid "No"
+msgstr "Nee"
+
+#: ../src/bin/ephoto_thumb_browser.c:1082
+msgid "No images matched your search"
+msgstr "Er kwamen geen afbeeldingen overeen met uw zoekopdracht"
+
+#: ../src/bin/ephoto_slideshow.c:785 ../src/bin/ephoto_slideshow.c:1171
+msgid "Normal"
+msgstr "Normaal"
+
+#: ../src/bin/ephoto_file.c:238 ../src/bin/ephoto_file.c:462
+msgid "Ok"
+msgstr "Oké"
+
+#: ../src/bin/ephoto_slideshow.c:877
+msgid "Okay"
+msgstr "Oké"
+
+#: ../src/bin/ephoto_single_browser.c:1856
+msgid "Old Photo"
+msgstr "Oude foto"
+
+#: ../src/bin/ephoto_config.c:370 ../src/bin/ephoto_file.c:372
+msgid "Open Link In Browser"
+msgstr "Open webkoppeling in webverkenner"
+
+#: ../src/bin/ephoto_file.c:1286
+msgid "Overwrite Image"
+msgstr "Afbeelding overschrijven"
+
+#: ../src/bin/ephoto_single_browser.c:1858
+msgid "Painting"
+msgstr "Schilderen"
+
+#: ../src/bin/ephoto_directory_browser.c:673
+#: ../src/bin/ephoto_thumb_browser.c:986
+msgid "Paste"
+msgstr "Plakken"
+
+#: ../src/bin/ephoto_file.c:1653
+msgid "Paste Files"
+msgstr "Bestanden plakken"
+
+#: ../src/bin/ephoto_slideshow.c:725 ../src/bin/ephoto_slideshow.c:1150
+msgid "Pause"
+msgstr "Pauzeren"
+
+#: ../src/bin/ephoto_slideshow.c:716 ../src/bin/ephoto_slideshow.c:1037
+msgid "Play"
+msgstr "Afspelen"
+
+#: ../src/bin/ephoto_filters.c:116
+msgid "Please wait while this filter is applied to your image."
+msgstr "Wacht a.u.b. terwijl dit filter wordt toegepast op uw afbeelding."
+
+#: ../src/bin/ephoto_file.c:1070
+msgid "Please wait while your directory is deleted."
+msgstr "Wacht a.u.b. terwijl uw map wordt verwijderd."
+
+#: ../src/bin/ephoto_file.c:933
+msgid "Please wait while your files are copied."
+msgstr "Wacht a.u.b. terwijl uw bestanden worden gekopieerd."
+
+#: ../src/bin/ephoto_file.c:1010 ../src/bin/ephoto_file.c:1109
+msgid "Please wait while your files are deleted."
+msgstr "Wacht a.u.b. terwijl uw bestanden worden verwijderd."
+
+#: ../src/bin/ephoto_file.c:871
+msgid "Please wait while your files are moved."
+msgstr "Wacht a.u.b. terwijl uw bestanden worden verplaatst."
+
+#: ../src/bin/ephoto_single_browser.c:1860
+msgid "Posterize"
+msgstr "Kleurenreductie toepassen"
+
+#: ../src/bin/ephoto_single_browser.c:2467
+#: ../src/bin/ephoto_single_browser.c:2469 ../src/bin/ephoto_slideshow.c:1034
+msgid "Previous"
+msgstr "Vorige"
+
+#: ../src/bin/ephoto_config.c:110
+msgid "Prompt Before Changing The Filesystem"
+msgstr "Vragen alvorens het bestandssysteem te wijzigen"
+
+#: ../src/bin/ephoto_single_browser.c:1921
+msgid "Properties"
+msgstr "Eigenschappen"
+
+#: ../src/bin/ephoto_single_browser.c:1839
+msgid "Quick Filters"
+msgstr "Snelle filters"
+
+#: ../src/bin/ephoto_red_eye.c:208
+msgid "Radius"
+msgstr "Straal"
+
+#: ../src/bin/ephoto_color.c:287
+msgid "Red"
+msgstr "Rood"
+
+#: ../src/bin/ephoto_red_eye.c:202 ../src/bin/ephoto_single_browser.c:1837
+msgid "Red Eye Removal"
+msgstr "Rode-ogen-verwijdering"
+
+#: ../src/bin/ephoto_single_browser.c:1882
+msgid "Redo"
+msgstr "Opnieuw uitvoeren"
+
+#: ../src/bin/ephoto_directory_browser.c:671 ../src/bin/ephoto_file.c:742
+#: ../src/bin/ephoto_single_browser.c:1913
+#: ../src/bin/ephoto_thumb_browser.c:971
+msgid "Rename"
+msgstr "Hernoemen"
+
+#: ../src/bin/ephoto_file.c:704
+msgid "Rename Directory"
+msgstr "Map hernoemen"
+
+#: ../src/bin/ephoto_file.c:706
+msgid "Rename File"
+msgstr "Bestand hernoemen"
+
+#: ../src/bin/ephoto_editor.c:54 ../src/bin/ephoto_single_browser.c:1883
+#: ../src/bin/ephoto_single_browser.c:1909
+msgid "Reset"
+msgstr "Terugzetten"
+
+#: ../src/bin/ephoto_single_browser.c:1004
+msgid "Reset Image"
+msgstr "Afbeelding terugzetten"
+
+#: ../src/bin/ephoto_single_browser.c:126
+msgid "Resolution"
+msgstr "Resolutie"
+
+#: ../src/bin/ephoto_directory_browser.c:660
+msgid "Root"
+msgstr "Beginmap"
+
+#: ../src/bin/ephoto_config.c:23 ../src/bin/ephoto_config.c:168
+msgid "Root Directory"
+msgstr "Beginmap"
+
+#: ../src/bin/ephoto_single_browser.c:1820
+#: ../src/bin/ephoto_single_browser.c:2499
+#: ../src/bin/ephoto_single_browser.c:2501
+msgid "Rotate Left"
+msgstr "Naar links draaien"
+
+#: ../src/bin/ephoto_single_browser.c:1822
+#: ../src/bin/ephoto_single_browser.c:2515
+#: ../src/bin/ephoto_single_browser.c:2517
+msgid "Rotate Right"
+msgstr "Naar rechts draaien"
+
+#: ../src/bin/ephoto_hsv.c:353
+msgid "Saturation"
+msgstr "Verzadiging"
+
+#: ../src/bin/ephoto_file.c:618 ../src/bin/ephoto_single_browser.c:1876
+#: ../src/bin/ephoto_single_browser.c:1910
+msgid "Save"
+msgstr "Opslaan"
+
+#: ../src/bin/ephoto_single_browser.c:1877
+#: ../src/bin/ephoto_single_browser.c:1911
+#: ../src/bin/ephoto_single_browser.c:2547
+#: ../src/bin/ephoto_single_browser.c:2549
+msgid "Save As"
+msgstr "Opslaan als"
+
+#: ../src/bin/ephoto_file.c:308 ../src/bin/ephoto_file.c:320
+#: ../src/bin/ephoto_file.c:337 ../src/bin/ephoto_file.c:1201
+#: ../src/bin/ephoto_file.c:1213 ../src/bin/ephoto_file.c:1229
+#: ../src/bin/ephoto_file.c:1330 ../src/bin/ephoto_file.c:1408
+msgid "Save Failed"
+msgstr "Opslaan mislukt"
+
+#: ../src/bin/ephoto_file.c:1413
+msgid "Save Image"
+msgstr "Afbeelding opslaan"
+
+#: ../src/bin/ephoto_file.c:1454
+msgid "Save Image As"
+msgstr "Afbeelding opslaan als"
+
+#: ../src/bin/ephoto_single_browser.c:1819
+msgid "Scale"
+msgstr "Herschalen"
+
+#: ../src/bin/ephoto_scale.c:217
+msgid "Scale Image"
+msgstr "Afbeelding herschalen"
+
+#: ../src/bin/ephoto_thumb_browser.c:962 ../src/bin/ephoto_thumb_browser.c:1360
+msgid "Search"
+msgstr "Zoeken"
+
+#: ../src/bin/ephoto_thumb_browser.c:964
+msgid "Select All"
+msgstr "Alles kiezen"
+
+#: ../src/bin/ephoto_thumb_browser.c:967
+msgid "Select None"
+msgstr "Niets kiezen"
+
+#: ../src/bin/ephoto_main.c:589 ../src/bin/ephoto_main.c:592
+#: ../src/bin/ephoto_slideshow.c:1023 ../src/bin/ephoto_slideshow.c:1049
+msgid "Settings"
+msgstr "Instellingen"
+
+#: ../src/bin/ephoto_config.c:662
+msgid "Settings Panel"
+msgstr "Instellingenbalk"
+
+#: ../src/bin/ephoto_single_browser.c:1862
+msgid "Sharpen"
+msgstr "Verscherpen"
+
+#: ../src/bin/ephoto_config.c:266 ../src/bin/ephoto_slideshow.c:858
+msgid "Show Each Slide For"
+msgstr "Toon elke dia gedurende"
+
+#: ../src/bin/ephoto_main.c:308 ../src/bin/ephoto_main.c:309
+#: ../src/bin/ephoto_main.c:370 ../src/bin/ephoto_main.c:371
+#: ../src/bin/ephoto_main.c:530 ../src/bin/ephoto_main.c:532
+#: ../src/bin/ephoto_main.c:687 ../src/bin/ephoto_main.c:688
+msgid "Show Folders"
+msgstr "Mappen tonen"
+
+#: ../src/bin/ephoto_config.c:102
+msgid "Show Folders On Start"
+msgstr "Mappen tonen bij start"
+
+#: ../src/bin/ephoto_thumb_browser.c:1087
+#: ../src/bin/ephoto_thumb_browser.c:1128
+msgid "Size"
+msgstr "Grootte"
+
+#: ../src/bin/ephoto_single_browser.c:1864
+msgid "Sketch"
+msgstr "Schetsen"
+
+#: ../src/bin/ephoto_config.c:287
+msgid "Slide Transition"
+msgstr "Overgangseffect bij dia's"
+
+#: ../src/bin/ephoto_config.c:721 ../src/bin/ephoto_main.c:572
+#: ../src/bin/ephoto_main.c:575
+msgid "Slideshow"
+msgstr "Diavertoning"
+
+#: ../src/bin/ephoto_config.c:126
+msgid "Smooth Scale Images"
+msgstr "Soepel schalen van afbeeldingen"
+
+#: ../src/bin/ephoto_thumb_browser.c:2129
+#: ../src/bin/ephoto_thumb_browser.c:2136
+msgid "Sort"
+msgstr "Rangschikken"
+
+#: ../src/bin/ephoto_single_browser.c:167
+#: ../src/bin/ephoto_thumb_browser.c:1121
+msgid "TB"
+msgid_plural "TB"
+msgstr[0] "TB"
+msgstr[1] "TB"
+
+#: ../src/bin/ephoto_thumb_browser.c:1085
+#: ../src/bin/ephoto_thumb_browser.c:1391
+msgid "There are no images in this directory"
+msgstr "Er zijn geen bestanden in deze map"
+
+#: ../src/bin/ephoto_file.c:808
+msgid "There was an error completing your action on"
+msgstr "Er is een fout opgetreden bij het voltooien van uw actie op"
+
+#: ../src/bin/ephoto_file.c:565
+msgid "There was an error creating this directory."
+msgstr "Er is een fout opgetreden bij het maken van deze map."
+
+#: ../src/bin/ephoto_file.c:669
+msgid "There was an error renaming this directory."
+msgstr "Er is een fout opgetreden bij het hernoemen van deze map."
+
+#: ../src/bin/ephoto_file.c:672
+msgid "There was an error renaming this file."
+msgstr "Er is een fout opgetreden bij het hernoemen van dit bestand."
+
+#: ../src/bin/ephoto_file.c:480
+msgid "There was an error uploading your image!"
+msgstr "Er is een fout opgetreden bij het opsturen van uw afbeelding."
+
+#: ../src/bin/ephoto_single_browser.c:1635
+msgid "This image does not exist or is corrupted!"
+msgstr "Deze afbeelding bestaat niet of is corrupt."
+
+#: ../src/bin/ephoto_config.c:161
+msgid "Top Level Directory"
+msgstr "Meest bovenliggende map"
+
+#: ../src/bin/ephoto_thumb_browser.c:1087
+#: ../src/bin/ephoto_thumb_browser.c:1127
+msgid "Total"
+msgstr "Totaal"
+
+#: ../src/bin/ephoto_single_browser.c:1815
+msgid "Transform"
+msgstr "Omzetten"
+
+#: ../src/bin/ephoto_directory_browser.c:499
+#: ../src/bin/ephoto_directory_browser.c:686
+msgid "Trash"
+msgstr "Weggooien"
+
+#: ../src/bin/ephoto_single_browser.c:125
+msgid "Type"
+msgstr "Type"
+
+#: ../src/bin/ephoto_single_browser.c:1881
+msgid "Undo"
+msgstr "Ongedaan maken"
+
+#: ../src/bin/ephoto_single_browser.c:1879
+#: ../src/bin/ephoto_single_browser.c:1917
+msgid "Upload"
+msgstr "Opsturen"
+
+#: ../src/bin/ephoto_file.c:1135 ../src/bin/ephoto_file.c:1495
+msgid "Upload Image"
+msgstr "Afbeelding opsturen"
+
+#: ../src/bin/ephoto_hsv.c:338
+msgid "Value"
+msgstr "Waarde"
+
+#: ../src/bin/ephoto_thumb_browser.c:2070
+#: ../src/bin/ephoto_thumb_browser.c:2072
+msgid "View Image"
+msgstr "Afbeelding bekijken"
+
+#: ../src/bin/ephoto_single_browser.c:2417
+#: ../src/bin/ephoto_single_browser.c:2419
+msgid "View Thumbnails"
+msgstr "Miniaturen tonen"
+
+#: ../src/bin/ephoto_config.c:149
+msgid "Weight (1.0 Max)"
+msgstr "Gewicht (max. 1.0)"
+
+#: ../src/bin/ephoto_cropper.c:725
+msgid "Width"
+msgstr "Breedte"
+
+#: ../src/bin/ephoto_file.c:1295 ../src/bin/ephoto_file.c:1421
+#: ../src/bin/ephoto_file.c:1503 ../src/bin/ephoto_file.c:1560
+#: ../src/bin/ephoto_file.c:1611 ../src/bin/ephoto_file.c:1662
+#: ../src/bin/ephoto_file.c:1709 ../src/bin/ephoto_file.c:1767
+#: ../src/bin/ephoto_file.c:1821 ../src/bin/ephoto_single_browser.c:1026
+msgid "Yes"
+msgstr "Ja"
+
+#: ../src/bin/ephoto_file.c:499
+msgid "Your image was uploaded to the following link:"
+msgstr "Uw afbeelding werd opgestuurd naar de volgende webkoppeling:"
+
+#: ../src/bin/ephoto_single_browser.c:1927
+msgid "Zoom 1:1"
+msgstr "Vergroten tot 1:1"
+
+#: ../src/bin/ephoto_single_browser.c:1925
+msgid "Zoom Fit"
+msgstr "Passend vergroten"
+
+#: ../src/bin/ephoto_single_browser.c:2435
+#: ../src/bin/ephoto_single_browser.c:2437
+#: ../src/bin/ephoto_thumb_browser.c:2088
+#: ../src/bin/ephoto_thumb_browser.c:2090
+msgid "Zoom In"
+msgstr "Vergroten"
+
+#: ../src/bin/ephoto_single_browser.c:2451
+#: ../src/bin/ephoto_single_browser.c:2453
+#: ../src/bin/ephoto_thumb_browser.c:2104
+#: ../src/bin/ephoto_thumb_browser.c:2106
+msgid "Zoom Out"
+msgstr "Verkleinen"
+
+#: ../src/bin/ephoto_file.c:809
+msgid "file"
+msgid_plural "files"
+msgstr[0] "bestand"
+msgstr[1] "bestanden"
+
+#: ../src/bin/ephoto_thumb_browser.c:1087
+#: ../src/bin/ephoto_thumb_browser.c:1127
+msgid "image"
+msgid_plural "images"
+msgstr[0] "afbeelding"
+msgstr[1] "afbeeldingen"
+
+#: ../src/bin/ephoto_config.c:212
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "seconde"
+msgstr[1] "seconden"
+
+#: ../src/bin/ephoto_config.c:275 ../src/bin/ephoto_slideshow.c:867
+msgid "seconds"
+msgstr "seconden"
