@@ -1,7 +1,7 @@
 install_data('ephoto.desktop',
              install_dir: join_paths(dir_data, 'applications'))
 install_data('ephoto.png',
-             install_dir: join_paths(dir_data, 'icons'))
+             install_dir: join_paths(dir_data, 'icons/hicolor/256x256/apps/'))
 host_os = host_machine.system()
 if host_os == 'linux'
         if cc.has_header_symbol('features.h', '__UCLIBC__')
