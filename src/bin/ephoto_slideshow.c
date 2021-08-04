@@ -382,10 +382,9 @@ _on_transition_end(void *data, Evas_Object *obj EINA_UNUSED,
    evas_object_show(ss->current_item);
    elm_layout_signal_emit(ss->slideshow, "ephoto,transition,done", "ephoto");
 
-   if (!ss->ephoto->gadget)
-     ss->timeout = ss->ephoto->config->slideshow_timeout;
-   else
-     ss->timeout = ss->ephoto->gadget_config->slideshow_timeout;
+
+   ss->timeout = ss->ephoto->config->slideshow_timeout;
+
    if (ss->timer)
      ecore_timer_del(ss->timer);
    ss->timer = NULL;
@@ -421,20 +420,20 @@ _slideshow_item_get(Ephoto_Slideshow *ss, Ephoto_Entry *entry, Evas_Object *pare
    layout = elm_layout_add(parent);
    elm_layout_file_set(layout, PACKAGE_DATA_DIR "/themes/ephoto.edj",
                        "ephoto,slideshow,item");
-   if (ss->ephoto->gadget)
-     elm_layout_signal_emit(layout, "gadget", "ephoto");
+
    EPHOTO_EXPAND(layout);
    EPHOTO_FILL(layout);
    evas_object_data_set(layout, "entry", entry);
 
    image = elm_image_add(parent);
-   if (ss->ephoto->config->movess && !ss->ephoto->gadget)
+   if (ss->ephoto->config->movess)
      {
         elm_image_preload_disabled_set(image, EINA_FALSE);
         elm_image_smooth_set(image, EINA_FALSE);
         elm_image_fill_outside_set(image, EINA_TRUE);
      }
-   else if (!ss->ephoto->config->movess || ss->ephoto->gadget)
+   // FIXME
+   else if (!ss->ephoto->config->movess)
      {
         evas_object_image_load_orientation_set(image, EINA_TRUE);
         evas_object_image_filled_set(image, EINA_TRUE);   
@@ -487,15 +486,13 @@ _slideshow_transition(void *data)
 
    snprintf(buf, PATH_MAX, "ephoto,%s", ss->ephoto->config->slideshow_transition);
    elm_layout_signal_emit(ss->slideshow, buf, "ephoto");
-   if (!ss->ephoto->gadget)
+   if (ss->ephoto->config->movess)
      {
-        if (ss->ephoto->config->movess)
-          {
-             elm_layout_signal_emit(ss->current_item, _slideshow_move_start_get(ss), "ephoto");
-             elm_layout_signal_emit(ss->current_item, _slideshow_move_end_get(ss), "ephoto");
-             _slideshow_move_randomize(ss);
-          }
+        elm_layout_signal_emit(ss->current_item, _slideshow_move_start_get(ss), "ephoto");
+        elm_layout_signal_emit(ss->current_item, _slideshow_move_end_get(ss), "ephoto");
+        _slideshow_move_randomize(ss);
      }
+
    if (ss->timer)
      ecore_timer_del(ss->timer);
    ss->timer = NULL;
@@ -519,25 +516,21 @@ _slideshow_play(Ephoto_Slideshow *ss)
         evas_object_raise(ss->current_item);
         evas_object_show(ss->current_item);
      }
-   if (!ss->ephoto->gadget)
-     {
-        if (ss->ephoto->config->movess)
-          _slideshow_move_randomize(ss);
-     }
+
+   if (ss->ephoto->config->movess)
+     _slideshow_move_randomize(ss);
+
    msg = alloca(sizeof(Edje_Message_Float_Set) + (1 * sizeof(float)));
    msg->count = 1;
    msg->val[0] = (float)ss->timeout;
    edje_object_message_send(elm_layout_edje_get(ss->current_item),
                             EDJE_MESSAGE_FLOAT_SET, 1, msg);
 
-   if (!ss->ephoto->gadget)
+   if (ss->ephoto->config->movess)
      {
-        if (ss->ephoto->config->movess)
-          {
-             elm_layout_signal_emit(ss->current_item, _slideshow_move_start_get(ss), "ephoto");
-             elm_layout_signal_emit(ss->current_item, _slideshow_move_end_get(ss), "ephoto");
-             _slideshow_move_randomize(ss);
-          }
+        elm_layout_signal_emit(ss->current_item, _slideshow_move_start_get(ss), "ephoto");
+        elm_layout_signal_emit(ss->current_item, _slideshow_move_end_get(ss), "ephoto");
+        _slideshow_move_randomize(ss);
      }
 
    if (ss->timer)
@@ -583,8 +576,7 @@ _mouse_down(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNUSED,
    evas_object_del(ss->notify);
    ss->notify_box = NULL;
    ss->notify = NULL;
-   if (!ss->ephoto->gadget)
-     evas_object_smart_callback_call(ss->slideshow, "back", entry);
+   evas_object_smart_callback_call(ss->slideshow, "back", entry);
    if (ss->old_item)
      {
         elm_layout_content_unset(ss->slideshow, "ephoto.swallow.slideshow.item2");
@@ -802,104 +794,6 @@ _settings(void *data, Evas_Object *obj EINA_UNUSED,
 }
 
 static void
-_gadget_settings_save(void *data, Evas_Object *obj EINA_UNUSED,
-          void *event_info EINA_UNUSED)
-{
-   Evas_Object *popup = data, *fentry, *spinner;
-   Ephoto_Slideshow *ss = evas_object_data_get(popup, "slideshow");
-   const char *path;
-
-   fentry = evas_object_data_get(popup, "fentry");
-   spinner = evas_object_data_get(popup, "timeout");
-
-   ss->ephoto->gadget_config->slideshow_timeout = elm_spinner_value_get(spinner);
-   path = elm_fileselector_path_get(fentry);
-   eina_stringshare_replace(&ss->ephoto->gadget_config->directory, path);
-   if (ecore_file_is_dir(path))
-     ephoto_directory_set(ss->ephoto, path, NULL, EINA_FALSE, EINA_TRUE);
-
-   ephoto_gadget_config_save(ss->ephoto);
-   evas_object_del(popup);
-}
-
-static void
-_popup_del(void *data EINA_UNUSED, Evas *e EINA_UNUSED, Evas_Object *obj, void *event_data EINA_UNUSED)
-{
-   evas_object_del(obj);
-}
-
-static void
-_gadget_settings(void *data, Evas_Object *obj EINA_UNUSED,
-          void *event_info EINA_UNUSED)
-{
-   Ephoto_Slideshow *ss = data;
-   Evas_Object *popup, *but, *table, *fentry, *label, *spinner, *rect;
-   char buf[PATH_MAX];
-
-   popup = elm_win_add(ss->ephoto->win, "win", ELM_WIN_BASIC);
-   if (ss->ephoto->gadget)
-     elm_win_alpha_set(popup, 1);
-   else
-     elm_win_autodel_set(popup, 1);
-   evas_object_data_set(popup, "slideshow", ss);
-   evas_object_event_callback_add(popup, EVAS_CALLBACK_HIDE, _popup_del, NULL);
-
-   table = elm_table_add(popup);
-   elm_table_homogeneous_set(table, EINA_FALSE);
-   EPHOTO_EXPAND(table);
-   EPHOTO_FILL(table);
-   elm_win_resize_object_add(popup, table);
-   evas_object_show(table);
-
-   fentry = elm_fileselector_add(table);
-   elm_fileselector_is_save_set(fentry, EINA_FALSE);
-   elm_fileselector_expandable_set(fentry, EINA_FALSE);
-   elm_fileselector_path_set(fentry, ss->ephoto->gadget_config->directory);
-   elm_fileselector_buttons_ok_cancel_set(fentry, EINA_FALSE);
-   elm_fileselector_folder_only_set(fentry, EINA_TRUE);
-   evas_object_size_hint_weight_set(fentry, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-   evas_object_size_hint_align_set(fentry, EVAS_HINT_FILL, EVAS_HINT_FILL);
-   elm_table_pack(table, fentry, 0, 0, 2, 5);
-   evas_object_show(fentry);
-   evas_object_data_set(popup, "fentry", fentry);
-
-   label = elm_label_add(table);
-   memset(buf, 0, PATH_MAX);
-   snprintf(buf, PATH_MAX, "%s:", _("Show Each Slide For"));
-   elm_object_text_set(label, buf);
-   EPHOTO_FILL(label);
-   elm_table_pack(table, label, 0, 5, 1, 1);
-   evas_object_show(label);
-
-   spinner = elm_spinner_add(table);
-   elm_spinner_editable_set(spinner, EINA_TRUE);
-   memset(buf, 0, PATH_MAX);
-   snprintf(buf, PATH_MAX, "%%1.0f %s", _("seconds"));
-   elm_spinner_label_format_set(spinner, buf);
-   elm_spinner_step_set(spinner, 1);
-   elm_spinner_value_set(spinner, ss->ephoto->gadget_config->slideshow_timeout);
-   elm_spinner_min_max_set(spinner, 1, 60);
-   elm_table_pack(table, spinner, 1, 5, 1, 1);
-   evas_object_show(spinner);
-   evas_object_data_set(popup, "timeout", spinner);
-
-   but = elm_button_add(table);
-   elm_object_text_set(but, _("Okay"));
-   elm_table_pack(table, but, 0, 6, 2, 1);
-   evas_object_smart_callback_add(but, "clicked", _gadget_settings_save, popup);
-   evas_object_show(but);
-
-   rect = evas_object_rectangle_add(evas_object_evas_get(table));
-   evas_object_repeat_events_set(rect, EINA_TRUE);
-   evas_object_color_set(rect, 0, 0, 0, 0);
-   evas_object_size_hint_min_set(rect, 300, 300);
-   elm_table_pack(table, rect, 0, 0, 2, 7);
-   evas_object_show(rect);
-
-   evas_object_show(popup);
-}
-
-static void
 _key_down(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNUSED,
           void *event_info)
 {
@@ -912,8 +806,7 @@ _key_down(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNUSED,
 
    if (!strcmp(k, "Escape") || !strcmp(k, "F5"))
      {
-        if (!ss->ephoto->gadget)
-          _back(ss, NULL, NULL);
+        _back(ss, NULL, NULL);
      }
    else if (!strcmp(k, "F1"))
      {
@@ -1028,15 +921,6 @@ ephoto_slideshow_show_controls(Ephoto *ephoto)
    elm_object_content_set(ss->notify, ss->notify_box);
    evas_object_show(ss->notify_box);
 
-   if (ephoto->gadget)
-     {
-        but = _add_icon(ss->notify_box, "preferences-other", _("Settings"), NULL);
-        evas_object_smart_callback_add(but, "clicked", _gadget_settings, ss);
-        elm_notify_align_set(ss->notify, 0.5, 0.5);
-        elm_notify_timeout_set(ss->notify, 0.0);
-        evas_object_show(ss->notify);
-        return;
-     }
    but = _add_icon(ss->notify_box, "edit-undo", _("Back"), NULL);
    evas_object_smart_callback_add(but, "clicked", _back, ss);
    but = _add_icon(ss->notify_box, "go-first", _("First"), NULL);
@@ -1093,12 +977,9 @@ ephoto_slideshow_add(Ephoto *ephoto, Evas_Object *parent)
 
    elm_layout_file_set(slideshow, PACKAGE_DATA_DIR "/themes/ephoto.edj",
                        "ephoto,slideshow,base");
-   if (ephoto->gadget)
-     elm_layout_signal_emit(slideshow, "gadget", "ephoto");
    evas_object_event_callback_add(slideshow, EVAS_CALLBACK_DEL, _slideshow_del,
                                   ss);
-   if (!ephoto->gadget)
-     evas_object_event_callback_add(slideshow, EVAS_CALLBACK_MOUSE_DOWN,
+   evas_object_event_callback_add(slideshow, EVAS_CALLBACK_MOUSE_DOWN,
                                     _mouse_down, ss);
    evas_object_data_set(slideshow, "slideshow", ss);
    EPHOTO_EXPAND(slideshow);
@@ -1125,8 +1006,6 @@ ephoto_slideshow_entries_set(Evas_Object *obj, Eina_List *entries)
 
    if (entries)
      ss->entries = entries;
-   if (ss->ephoto->gadget)
-     ephoto_slideshow_entry_set(ss->slideshow, eina_list_nth(ss->entries, 0));
 }
 
 void
@@ -1146,10 +1025,8 @@ ephoto_slideshow_entry_set(Evas_Object *obj, Ephoto_Entry *entry)
    if (entry)
      ephoto_entry_free_listener_add(entry, _entry_free, ss);
 
-   if (!ss->ephoto->gadget)
-     ss->timeout = ss->ephoto->config->slideshow_timeout;
-   else
-     ss->timeout = ss->ephoto->gadget_config->slideshow_timeout;
+   ss->timeout = ss->ephoto->config->slideshow_timeout;
+
    _slideshow_play(ss);
    ss->playing = 1;
 
@@ -1191,28 +1068,25 @@ ephoto_slideshow_entry_set(Evas_Object *obj, Ephoto_Entry *entry)
         evas_object_del(ss->event);
         ss->event = NULL;
      }
-   if (!ss->ephoto->gadget)
+
+   ss->event = evas_object_rectangle_add(ss->ephoto->win);
+   evas_object_smart_member_add(ss->event, ss->ephoto->win);
+   evas_object_color_set(ss->event, 0, 0, 0, 0);
+   evas_object_repeat_events_set(ss->event, EINA_TRUE);
+   evas_object_show(ss->event);
+   evas_object_event_callback_add(ss->event, EVAS_CALLBACK_KEY_DOWN, _key_down,
+                            ss);
+   evas_object_raise(ss->event);
+   elm_object_focus_set(ss->event, EINA_TRUE);
+
+   if (ss->notify)
      {
-        ss->event = evas_object_rectangle_add(ss->ephoto->win);
-        evas_object_smart_member_add(ss->event, ss->ephoto->win);
-        evas_object_color_set(ss->event, 0, 0, 0, 0);
-        evas_object_repeat_events_set(ss->event, EINA_TRUE);
-        evas_object_show(ss->event);
-        evas_object_event_callback_add(ss->event, EVAS_CALLBACK_KEY_DOWN, _key_down,
-                                  ss);
-        evas_object_raise(ss->event);
-        elm_object_focus_set(ss->event, EINA_TRUE);
-     }
-   else
-     {
-        if (ss->notify)
+        if (!elm_notify_timeout_get(ss->notify))
           {
-             if (!elm_notify_timeout_get(ss->notify))
-               {
-                  elm_notify_timeout_set(ss->notify, 3.0);
-                  evas_object_show(ss->notify);
-               }
+             elm_notify_timeout_set(ss->notify, 3.0);
+             evas_object_show(ss->notify);
           }
      }
+
 }
 

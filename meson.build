@@ -19,7 +19,6 @@ elm  = dependency('elementary', required: true,  version: efl_version)
 edje = dependency('edje',       required: true,  version: efl_version)
 eipc = dependency('ecore-ipc',  required: true,  version: efl_version)
 exif = dependency('libexif',    required: false, version: '>= 0.6.0')
-depe = dependency('enlightenment', required: false)
 
 ##### dir locations
 dir_prefix = get_option('prefix')
@@ -60,10 +59,7 @@ endif
 if exif.found() == true
     cfg.set       ('HAVE_LIBEXIF'        , 1)
 endif
-if depe.found() == true
-    build_gadget = true
-    cfg.set       ('HAVE_E'              , 1)
-endif
+
 ##### translations
 use_translations = false
 depnls = []

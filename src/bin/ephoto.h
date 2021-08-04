@@ -20,9 +20,6 @@
 # include <Edje.h>
 # include <Evas.h>
 # include <Eio.h>
-#if HAVE_ENLIGHTENMENT
-# include <e_gadget_types.h>
-#endif
 
 # include "config.h"
 
@@ -39,7 +36,6 @@
 
 /*local types*/
 typedef struct _Ephoto_Config             Ephoto_Config;
-typedef struct _Ephoto_Gadget_Config      Ephoto_Gadget_Config;
 typedef struct _Ephoto                    Ephoto;
 typedef struct _Ephoto_Entry              Ephoto_Entry;
 typedef struct _Ephoto_Event_Entry_Create Ephoto_Event_Entry_Create;
@@ -50,7 +46,7 @@ typedef enum _Ephoto_Sort                 Ephoto_Sort;
 typedef enum _Ephoto_Ipc_Domain           Ephoto_Ipc_Domain;
 
 /*main window functions*/
-Evas_Object *ephoto_window_add(const char *path, int gadget, int id);
+Evas_Object *ephoto_window_add(const char *path);
 void         ephoto_title_set(Ephoto *ephoto, const char *title);
 void         ephoto_thumb_size_set(Ephoto *ephoto, int size);
 Evas_Object *ephoto_thumb_add(Ephoto *ephoto, Evas_Object *parent,
@@ -64,10 +60,6 @@ void         ephoto_show_folders(Ephoto *ephoto, Eina_Bool toggle);
 Eina_Bool                  ephoto_config_init(Ephoto *em);
 void                       ephoto_config_save(Ephoto *em);
 void                       ephoto_config_free(Ephoto *em);
-Eina_Bool                  ephoto_gadget_config_init(Ephoto *em, int id, const char *profile);
-void                       ephoto_gadget_config_save(Ephoto *em);
-void                       ephoto_gadget_config_remove(Ephoto *em);
-void                       ephoto_gadget_config_free(Ephoto *em);
 void                       ephoto_config_main(Ephoto *em);
 
 /*single image functions*/
@@ -257,15 +249,6 @@ struct _Ephoto_Config
    Evas_Object *panel_size;
 };
 
-struct _Ephoto_Gadget_Config
-{
-   int        config_version;
-   int         id;
-   const char *profile;
-   const char *directory;
-   double      slideshow_timeout;
-};
-
 struct _Ephoto
 {
    Evas_Object               *win;
@@ -310,7 +293,6 @@ struct _Ephoto
    const char                *destination;
 
    int                        thumb_gen_size;
-   int                        gadget;
 
    struct
    {
@@ -327,11 +309,10 @@ struct _Ephoto
    Ephoto_State               state, prev_state;
 
    Ephoto_Config             *config;
-   Ephoto_Gadget_Config      *gadget_config;
    Ephoto_Sort                sort;
    /* if launched via menu or with no path org_open is NULL
          otherwise stores ephoto->config->open value to restore at exit.*/
-   const char                *org_open;
+   const char                *org_open; 
 };
 
 struct _Ephoto_Entry

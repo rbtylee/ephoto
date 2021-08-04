@@ -2,18 +2,16 @@
 
 static void _ephoto_display_usage(void);
 
-int
-main(int argc, char *argv[])
+EAPI_MAIN int
+elm_main(int argc, char **argv)
 {
-   int gadget = 0, id_num = 0, r = 0;
-   char buf[PATH_MAX];
+   int r = 0;
 
-   elm_init(argc, (char **)argv);
    eio_init();
    elm_need_efreet();
    elm_language_set("");
    elm_app_compile_data_dir_set(PACKAGE_DATA_DIR);
-   elm_app_info_set(main, "ephoto", "themes/ephoto.edj");
+   elm_app_info_set(elm_main, "ephoto", "themes/ephoto.edj");
 #if HAVE_GETTEXT && ENABLE_NLS
    elm_app_compile_locale_set(LOCALEDIR);
    bindtextdomain(PACKAGE, elm_app_locale_dir_get());
@@ -30,30 +28,7 @@ main(int argc, char *argv[])
 
    elm_policy_set(ELM_POLICY_QUIT, ELM_POLICY_QUIT_LAST_WINDOW_CLOSED);
 
-   if (getenv("E_GADGET_ID"))
-     {
-        gadget = 1;
-        snprintf(buf, sizeof(buf), "%s", getenv("E_GADGET_ID"));
-        id_num = atoi(buf);
-     }
-   if (id_num < 0)
-     {
-        Evas_Object *win, *icon;
-
-        win = elm_win_add(NULL, "ephoto", ELM_WIN_BASIC);
-        elm_win_title_set(win, "Ephoto");
-        elm_win_alpha_set(win, 1);
-        elm_win_autodel_set(win, 1);
-        evas_object_size_hint_aspect_set(win, EVAS_ASPECT_CONTROL_BOTH, 1, 1);
-
-        icon = elm_image_add(win);
-        elm_image_file_set(icon, PACKAGE_DATA_DIR "/images/ephoto.png", NULL);
-        elm_win_resize_object_add(win, icon);
-        evas_object_show(icon);
-
-        evas_object_show(win);
-     }
-   else if (argc > 2)
+   if (argc > 2)
      {
         printf("Too Many Arguments!\n");
         _ephoto_display_usage();
@@ -62,7 +37,7 @@ main(int argc, char *argv[])
      }
    else if (argc < 2)
      {
-        Evas_Object *win = ephoto_window_add(NULL, gadget, id_num);
+        Evas_Object *win = ephoto_window_add(NULL);
 
         if (!win)
           {
@@ -86,7 +61,7 @@ main(int argc, char *argv[])
              r = 1;
              goto end;
           }
-        Evas_Object *win = ephoto_window_add(real, gadget, id_num);
+        Evas_Object *win = ephoto_window_add(real);
 
         free(real);
         if (!win)
@@ -96,12 +71,12 @@ main(int argc, char *argv[])
           }
      }
 
-   ecore_main_loop_begin();
+   elm_run();
+
 end:
    e_thumb_shutdown();
    efreet_mime_shutdown();
    eio_shutdown();
-   elm_shutdown();
 
    return r;
 }
@@ -114,3 +89,5 @@ _ephoto_display_usage(void)
                              "ephoto filename : Specifies a file to open\n"
                              "ephoto dirname  : Specifies a directory to open\n");
 }
+
+ELM_MAIN()

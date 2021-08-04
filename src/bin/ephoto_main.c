@@ -102,31 +102,27 @@ _ephoto_slideshow_show(Ephoto *ephoto, Ephoto_Entry *entry)
 {
    _ephoto_state_set(ephoto, EPHOTO_STATE_SLIDESHOW);
    ephoto_slideshow_show_controls(ephoto);
-   if (!ephoto->gadget)
-     {
-        if (ephoto->selentries)
-          ephoto_slideshow_entries_set(ephoto->slideshow, ephoto->selentries);
-        else if (ephoto->searchentries)
-          ephoto_slideshow_entries_set(ephoto->slideshow, ephoto->searchentries);
-        else
-          ephoto_slideshow_entries_set(ephoto->slideshow, ephoto->entries);
-        ephoto_slideshow_entry_set(ephoto->slideshow, entry);
-     }
+
+   if (ephoto->selentries)
+     ephoto_slideshow_entries_set(ephoto->slideshow, ephoto->selentries);
+   else if (ephoto->searchentries)
+     ephoto_slideshow_entries_set(ephoto->slideshow, ephoto->searchentries);
+   else
+     ephoto_slideshow_entries_set(ephoto->slideshow, ephoto->entries);
+   ephoto_slideshow_entry_set(ephoto->slideshow, entry);
+
    evas_object_show(ephoto->slideshow);
-   if (!ephoto->gadget)
-     {
-        evas_object_hide(ephoto->single_browser);
-        evas_object_hide(ephoto->thumb_browser);
-        elm_table_unpack(ephoto->main, ephoto->statusbar);
-        evas_object_hide(ephoto->dir_browser);
-        elm_box_unpack(ephoto->layout, ephoto->dir_browser);
-        evas_object_hide(ephoto->statusbar);
-        evas_object_freeze_events_set(ephoto->single_browser, EINA_TRUE);
-        evas_object_freeze_events_set(ephoto->thumb_browser, EINA_TRUE);
-        elm_table_unpack(ephoto->main, ephoto->statusbar);
-     }
-   if (!ephoto->gadget)
-     elm_object_focus_set(ephoto->slideshow, EINA_TRUE);
+   evas_object_hide(ephoto->single_browser);
+   evas_object_hide(ephoto->thumb_browser);
+   elm_table_unpack(ephoto->main, ephoto->statusbar);
+   evas_object_hide(ephoto->dir_browser);
+   elm_box_unpack(ephoto->layout, ephoto->dir_browser);
+   evas_object_hide(ephoto->statusbar);
+   evas_object_freeze_events_set(ephoto->single_browser, EINA_TRUE);
+   evas_object_freeze_events_set(ephoto->thumb_browser, EINA_TRUE);
+   elm_table_unpack(ephoto->main, ephoto->statusbar);
+
+   elm_object_focus_set(ephoto->slideshow, EINA_TRUE);
    evas_object_freeze_events_set(ephoto->slideshow, EINA_FALSE);
 }
 
@@ -249,14 +245,10 @@ _win_free(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNUSED,
           ecore_event_handler_del(handler);
      }
    ephoto_entries_free(ephoto);
-   if (!ephoto->gadget && ephoto->gadget_config)
-     {
-       if (ephoto->org_open)
-         eina_stringshare_replace(&ephoto->config->open, ephoto->org_open);
-       ephoto_config_save(ephoto);
-     }
-   if (ephoto->gadget_config)
-     ephoto_config_free(ephoto);
+   if (ephoto->org_open)
+     eina_stringshare_replace(&ephoto->config->open, ephoto->org_open);
+   ephoto_config_save(ephoto);
+
    free(ephoto->config);
    free(ephoto);
 }
@@ -269,8 +261,6 @@ _resize_cb(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNUSED,
    Evas_Coord w, h;
 
    if (elm_win_fullscreen_get(ephoto->win))
-     return;
-   if (ephoto->gadget)
      return;
    evas_object_geometry_get(ephoto->win, 0, 0, &w, &h);
    if (w && h)
@@ -374,21 +364,8 @@ ephoto_show_folders(Ephoto *ephoto, Eina_Bool toggle)
      }
 }
 
-static Eina_Bool
-_gadget_removed_cb(void *data, int type EINA_UNUSED, void *event_data)
-{
-   Ecore_Event_Signal_User *user = event_data;
-   Ephoto *ephoto = data;
-   
-   if (user->number == 2)
-     {
-        ephoto_gadget_config_remove(ephoto);
-     }
-   return EINA_TRUE;
-}
-
 Evas_Object *
-ephoto_window_add(const char *path, int gadget, int id)
+ephoto_window_add(const char *path)
 {
    Ephoto *ephoto = calloc(1, sizeof(Ephoto));
    Evas_Object *ic, *but;
@@ -411,17 +388,8 @@ ephoto_window_add(const char *path, int gadget, int id)
    ephoto->thumb_browser_dirty = EINA_FALSE;
    ephoto->entries = NULL;
    ephoto->sort = EPHOTO_SORT_ALPHABETICAL_ASCENDING;
-   ephoto->gadget = gadget;
-   if (!ephoto->gadget)
-     ephoto->win = elm_win_util_standard_add("ephoto", "Ephoto");
-   else
-     {
-        ephoto->win = elm_win_add(NULL, "ephoto", ELM_WIN_BASIC);
-        elm_win_title_set(ephoto->win, "Ephoto");
-        elm_win_alpha_set(ephoto->win, 1);
-        evas_object_size_hint_aspect_set(ephoto->win, EVAS_ASPECT_CONTROL_BOTH, 1,1);
-        ecore_event_handler_add(ECORE_EVENT_SIGNAL_USER, _gadget_removed_cb, ephoto);
-     }
+   ephoto->win = elm_win_util_standard_add("ephoto", "Ephoto");
+
    if (!ephoto->win)
      {
         free(ephoto);
@@ -439,17 +407,7 @@ ephoto_window_add(const char *path, int gadget, int id)
         evas_object_del(ephoto->win);
         return NULL;
      }
-   if (ephoto->gadget)
-     {
-        const char *profile;
-
-        profile = elm_config_profile_get();
-        if (!ephoto_gadget_config_init(ephoto, id, profile))
-          {
-             evas_object_del(ephoto->win);
-             return NULL;
-          }
-     }
+     
    // BODHI HACK
    if (path)
      {
@@ -497,34 +455,32 @@ ephoto_window_add(const char *path, int gadget, int id)
    elm_box_pack_end(ephoto->layout, ephoto->pager);
    evas_object_show(ephoto->pager);
 
-   if (!ephoto->gadget)
+   ephoto->thumb_browser = ephoto_thumb_browser_add(ephoto, ephoto->layout);
+   if (!ephoto->thumb_browser)
      {
-        ephoto->thumb_browser = ephoto_thumb_browser_add(ephoto, ephoto->layout);
-        if (!ephoto->thumb_browser)
-          {
-             evas_object_del(ephoto->win);
-             return NULL;
-          }
-        elm_table_pack(ephoto->pager, ephoto->thumb_browser, 0, 0, 1, 1);
-        evas_object_smart_callback_add(ephoto->thumb_browser, "view",
-                                       _ephoto_thumb_browser_view, ephoto);
-        evas_object_smart_callback_add(ephoto->thumb_browser, "changed,directory",
-                                       _ephoto_thumb_browser_changed_directory, ephoto);
-        evas_object_smart_callback_add(ephoto->thumb_browser, "slideshow",
-                                       _ephoto_thumb_browser_slideshow, ephoto);
-
-        ephoto->single_browser = ephoto_single_browser_add(ephoto, ephoto->layout);
-        if (!ephoto->single_browser)
-          {
-             evas_object_del(ephoto->win);
-             return NULL;
-          }
-        elm_table_pack(ephoto->pager, ephoto->single_browser, 0, 0, 1, 1);
-        evas_object_smart_callback_add(ephoto->single_browser, "back",
-                                       _ephoto_single_browser_back, ephoto);
-        evas_object_smart_callback_add(ephoto->single_browser, "slideshow",
-                                       _ephoto_single_browser_slideshow, ephoto);
+        evas_object_del(ephoto->win);
+        return NULL;
      }
+   elm_table_pack(ephoto->pager, ephoto->thumb_browser, 0, 0, 1, 1);
+   evas_object_smart_callback_add(ephoto->thumb_browser, "view",
+                                  _ephoto_thumb_browser_view, ephoto);
+   evas_object_smart_callback_add(ephoto->thumb_browser, "changed,directory",
+                                  _ephoto_thumb_browser_changed_directory, ephoto);
+   evas_object_smart_callback_add(ephoto->thumb_browser, "slideshow",
+                                  _ephoto_thumb_browser_slideshow, ephoto);
+
+   ephoto->single_browser = ephoto_single_browser_add(ephoto, ephoto->layout);
+   if (!ephoto->single_browser)
+     {
+        evas_object_del(ephoto->win);
+        return NULL;
+     }
+   elm_table_pack(ephoto->pager, ephoto->single_browser, 0, 0, 1, 1);
+   evas_object_smart_callback_add(ephoto->single_browser, "back",
+                                  _ephoto_single_browser_back, ephoto);
+   evas_object_smart_callback_add(ephoto->single_browser, "slideshow",
+                                  _ephoto_single_browser_slideshow, ephoto);
+
    ephoto->slideshow = ephoto_slideshow_add(ephoto, ephoto->layout);
    if (!ephoto->slideshow)
      {
@@ -535,116 +491,115 @@ ephoto_window_add(const char *path, int gadget, int id)
    evas_object_smart_callback_add(ephoto->slideshow, "back",
                                   _ephoto_slideshow_back, ephoto);
 
-   if (!ephoto->gadget)
-     {
-        ephoto->dir_browser = ephoto_directory_browser_add(ephoto, ephoto->layout);
-        EPHOTO_WEIGHT(ephoto->dir_browser, ephoto->config->left_size, EVAS_HINT_EXPAND);
-        EPHOTO_FILL(ephoto->dir_browser);
-        elm_box_pack_start(ephoto->layout, ephoto->dir_browser);
-        evas_object_show(ephoto->dir_browser);
 
-        ephoto->statusbar = elm_box_add(ephoto->main);
-        evas_object_size_hint_min_set(ephoto->statusbar, 20 * elm_config_scale_get(),
-                                      20 * elm_config_scale_get());
-        elm_box_horizontal_set(ephoto->statusbar, EINA_TRUE);
-        EPHOTO_WEIGHT(ephoto->statusbar, EVAS_HINT_EXPAND, EVAS_HINT_FILL);
-        EPHOTO_FILL(ephoto->statusbar);
-        elm_table_pack(ephoto->main, ephoto->statusbar, 0, 2, 1, 1);
-        evas_object_show(ephoto->statusbar);
+   ephoto->dir_browser = ephoto_directory_browser_add(ephoto, ephoto->layout);
+   EPHOTO_WEIGHT(ephoto->dir_browser, ephoto->config->left_size, EVAS_HINT_EXPAND);
+   EPHOTO_FILL(ephoto->dir_browser);
+   elm_box_pack_start(ephoto->layout, ephoto->dir_browser);
+   evas_object_show(ephoto->dir_browser); 
 
-        ic = elm_icon_add(ephoto->statusbar);
-        evas_object_size_hint_min_set(ic, 20 * elm_config_scale_get(),
-                                      20 * elm_config_scale_get());
-        ret = elm_icon_standard_set(ic, "folder");
-        evas_object_size_hint_aspect_set(ic, EVAS_ASPECT_CONTROL_BOTH, 1, 1);
-        ephoto->folders_icon = ic;
+   ephoto->statusbar = elm_box_add(ephoto->main);
+   evas_object_size_hint_min_set(ephoto->statusbar, 20 * elm_config_scale_get(),
+                                20 * elm_config_scale_get());
+   elm_box_horizontal_set(ephoto->statusbar, EINA_TRUE);
+   EPHOTO_WEIGHT(ephoto->statusbar, EVAS_HINT_EXPAND, EVAS_HINT_FILL);
+   EPHOTO_FILL(ephoto->statusbar);
+   elm_table_pack(ephoto->main, ephoto->statusbar, 0, 2, 1, 1);
+   evas_object_show(ephoto->statusbar);
 
-        but = elm_button_add(ephoto->statusbar);
-        elm_object_part_content_set(but, "icon", ic);
-        if (!ret)
-          elm_object_text_set(but, _("Show Folders"));
-        evas_object_smart_callback_add(but, "clicked", _folder_icon_clicked, ephoto);
-        elm_object_tooltip_text_set(but, _("Show Folders"));
-        elm_object_tooltip_orient_set(but, ELM_TOOLTIP_ORIENT_RIGHT);
-        elm_box_pack_end(ephoto->statusbar, but);
-        evas_object_show(but);
-        ephoto->folders_button = but;
+   ic = elm_icon_add(ephoto->statusbar);
+   evas_object_size_hint_min_set(ic, 20 * elm_config_scale_get(),
+                                20 * elm_config_scale_get());
+   ret = elm_icon_standard_set(ic, "folder");
+   evas_object_size_hint_aspect_set(ic, EVAS_ASPECT_CONTROL_BOTH, 1, 1);
+   ephoto->folders_icon = ic;
 
-        ephoto->controls_left = elm_box_add(ephoto->statusbar);
-        elm_box_horizontal_set(ephoto->controls_left, EINA_TRUE);
-        EPHOTO_WEIGHT(ephoto->controls_left, EVAS_HINT_FILL, EVAS_HINT_FILL);
-        EPHOTO_FILL(ephoto->controls_left);
-        elm_box_pack_end(ephoto->statusbar, ephoto->controls_left);
-        evas_object_show(ephoto->controls_left);
+   but = elm_button_add(ephoto->statusbar);
+   elm_object_part_content_set(but, "icon", ic);
+   if (!ret)
+     elm_object_text_set(but, _("Show Folders"));
+   evas_object_smart_callback_add(but, "clicked", _folder_icon_clicked, ephoto);
+   elm_object_tooltip_text_set(but, _("Show Folders"));
+   elm_object_tooltip_orient_set(but, ELM_TOOLTIP_ORIENT_RIGHT);
+   elm_box_pack_end(ephoto->statusbar, but);
+   evas_object_show(but);
+   ephoto->folders_button = but; 
 
-        ephoto->infolabel = elm_label_add(ephoto->statusbar);
-        elm_object_style_set(ephoto->infolabel, "info");
-        elm_label_line_wrap_set(ephoto->infolabel, ELM_WRAP_MIXED);
-        elm_label_ellipsis_set(ephoto->infolabel, EINA_TRUE);
-        elm_object_text_set(ephoto->infolabel, _("Information"));
-        EPHOTO_EXPAND(ephoto->infolabel);
-        EPHOTO_FILL(ephoto->infolabel);
+   ephoto->controls_left = elm_box_add(ephoto->statusbar);
+   elm_box_horizontal_set(ephoto->controls_left, EINA_TRUE);
+   EPHOTO_WEIGHT(ephoto->controls_left, EVAS_HINT_FILL, EVAS_HINT_FILL);
+   EPHOTO_FILL(ephoto->controls_left);
+   elm_box_pack_end(ephoto->statusbar, ephoto->controls_left);
+   evas_object_show(ephoto->controls_left);
 
-        elm_box_pack_end(ephoto->statusbar, ephoto->infolabel);
-        evas_object_show(ephoto->infolabel);
+   ephoto->infolabel = elm_label_add(ephoto->statusbar);
+   elm_object_style_set(ephoto->infolabel, "info");
+   elm_label_line_wrap_set(ephoto->infolabel, ELM_WRAP_MIXED);
+   elm_label_ellipsis_set(ephoto->infolabel, EINA_TRUE);
+   elm_object_text_set(ephoto->infolabel, _("Information"));
+   EPHOTO_EXPAND(ephoto->infolabel);
+   EPHOTO_FILL(ephoto->infolabel);
 
-        ephoto->controls_right = elm_box_add(ephoto->statusbar);
-        elm_box_horizontal_set(ephoto->controls_right, EINA_TRUE);
-        EPHOTO_WEIGHT(ephoto->controls_right, EVAS_HINT_FILL, EVAS_HINT_FILL);
-        EPHOTO_FILL(ephoto->controls_right);
-        elm_box_pack_end(ephoto->statusbar, ephoto->controls_right);
-        evas_object_show(ephoto->controls_right);
+   elm_box_pack_end(ephoto->statusbar, ephoto->infolabel);
+   evas_object_show(ephoto->infolabel);
 
-        ic = elm_icon_add(ephoto->statusbar);
-        evas_object_size_hint_min_set(ic, 20 * elm_config_scale_get(),
-                                      20 * elm_config_scale_get());
-        ret = elm_icon_standard_set(ic, "media-playback-start");
-        evas_object_size_hint_aspect_set(ic, EVAS_ASPECT_CONTROL_BOTH, 1, 1);
+   ephoto->controls_right = elm_box_add(ephoto->statusbar);
+   elm_box_horizontal_set(ephoto->controls_right, EINA_TRUE);
+   EPHOTO_WEIGHT(ephoto->controls_right, EVAS_HINT_FILL, EVAS_HINT_FILL);
+   EPHOTO_FILL(ephoto->controls_right);
+   elm_box_pack_end(ephoto->statusbar, ephoto->controls_right);
+   evas_object_show(ephoto->controls_right); 
 
-        but = elm_button_add(ephoto->statusbar);
-        elm_object_part_content_set(but, "icon", ic);
-        if (!ret)
-          elm_object_text_set(but, _("Slideshow"));
-        evas_object_smart_callback_add(but, "clicked",
-                                       _slideshow_icon_clicked, ephoto);
-        elm_object_tooltip_text_set(but, _("Slideshow"));
-        elm_object_tooltip_orient_set(but, ELM_TOOLTIP_ORIENT_TOP);
-        elm_box_pack_end(ephoto->statusbar, but);
-        evas_object_show(but);
+   ic = elm_icon_add(ephoto->statusbar);
+  evas_object_size_hint_min_set(ic, 20 * elm_config_scale_get(), 
+                                20 * elm_config_scale_get());
+   ret = elm_icon_standard_set(ic, "media-playback-start");
+   evas_object_size_hint_aspect_set(ic, EVAS_ASPECT_CONTROL_BOTH, 1, 1);
 
-        ic = elm_icon_add(ephoto->statusbar);
-        evas_object_size_hint_min_set(ic, 20 * elm_config_scale_get(),
-                                      20 * elm_config_scale_get());
-        ret = elm_icon_standard_set(ic, "preferences-other");
-        evas_object_size_hint_aspect_set(ic, EVAS_ASPECT_CONTROL_BOTH, 1, 1);
+   but = elm_button_add(ephoto->statusbar);
+   elm_object_part_content_set(but, "icon", ic);
+   if (!ret)
+     elm_object_text_set(but, _("Slideshow"));
+   evas_object_smart_callback_add(but, "clicked",
+                                 _slideshow_icon_clicked, ephoto);
+   elm_object_tooltip_text_set(but, _("Slideshow"));
+   elm_object_tooltip_orient_set(but, ELM_TOOLTIP_ORIENT_TOP);
+   elm_box_pack_end(ephoto->statusbar, but);
+   evas_object_show(but); 
 
-        but = elm_button_add(ephoto->statusbar);
-        elm_object_part_content_set(but, "icon", ic);
-        if (!ret)
-          elm_object_text_set(but, _("Settings"));
-        evas_object_smart_callback_add(but, "clicked",
-                                       _settings_icon_clicked, ephoto);
-        elm_object_tooltip_text_set(but, _("Settings"));
-        elm_object_tooltip_orient_set(but, ELM_TOOLTIP_ORIENT_TOP);
-        elm_box_pack_end(ephoto->statusbar, but);
-        evas_object_show(but);
+   ic = elm_icon_add(ephoto->statusbar);
+   evas_object_size_hint_min_set(ic, 20 * elm_config_scale_get(),
+                                20 * elm_config_scale_get());
+   ret = elm_icon_standard_set(ic, "preferences-other");
+   evas_object_size_hint_aspect_set(ic, EVAS_ASPECT_CONTROL_BOTH, 1, 1);
 
-        ic = elm_icon_add(ephoto->statusbar);
-        evas_object_size_hint_min_set(ic, 20 * elm_config_scale_get(),
-                                      20 * elm_config_scale_get());
-        ret = elm_icon_standard_set(ic, "application-exit");
-        evas_object_size_hint_aspect_set(ic, EVAS_ASPECT_CONTROL_BOTH, 1, 1);
+   but = elm_button_add(ephoto->statusbar);
+   elm_object_part_content_set(but, "icon", ic);
+   if (!ret)
+     elm_object_text_set(but, _("Settings"));
+   evas_object_smart_callback_add(but, "clicked",
+                                 _settings_icon_clicked, ephoto);
+   elm_object_tooltip_text_set(but, _("Settings"));
+   elm_object_tooltip_orient_set(but, ELM_TOOLTIP_ORIENT_TOP);
+   elm_box_pack_end(ephoto->statusbar, but);
+   evas_object_show(but);
 
-        ephoto->exit = elm_button_add(ephoto->statusbar);
-        elm_object_part_content_set(ephoto->exit, "icon", ic);
-        if (!ret)
-          elm_object_text_set(ephoto->exit, _("Exit"));
-        evas_object_smart_callback_add(ephoto->exit, "clicked",
-                                       _exit_icon_clicked, ephoto);
-        elm_object_tooltip_text_set(ephoto->exit, _("Exit"));
-        elm_object_tooltip_orient_set(ephoto->exit, ELM_TOOLTIP_ORIENT_TOP);
-        evas_object_hide(ephoto->exit);
-     }
+   ic = elm_icon_add(ephoto->statusbar);
+   evas_object_size_hint_min_set(ic, 20 * elm_config_scale_get(),
+                                20 * elm_config_scale_get());
+   ret = elm_icon_standard_set(ic, "application-exit");
+   evas_object_size_hint_aspect_set(ic, EVAS_ASPECT_CONTROL_BOTH, 1, 1);
+
+   ephoto->exit = elm_button_add(ephoto->statusbar);
+   elm_object_part_content_set(ephoto->exit, "icon", ic);
+   if (!ret)
+     elm_object_text_set(ephoto->exit, _("Exit"));
+   evas_object_smart_callback_add(ephoto->exit, "clicked",
+                                 _exit_icon_clicked, ephoto);
+   elm_object_tooltip_text_set(ephoto->exit, _("Exit"));
+   elm_object_tooltip_orient_set(ephoto->exit, ELM_TOOLTIP_ORIENT_TOP);
+   evas_object_hide(ephoto->exit);
+
    if ((!path) || (!ecore_file_exists(path)))
      {
         if (ephoto->config->open)
@@ -670,10 +625,7 @@ ephoto_window_add(const char *path, int gadget, int id)
         char *rp = ecore_file_realpath(path);
         eina_stringshare_replace(&ephoto->config->directory, rp);
         free(rp);
-        if (!ephoto->gadget)
-          _ephoto_thumb_browser_show(ephoto, NULL);
-        else
-          _ephoto_slideshow_show(ephoto, NULL);
+        _ephoto_thumb_browser_show(ephoto, NULL);
      }
    else
      {
@@ -683,17 +635,12 @@ ephoto_window_add(const char *path, int gadget, int id)
         eina_stringshare_replace(&ephoto->config->directory, rp);
         free(rp);
         free(dir);
-        if (!ephoto->gadget)
-          {
-             ephoto_single_browser_path_pending_set(ephoto->single_browser, path);
-             evas_object_hide(ephoto->thumb_browser);
-             evas_object_hide(ephoto->slideshow);
-             evas_object_show(ephoto->single_browser);
-             ephoto_single_browser_show_controls(ephoto);
-             ephoto->state = EPHOTO_STATE_SLIDESHOW;
-          }
-        else
-          _ephoto_slideshow_show(ephoto, NULL);
+        ephoto_single_browser_path_pending_set(ephoto->single_browser, path);
+        evas_object_hide(ephoto->thumb_browser);
+        evas_object_hide(ephoto->slideshow);
+        evas_object_show(ephoto->single_browser);
+        ephoto_single_browser_show_controls(ephoto);
+        ephoto->state = EPHOTO_STATE_SLIDESHOW;
      }
 
    snprintf(config, PATH_MAX, "%s/.config/ephoto", eina_environment_home_get());
@@ -701,45 +648,37 @@ ephoto_window_add(const char *path, int gadget, int id)
    snprintf(trash, PATH_MAX, "%s/trash", ephoto->config_path);
    ephoto->trash_path = eina_stringshare_add(trash);
 
-   if (!ephoto->gadget)
-     {
-        ephoto_directory_browser_top_dir_set(ephoto, ephoto->config->directory);
-        ephoto_directory_browser_initialize_structure(ephoto, (char *)ephoto->config->open);
-        evas_object_resize(ephoto->win, ephoto->config->window_width,
-                           ephoto->config->window_height);
-     }
+   ephoto_directory_browser_top_dir_set(ephoto, ephoto->config->directory);
+   ephoto_directory_browser_initialize_structure(ephoto, (char *)ephoto->config->open);
+   evas_object_resize(ephoto->win, ephoto->config->window_width,
+                      ephoto->config->window_height);
+
    evas_object_show(ephoto->win);
 
-   if (!ephoto->gadget)
+   if (!ephoto->config->folders)
      {
-        if (!ephoto->config->folders)
-          {
-             evas_object_hide(ephoto->dir_browser);
-             elm_box_unpack(ephoto->layout, ephoto->dir_browser);
-             ephoto->folders_toggle = EINA_FALSE;
-             ret = elm_icon_standard_set(ephoto->folders_icon, "folder");
-             if (!ret)
-               elm_object_text_set(ephoto->folders_button, _("Show Folders"));
-             elm_object_tooltip_text_set(ephoto->folders_button, _("Show Folders"));
-          }
-        else
-          {
-             ephoto->folders_toggle = EINA_TRUE;
-             ret = elm_icon_standard_set(ephoto->folders_icon, "folder-open");
-             if (!ret)
-               elm_object_text_set(ephoto->folders_button, _("Hide Folders"));
-             elm_object_tooltip_text_set(ephoto->folders_button, _("Hide Folders"));
-          }
-        if (ephoto->config->firstrun)
-          {
-             _settings_icon_clicked(ephoto, NULL, NULL);
-             ephoto->config->firstrun = 0;
-          }
+        evas_object_hide(ephoto->dir_browser);
+        elm_box_unpack(ephoto->layout, ephoto->dir_browser);
+        ephoto->folders_toggle = EINA_FALSE;
+        ret = elm_icon_standard_set(ephoto->folders_icon, "folder");
+        if (!ret)
+          elm_object_text_set(ephoto->folders_button, _("Show Folders"));
+        elm_object_tooltip_text_set(ephoto->folders_button, _("Show Folders"));
      }
    else
      {
-        ephoto_directory_set(ephoto, ephoto->gadget_config->directory, NULL, EINA_FALSE, EINA_TRUE);
+        ephoto->folders_toggle = EINA_TRUE;
+        ret = elm_icon_standard_set(ephoto->folders_icon, "folder-open");
+        if (!ret)
+          elm_object_text_set(ephoto->folders_button, _("Hide Folders"));
+        elm_object_tooltip_text_set(ephoto->folders_button, _("Hide Folders"));
      }
+   if (ephoto->config->firstrun)
+     {
+        _settings_icon_clicked(ephoto, NULL, NULL);
+        ephoto->config->firstrun = 0;
+     }
+
    return ephoto->win;
 }
 
@@ -892,18 +831,10 @@ _ephoto_populate_end(void *data, Eio_File *handler EINA_UNUSED)
 
    ed->ephoto->ls = NULL;
 
-   if (!ed->ephoto->gadget)
-     {
-        if (eina_list_count(ed->ephoto->entries))
-          ephoto_single_browser_entries_set(ed->ephoto->single_browser,
-                                            ed->ephoto->entries);
-     }
-   else
-     {
-        if (eina_list_count(ed->ephoto->entries))
-          ephoto_slideshow_entries_set(ed->ephoto->slideshow,
+   if (eina_list_count(ed->ephoto->entries))
+     ephoto_single_browser_entries_set(ed->ephoto->single_browser,
                                        ed->ephoto->entries);
-     }
+
    ecore_event_add(EPHOTO_EVENT_POPULATE_END, NULL, NULL, NULL);
    free(ed);
 }
@@ -1065,12 +996,6 @@ ephoto_directory_set(Ephoto *ephoto, const char *path, Evas_Object *expanded,
    if (ed->ephoto->job.change_dir)
      ecore_job_del(ed->ephoto->job.change_dir);
    ed->ephoto->job.change_dir = ecore_job_add(_ephoto_change_dir, ed);
-
-   if (ephoto->gadget)
-     {
-        free(rp);
-        return;
-     }
 
    if (ephoto->monitor)
      {
