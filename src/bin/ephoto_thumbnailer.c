@@ -43,7 +43,7 @@ static char     *_e_thumb_file_id(char *file,
 static Ecore_Ipc_Server *_e_ipc_server = NULL;
 static Eina_List *_thumblist = NULL;
 static Ecore_Timer *_timer = NULL;
-static char _thumbdir[4096] = "";
+static char _thumbdir[PATH_MAX] = "";
 
 /* externally accessible functions */
 int

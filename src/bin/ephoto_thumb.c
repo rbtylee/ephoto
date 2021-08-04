@@ -130,7 +130,7 @@ void
 e_thumb_icon_begin(Evas_Object *obj)
 {
    E_Thumb *eth, *eth2;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    eth = evas_object_data_get(obj, "e_thumbdata");
    if (!eth) return;
@@ -435,7 +435,7 @@ _e_thumb_cb_exe_event_del(void *data EINA_UNUSED, int type EINA_UNUSED, void *ev
         while ((int)eina_list_count(_thumbnailers_exe) < _num_thumbnailers)
           {
              Ecore_Exe *exe_thumb;
-             char buf[4096];
+             char buf[PATH_MAX];
 
              snprintf(buf, sizeof(buf),
                       "%s/ephoto/ephoto_thumbnail --nice=1", PACKAGE_LIB_DIR);

@@ -6,7 +6,7 @@ int
 main(int argc, char *argv[])
 {
    int gadget = 0, id_num = 0, r = 0;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    elm_init(argc, (char **)argv);
    eio_init();
