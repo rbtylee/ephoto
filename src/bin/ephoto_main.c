@@ -249,8 +249,12 @@ _win_free(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNUSED,
           ecore_event_handler_del(handler);
      }
    ephoto_entries_free(ephoto);
-   if (!ephoto->gadget)
-     ephoto_config_save(ephoto);
+   if (!ephoto->gadget && ephoto->gadget_config)
+     {
+       if (ephoto->org_open)
+         eina_stringshare_replace(&ephoto->config->open, ephoto->org_open);
+       ephoto_config_save(ephoto);
+     }
    if (ephoto->gadget_config)
      ephoto_config_free(ephoto);
    free(ephoto->config);
@@ -445,6 +449,26 @@ ephoto_window_add(const char *path, int gadget, int id)
              evas_object_del(ephoto->win);
              return NULL;
           }
+     }
+   // BODHI HACK
+   if (path)
+     {
+        eina_stringshare_replace(&ephoto->org_open, ephoto->config->open);
+        char *dir = ecore_file_dir_get(path);
+        const char *home = eina_environment_home_get();
+        char *rp = ecore_file_realpath(dir);
+        if (strstr(rp, home))
+          {
+             if (ecore_file_can_read(rp) && ecore_file_exists(rp))
+               eina_stringshare_replace(&ephoto->config->open, home);
+          }
+        else
+          {
+             if (ecore_file_can_read(rp) && ecore_file_exists(rp))
+               eina_stringshare_replace(&ephoto->config->open, rp);
+          }
+        free(dir);
+        free(rp);
      }
 
    if ((ephoto->config->thumb_gen_size != 128) &&

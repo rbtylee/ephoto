@@ -329,6 +329,9 @@ struct _Ephoto
    Ephoto_Config             *config;
    Ephoto_Gadget_Config      *gadget_config;
    Ephoto_Sort                sort;
+   /* if launched via menu or with no path org_open is NULL
+         otherwise stores ephoto->config->open value to restore at exit.*/
+   const char                *org_open;
 };
 
 struct _Ephoto_Entry
