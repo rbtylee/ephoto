@@ -1070,7 +1070,7 @@ ephoto_thumb_browser_update_info_label(Ephoto *ephoto)
 {
    char buf[PATH_MAX];
    char isize[PATH_MAX];
-   char image_info[PATH_MAX];
+   char image_info[PATH_MAX + 28];
    double totsize;
    Ephoto_Thumb_Browser *tb = evas_object_data_get(ephoto->thumb_browser,
                                                    "thumb_browser");
@@ -1123,7 +1123,7 @@ ephoto_thumb_browser_update_info_label(Ephoto *ephoto)
                     }
                }
           }
-        snprintf(image_info, PATH_MAX, "<b>%s:</b> %d %s        <b>%s:</b> %s",
+        snprintf(image_info, PATH_MAX + 28, "<b>%s:</b> %d %s        <b>%s:</b> %s",
                  _("Total"), tb->totimages, ngettext("image", "images",
                                                      tb->totimages), _("Size"), isize);
         elm_object_text_set(tb->ephoto->infolabel, image_info);

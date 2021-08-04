@@ -590,7 +590,7 @@ static int
 _ephoto_config_load(Ephoto *ephoto)
 {
    Eet_File *ef;
-   char buf[4096], buf2[4096];
+   char buf[PATH_MAX+12], buf2[PATH_MAX];
 
    snprintf(buf2, sizeof(buf2), "%s/ephoto", efreet_config_home_get());
    ecore_file_mkpath(buf2);
@@ -629,7 +629,7 @@ _ephoto_on_config_save(void *data)
 {
    Ephoto *ephoto = data;
    Eet_File *ef;
-   char buf[4096], buf2[4096];
+   char buf[PATH_MAX], buf2[PATH_MAX + 4];
 
    snprintf(buf, sizeof(buf), "%s/ephoto/ephoto.cfg", efreet_config_home_get());
    snprintf(buf2, sizeof(buf2), "%s.tmp", buf);
@@ -857,7 +857,7 @@ static int
 _ephoto_gadget_config_load(Ephoto *ephoto, int id, const char *profile)
 {
    Eet_File *ef;
-   char buf[4096], buf2[4096];
+   char buf[PATH_MAX + 42], buf2[PATH_MAX];
 
    if (id >= 0)
      {
@@ -899,7 +899,7 @@ _ephoto_gadget_on_config_save(void *data)
 {
    Ephoto *ephoto = data;
    Eet_File *ef;
-   char buf[4096], buf2[4096];
+   char buf[PATH_MAX], buf2[PATH_MAX + 4];
 
    if (ephoto->gadget_config->id >= 0)
      {
@@ -944,7 +944,7 @@ ephoto_gadget_config_free(Ephoto *ephoto)
 void
 ephoto_gadget_config_remove(Ephoto *ephoto)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
 
    printf("%d x %s\n", ephoto->gadget_config->id, ephoto->gadget_config->profile);
    if (ephoto->gadget_config->id >= 0)
