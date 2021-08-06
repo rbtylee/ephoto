@@ -274,11 +274,13 @@ _on_list_expanded(void *data, Evas_Object *obj EINA_UNUSED, void *event_info)
    entry = elm_object_item_data_get(it);
    path = entry->path;
    db->dirs_only = 0;
+   /* Breaks display of images upon opening
    if (!strcmp(path, db->ephoto->config->directory))
      {
         db->dirs_only = 1;
         ephoto_thumb_browser_dirs_only_set(db->ephoto, EINA_TRUE);
      }
+     */
    db->thumbs_only = 0;
    ephoto_directory_set(db->ephoto, path, it, db->dirs_only, db->thumbs_only);
    ephoto_title_set(db->ephoto, db->ephoto->config->directory);
@@ -1278,7 +1280,7 @@ ephoto_directory_browser_initialize_structure(Ephoto *ephoto, char *rp)
         cur = next;
         if (!cur)
           cur = tentry->item;
-	EINA_ITERATOR_FOREACH(it, finfo)
+          EINA_ITERATOR_FOREACH(it, finfo)
           {
              char *rp = ecore_file_realpath(finfo->path);
              if (finfo->type != EINA_FILE_DIR && finfo->type != EINA_FILE_LNK)

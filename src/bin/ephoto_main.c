@@ -414,7 +414,11 @@ ephoto_window_add(const char *path)
         eina_stringshare_replace(&ephoto->org_open, ephoto->config->open);
         char *dir = ecore_file_dir_get(path);
         const char *home = eina_environment_home_get();
-        char *rp = ecore_file_realpath(dir);
+        char *rp;
+        if (ecore_file_is_dir(path))
+           rp = ecore_file_realpath(path);
+        else
+           rp = ecore_file_realpath(dir);
         if (strstr(rp, home))
           {
              if (ecore_file_can_read(rp) && ecore_file_exists(rp))
