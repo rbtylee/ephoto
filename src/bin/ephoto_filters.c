@@ -905,7 +905,7 @@ _sobel(void *data, Ecore_Thread *th EINA_UNUSED)
                          }
                     }
                }
-             pval = abs(hpval) + abs(vpval);
+             pval = fabs(hpval) + fabs(vpval);
              *p = pval;
              b = ((*p) & 0xff);
              g = ((*p >> 8) & 0xff);
