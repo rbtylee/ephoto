@@ -2551,6 +2551,8 @@ ephoto_single_browser_show_controls(Ephoto *ephoto)
    evas_object_smart_callback_add(but, "clicked", _save_image_as, sb);
    elm_box_pack_end(ephoto->controls_right, but);
    evas_object_show(but);
+   _edit_function_item_add(ephoto->controls_right, "document-send", _("Upload"), _upload_image,
+                           sb);
 }
 
 Evas_Object *
