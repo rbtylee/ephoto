@@ -8,6 +8,14 @@ static Eina_Bool _ephoto_on_config_save(void *data);
 static Eet_Data_Descriptor *edd = NULL;
 
 static void
+_config_popup_dismissed_cb(void *data, Evas_Object *obj EINA_UNUSED,
+                           void *event_info EINA_UNUSED)
+{
+   Evas_Object *popup = data;
+   evas_object_del(popup);
+}
+
+static void
 _config_save_cb(void *data, Evas_Object *obj EINA_UNUSED,
                 void *event_info EINA_UNUSED)
 {
@@ -66,7 +74,8 @@ _config_save_cb(void *data, Evas_Object *obj EINA_UNUSED,
      eina_stringshare_replace(&ephoto->config->slideshow_transition,
                               elm_object_text_get(ephoto->config->slide_trans));
 
-   evas_object_del(popup);
+   evas_object_smart_callback_add(popup, "dismissed", _config_popup_dismissed_cb, popup);
+   elm_popup_dismiss(popup);
    elm_object_focus_set(ephoto->pager, EINA_TRUE);
    if (ephoto->state == EPHOTO_STATE_THUMB)
      ephoto_thumb_browser_recalc(ephoto);
