@@ -484,7 +484,6 @@ ephoto_window_add(const char *path)
                                   _ephoto_single_browser_back, ephoto);
    evas_object_smart_callback_add(ephoto->single_browser, "slideshow",
                                   _ephoto_single_browser_slideshow, ephoto);
-
    ephoto->slideshow = ephoto_slideshow_add(ephoto, ephoto->layout);
    if (!ephoto->slideshow)
      {
@@ -500,7 +499,7 @@ ephoto_window_add(const char *path)
    EPHOTO_WEIGHT(ephoto->dir_browser, ephoto->config->left_size, EVAS_HINT_EXPAND);
    EPHOTO_FILL(ephoto->dir_browser);
    elm_box_pack_start(ephoto->layout, ephoto->dir_browser);
-   evas_object_show(ephoto->dir_browser); 
+   evas_object_show(ephoto->dir_browser);
 
    ephoto->statusbar = elm_box_add(ephoto->main);
    evas_object_size_hint_min_set(ephoto->statusbar, 20 * elm_config_scale_get(),
@@ -552,10 +551,10 @@ ephoto_window_add(const char *path)
    EPHOTO_WEIGHT(ephoto->controls_right, EVAS_HINT_FILL, EVAS_HINT_FILL);
    EPHOTO_FILL(ephoto->controls_right);
    elm_box_pack_end(ephoto->statusbar, ephoto->controls_right);
-   evas_object_show(ephoto->controls_right); 
+   evas_object_show(ephoto->controls_right);
 
    ic = elm_icon_add(ephoto->statusbar);
-  evas_object_size_hint_min_set(ic, 20 * elm_config_scale_get(), 
+   evas_object_size_hint_min_set(ic, 20 * elm_config_scale_get(),
                                 20 * elm_config_scale_get());
    ret = elm_icon_standard_set(ic, "media-playback-start");
    evas_object_size_hint_aspect_set(ic, EVAS_ASPECT_CONTROL_BOTH, 1, 1);
@@ -569,7 +568,7 @@ ephoto_window_add(const char *path)
    elm_object_tooltip_text_set(but, _("Slideshow"));
    elm_object_tooltip_orient_set(but, ELM_TOOLTIP_ORIENT_TOP);
    elm_box_pack_end(ephoto->statusbar, but);
-   evas_object_show(but); 
+   evas_object_show(but);
 
    ic = elm_icon_add(ephoto->statusbar);
    evas_object_size_hint_min_set(ic, 20 * elm_config_scale_get(),
@@ -642,9 +641,12 @@ ephoto_window_add(const char *path)
         ephoto_single_browser_path_pending_set(ephoto->single_browser, path);
         evas_object_hide(ephoto->thumb_browser);
         evas_object_hide(ephoto->slideshow);
+        evas_object_hide(ephoto->dir_browser);
+        elm_box_unpack(ephoto->layout, ephoto->dir_browser);
+        ephoto->folders_toggle = EINA_FALSE;
         evas_object_show(ephoto->single_browser);
         ephoto_single_browser_show_controls(ephoto);
-        ephoto->state = EPHOTO_STATE_SLIDESHOW;
+        ephoto->state = EPHOTO_STATE_SINGLE;
      }
 
    snprintf(config, PATH_MAX, "%s/.config/ephoto", eina_environment_home_get());
