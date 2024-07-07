@@ -2174,23 +2174,23 @@ ephoto_single_browser_entries_set(Evas_Object *obj, Eina_List *entries)
           {
              if (v)
                {
-                  const char *image;
-                  char *dir;
+                  //~ const char *image;
+                  //~ char *dir;
 
-                  elm_image_file_get(v->image, &image, NULL);
-                  dir = ecore_file_dir_get(image);
-                  if (!dir)
-                    {
-                       ephoto_single_browser_entry_set(sb->main,
-                                                       _first_entry_find(sb));
-                    }
-                  else
-                    {
-                       if (strcmp(sb->ephoto->config->directory, dir))
-                         ephoto_single_browser_entry_set(sb->main,
-                                                         _first_entry_find(sb));
-                       free(dir);
-                    }
+                  //~ elm_image_file_get(v->image, &image, NULL);
+                  //~ dir = ecore_file_dir_get(image);
+                  //~ if (!dir)
+                    //~ {
+                       //~ ephoto_single_browser_entry_set(sb->main,
+                                                       //~ _first_entry_find(sb));
+                    //~ }
+                  //~ if (dir)
+                    //~ {
+                       //~ if (strcmp(sb->ephoto->config->directory, dir))
+                         //~ ephoto_single_browser_entry_set(sb->main,
+                                                         //~ _first_entry_find(sb));
+                       //~ free(dir);
+                    //~ }
                }
              else
                ephoto_single_browser_entry_set(sb->main,
