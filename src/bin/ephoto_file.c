@@ -1178,7 +1178,7 @@ _prompt_upload_apply(void *data, Evas_Object *obj EINA_UNUSED,
    ecore_con_url_additional_header_add(ephoto->url_up, "Authorization",
                                        "Client-ID 67aecc7e6662370");
    ecore_con_url_http_version_set(ephoto->url_up, ECORE_CON_URL_HTTP_VERSION_1_0);
-   ecore_con_url_post(ephoto->url_up, fdata, fsize, NULL);
+   ecore_con_url_post(ephoto->url_up, fdata, fsize, "application/x-e-shot");
 }
 
 static void
