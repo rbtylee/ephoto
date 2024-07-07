@@ -1649,18 +1649,18 @@ _edit_function_item_add(Evas_Object *parent, const char *icon, const char *label
    Evas_Object *button, *ic;
 
    ic = elm_icon_add(parent);
-   evas_object_size_hint_min_set(ic, 20 * elm_config_scale_get(),
-                                 20 * elm_config_scale_get());
+   //~ evas_object_size_hint_min_set(ic, 20 * elm_config_scale_get(),
+                                 //~ 20 * elm_config_scale_get());
    evas_object_size_hint_aspect_set(ic, EVAS_ASPECT_CONTROL_VERTICAL, 1, 1);
    elm_icon_standard_set(ic, icon);
 
    button = elm_button_add(parent);
    elm_object_tooltip_text_set(button, label);
-   elm_object_tooltip_orient_set(button, ELM_TOOLTIP_ORIENT_LEFT);
+   elm_object_tooltip_orient_set(button, ELM_TOOLTIP_ORIENT_TOP);
    elm_object_tooltip_window_mode_set(button, EINA_TRUE);
    elm_object_part_content_set(button, "icon", ic);
-   evas_object_size_hint_min_set(button, 30 * elm_config_scale_get(),
-                                 30 * elm_config_scale_get());
+   //~ evas_object_size_hint_min_set(button, 30 * elm_config_scale_get(),
+                                 //~ 30 * elm_config_scale_get());
    evas_object_smart_callback_add(button, "clicked", callback, data);
    EPHOTO_WEIGHT(button, EVAS_HINT_FILL, EVAS_HINT_FILL);
    EPHOTO_FILL(button);
