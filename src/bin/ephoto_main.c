@@ -661,7 +661,7 @@ ephoto_window_add(const char *path)
 
    evas_object_show(ephoto->win);
 
-   if (!ephoto->config->folders)
+   if (!ephoto->config->folders || !ecore_file_is_dir(path))
      {
         evas_object_hide(ephoto->dir_browser);
         elm_box_unpack(ephoto->layout, ephoto->dir_browser);
