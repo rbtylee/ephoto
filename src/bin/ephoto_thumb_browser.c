@@ -1698,18 +1698,12 @@ _ephoto_main_key_down(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNU
         if ((!strcasecmp(k, "plus")) || (!strcasecmp(k, "equal")))
           {
              int zoom = tb->ephoto->config->thumb_size + ZOOM_STEP;
-
              _ephoto_thumb_zoom_set(tb, zoom);
           }
         else if ((!strcasecmp(k, "minus")) || (!strcasecmp(k, "underscore")))
           {
              int zoom = tb->ephoto->config->thumb_size - ZOOM_STEP;
-
              _ephoto_thumb_zoom_set(tb, zoom);
-          }
-        else if (!strcasecmp(k, "Tab"))
-          {
-             _view_single(tb, NULL, NULL);
           }
         else if (!strcasecmp(k, "c"))
           {
@@ -1752,6 +1746,10 @@ _ephoto_main_key_down(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNU
              else
                _grid_menu_delete_cb(tb, NULL, NULL);
           }
+     }
+   else if (!strcasecmp(k, "Return"))
+     {
+        _view_single(tb, NULL, NULL);
      }
    else if (!strcasecmp(k, "F1"))
      {
