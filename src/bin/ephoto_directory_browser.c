@@ -1280,7 +1280,7 @@ ephoto_directory_browser_initialize_structure(Ephoto *ephoto, char *rp)
         cur = next;
         if (!cur)
           cur = tentry->item;
-          EINA_ITERATOR_FOREACH(it, finfo)
+        EINA_ITERATOR_FOREACH(it, finfo)
           {
              char *it_rp = ecore_file_realpath(finfo->path);
              if (finfo->type != EINA_FILE_DIR && finfo->type != EINA_FILE_LNK)
