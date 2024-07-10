@@ -694,12 +694,25 @@ _rename_cancel(void *data, Evas_Object *obj EINA_UNUSED,
 }
 
 static void
+_rename_popup_del(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNUSED,
+                      void *event_info)
+{
+ Evas_Object *popup = data;
+ Evas_Event_Key_Down *ev = event_info;
+ const char *k = ev->keyname;
+ if (!strcasecmp(k, "Escape"))
+   evas_object_del(popup);
+}
+
+static void
 _rename_file(Ephoto *ephoto, const char *file)
 {
    Evas_Object *popup, *box, *entry, *button, *ic;
    char buf[PATH_MAX], *bn, *string;
 
    popup = elm_popup_add(ephoto->win);
+   evas_object_event_callback_add(popup, EVAS_CALLBACK_KEY_DOWN,
+                                  _rename_popup_del, popup);
    if (ecore_file_is_dir(file))
      elm_object_part_text_set(popup, "title, text", _("Rename Directory"));
    else
