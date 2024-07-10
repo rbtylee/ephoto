@@ -1717,6 +1717,10 @@ _ephoto_main_key_down(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNU
           {
              _grid_menu_paste_cb(tb, NULL, NULL);
           }
+        else if (!strcasecmp(k, "Tab"))
+          {
+            _view_single(tb, NULL, NULL);
+          }
         else if (!strcasecmp(k, "a"))
           {
              _grid_menu_select_all_cb(tb, NULL, NULL);
@@ -1747,9 +1751,9 @@ _ephoto_main_key_down(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNU
                _grid_menu_delete_cb(tb, NULL, NULL);
           }
      }
-   else if (!strcasecmp(k, "Return"))
+   else if (!strcasecmp(k, "Space"))
      {
-        _view_single(tb, NULL, NULL);
+        return;
      }
    else if (!strcasecmp(k, "F1"))
      {
