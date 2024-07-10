@@ -274,10 +274,4 @@ msgstr "Vměstnat do okna"
 
 #: src/bin/ephoto_single_browser.c:1524
 msgid "Zoom 1:1"
-msgstr "Zoom 1:1"
-
-#~ msgid "bytes"
-#~ msgstr "bajtů"
-
-#~ msgid "OK"
-#~ msgstr "OK"
+msgstr "Přiblížení 1:1"
