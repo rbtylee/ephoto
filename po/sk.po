@@ -436,7 +436,7 @@ msgstr "Celkom"
 #: src/bin/ephoto_thumb_browser.c:3282 src/bin/ephoto_thumb_browser.c:3324
 msgid "image"
 msgid_plural "images"
-msgstr[0] "obrázek"
+msgstr[0] "obrázok"
 msgstr[1] "obrázky"
 msgstr[2] "obrázkov"
 
@@ -718,7 +718,7 @@ msgstr "Prispôsobiť oknu"
 
 #: src/bin/ephoto_single_browser.c:2642
 msgid "Zoom 1:1"
-msgstr "Zoom 1:1"
+msgstr "Priblíženie 1:1"
 
 #: src/bin/ephoto_slideshow.c:120 src/bin/ephoto_slideshow.c:412
 msgid "Play"
@@ -736,18 +736,3 @@ msgstr "Celá obrazovka"
 #: src/bin/ephoto_slideshow.c:168 src/bin/ephoto_slideshow.c:532
 msgid "Normal"
 msgstr "Normálne"
-
-#~ msgid "About"
-#~ msgstr "O programe"
-
-#~ msgid "Show the file selector"
-#~ msgstr "Zobraziť výber súborov"
-
-#~ msgid "Hide the file selector"
-#~ msgstr "Skrýť výber súborov"
-
-#~ msgid "bytes"
-#~ msgstr "bajtov"
-
-#~ msgid "OK"
-#~ msgstr "OK"
