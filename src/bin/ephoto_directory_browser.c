@@ -645,6 +645,22 @@ _fsel_mouse_up_cb(void *data, Evas *e EINA_UNUSED,
           {
              evas_object_data_del(db->fsel, "current_item");
              evas_object_data_set(db->fsel, "current_item", item);
+
+             evas_object_hide(db->ephoto->slideshow);
+             evas_object_hide(db->ephoto->single_browser);
+             evas_object_show(db->ephoto->thumb_browser);
+             elm_object_focus_set(db->ephoto->thumb_browser, EINA_TRUE);
+             db->ephoto->prev_state = db->ephoto->state;
+             db->ephoto->state = EPHOTO_STATE_THUMB;
+             ephoto_thumb_browser_update_info_label(db->ephoto);
+             evas_object_show(db->ephoto->statusbar);
+             elm_box_clear(db->ephoto->controls_left);
+             elm_box_clear(db->ephoto->controls_right);
+             ephoto_thumb_browser_show_controls(db->ephoto);
+             evas_object_freeze_events_set(db->ephoto->single_browser, EINA_TRUE);
+             evas_object_freeze_events_set(db->ephoto->slideshow, EINA_TRUE);
+             evas_object_freeze_events_set(db->ephoto->thumb_browser, EINA_FALSE);
+
              if (elm_genlist_item_type_get(item) == ELM_GENLIST_ITEM_TREE)
                db->click_timer = ecore_timer_loop_add(.3, _click_timer_cb, db);
              else
