@@ -2031,6 +2031,8 @@ _ephoto_main_key_down(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNU
              sb->event = NULL;
           }
         evas_object_smart_callback_call(sb->main, "back", sb->entry);
+        elm_object_focus_set(sb->ephoto->layout, EINA_TRUE);
+        elm_object_focus_set(sb->ephoto->thumb_browser, EINA_TRUE);
      }
    else if (!strcmp(k, "Left") && !sb->editing)
      _prev_entry(sb);
