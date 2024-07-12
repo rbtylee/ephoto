@@ -439,6 +439,7 @@ _config_bindings(Evas_Object *parent)
                                "<b>Ctrl+r:</b> Flip Vertical<br/>"
                                "<b>Ctrl+Shift+s:</b> Save Image As<br/>"
                                "<b>Ctrl+s:</b> Save Image<br/>"
+                               "<b>Ctrl+c:</b> Copy Image to Clipboard<br/>"
                                "<b>Ctrl+u:</b> Reset Image<br/>"
                                "<b>Ctrl+y:</b> Redo<br/>"
                                "<b>Ctrl+Shift+z:</b> Redo<br/>"
