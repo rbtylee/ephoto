@@ -1114,6 +1114,38 @@ _delete_image(void *data, Evas_Object *obj EINA_UNUSED,
 }
 
 static void
+_clipboard_copy(void *data, Evas_Object *obj EINA_UNUSED,
+              void *event_info EINA_UNUSED)
+{
+   Ephoto_Single_Browser *sb = data;
+   FILE *f = fopen(sb->entry->path, "r");
+   unsigned char *fdatas = NULL;
+   static int fsize = 0;
+   Evas_Object *win_cp = elm_win_add(NULL, NULL, ELM_WIN_BASIC);
+
+   if (!f) return;
+   fseek(f, 0, SEEK_END);
+   fsize = ftell(f);
+   fseek(f, 0, SEEK_SET);
+   if (fsize > 0)
+     {
+        fdatas = malloc(fsize);
+        if (fdatas)
+          {
+             if (fread(fdatas, fsize, 1, f) == 1)
+               {
+                  elm_cnp_selection_set(win_cp,
+                                        ELM_SEL_TYPE_CLIPBOARD,
+                                        ELM_SEL_FORMAT_IMAGE,
+                                        fdatas, fsize);
+               }
+             free(fdatas);
+          }
+     }
+   fclose(f);
+}
+
+static void
 _rename_image(void *data, Evas_Object *obj EINA_UNUSED,
               void *event_info EINA_UNUSED)
 {
@@ -1910,6 +1942,8 @@ _add_edit_menu_items(Ephoto_Single_Browser *sb, Evas_Object *menu)
    elm_menu_item_add(menu, menu_it, "document-save", _("Save"), _save_image, sb);
    elm_menu_item_add(menu, menu_it, "document-save-as", _("Save As"),
                      _save_image_as, sb);
+   elm_menu_item_add(menu, menu_it, "edit-copy", _("Copy to Clipboard"),
+                     _clipboard_copy, sb);
    elm_menu_item_add(menu, menu_it, "edit", _("Rename"),
                      _rename_image, sb);
    elm_menu_item_add(menu, menu_it, "edit-delete", _("Delete"),
