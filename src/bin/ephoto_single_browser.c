@@ -2050,6 +2050,10 @@ _ephoto_main_key_down(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNU
              else
                _redo_image(sb, NULL, NULL);
           }
+        else if (!strcmp(k, "c"))
+          {
+             _clipboard_copy(sb, NULL, NULL);
+          }
         else if (!strcmp(k, "y"))
           {
              _redo_image(sb, NULL, NULL);
