@@ -697,11 +697,15 @@ static void
 _rename_popup_del(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNUSED,
                       void *event_info)
 {
- Evas_Object *popup = data;
- Evas_Event_Key_Down *ev = event_info;
- const char *k = ev->keyname;
- if (!strcasecmp(k, "Escape"))
-   evas_object_del(popup);
+   Evas_Object *popup = data;
+   Ephoto *ephoto = evas_object_data_get(popup, "ephoto");
+   Evas_Event_Key_Down *ev = event_info;
+   const char *k = ev->keyname;
+
+   if (!strcasecmp(k, "Escape"))
+     evas_object_del(popup);
+
+   elm_object_focus_set(ephoto->pager, EINA_TRUE);
 }
 
 static void
