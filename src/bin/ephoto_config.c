@@ -282,7 +282,7 @@ _config_slideshow(Ephoto *ephoto, Evas_Object *parent)
    spinner = elm_spinner_add(table);
    elm_spinner_editable_set(spinner, EINA_TRUE);
    memset(buf, 0, PATH_MAX);
-   snprintf(buf, PATH_MAX, "%%1.0f %s", _("seconds"));
+   snprintf(buf, PATH_MAX, "%%1.0f %s", _("second"));
    evas_object_smart_callback_add(spinner, "changed", _spinner_changed, NULL);
    elm_spinner_label_format_set(spinner, buf);
    elm_spinner_step_set(spinner, 1);
