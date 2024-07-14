@@ -10,6 +10,7 @@ i18n.gettext('ephoto',
                 'ka',
                 'nl',
                 'ru',
+                'pt',
                 'sk',
                 'sl'
              ],
