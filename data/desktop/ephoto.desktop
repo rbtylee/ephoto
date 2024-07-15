@@ -2,6 +2,7 @@
 Type=Application
 Name=Ephoto
 Name[ca]=Ephoto
+Name[cs]=Ephoto
 Name[de]=Ephoto
 Name[el]=Ephoto
 Name[eo]=EFoto
@@ -17,6 +18,7 @@ Name[sk]=Ephoto
 Name[tr]=Fotoğraf
 Comment=Enlightened Photo Viewer
 Comment[ca]=Visor de fotos Enlightened
+Comment[cs]=Prohlížeč obrázků pro Enlightenement
 Comment[da]=Oplyst billedfremviser
 Comment[de]=Enlightened-Fotobetrachter
 Comment[eo]=Foto-vidigilo de Enlightenment

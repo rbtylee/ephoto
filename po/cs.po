@@ -2,6 +2,7 @@
 # Copyright (C) 2015 Stephen "okra" Houston
 # This file is distributed under the same license as the ephoto package.
 # Daniel Kolesa <daniel@octaforge.org>, 2015.
+# Štefan Uram <uram@szm.sk>, 2024.
 #
 msgid ""
 msgstr ""
@@ -20,69 +21,68 @@ msgstr ""
 
 #: src/bin/ephoto_bcg.c:325 src/bin/ephoto_single_browser.c:1863
 msgid "Brightness/Contrast/Gamma"
-msgstr ""
+msgstr "Jas/Konstrast/Gamma"
 
 #: src/bin/ephoto_bcg.c:331
 msgid "Gamma"
-msgstr ""
+msgstr "Gamma"
 
 #: src/bin/ephoto_bcg.c:346
 msgid "Contrast"
-msgstr ""
+msgstr "Kontrast"
 
 #: src/bin/ephoto_bcg.c:361
 msgid "Brightness"
-msgstr ""
+msgstr "Jas"
 
 #: src/bin/ephoto_config.c:27 src/bin/ephoto_config.c:178
 msgid "Root Directory"
-msgstr ""
+msgstr "Kořenový adresář"
 
 #: src/bin/ephoto_config.c:29 src/bin/ephoto_config.c:180
 msgid "Home Directory"
-msgstr ""
+msgstr "Domovský adresář"
 
 #: src/bin/ephoto_config.c:31 src/bin/ephoto_config.c:182
 msgid "Last Open Directory"
-msgstr ""
+msgstr "Poslední otevřený adresář"
 
 #: src/bin/ephoto_config.c:93 src/bin/ephoto_config.c:184
 #: src/bin/ephoto_config.c:197
 msgid "Custom Directory"
-msgstr ""
+msgstr "Volitelný adresář"
 
 #: src/bin/ephoto_config.c:112
 msgid "Show Folders On Start"
-msgstr ""
+msgstr "Zobrazit adresáře při startu"
 
 #: src/bin/ephoto_config.c:120
 msgid "Prompt Before Changing The Filesystem"
-msgstr ""
+msgstr "Upozornění před systémovými operacemi"
 
 #: src/bin/ephoto_config.c:128
 msgid "Move Files When Dropped"
-msgstr ""
+msgstr "Přesunout sooubory po uvolňení"
 
 #: src/bin/ephoto_config.c:136
 msgid "Smooth Scale Images"
-msgstr ""
+msgstr "Obrázky v plynulém měřítku"
 
 #: src/bin/ephoto_config.c:144
 msgid "Keep Aspect on Thumbnails"
-msgstr ""
+msgstr "Ponechat aspekt na miniaturách"
 
 #: src/bin/ephoto_config.c:152
-#, fuzzy
 msgid "File Panel Size"
 msgstr "Velikost souboru"
 
 #: src/bin/ephoto_config.c:159
 msgid "Weight (1.0 Max)"
-msgstr ""
+msgstr "Šiřka (1.0 Max)"
 
 #: src/bin/ephoto_config.c:171
 msgid "Top Level Directory"
-msgstr ""
+msgstr "Nejvyšší úroveň adresářů"
 
 #: src/bin/ephoto_config.c:222
 msgid "second"
@@ -92,9 +92,8 @@ msgstr[1] "sekundy"
 msgstr[2] "sekund"
 
 #: src/bin/ephoto_config.c:267
-#, fuzzy
 msgid "Moving Slideshow"
-msgstr "Prezentace"
+msgstr "Pohyblivá Prezentace"
 
 #: src/bin/ephoto_config.c:276
 msgid "Show Each Slide For"
@@ -102,7 +101,7 @@ msgstr "Zobrazit každý obrázek"
 
 #: src/bin/ephoto_config.c:285
 msgid "seconds"
-msgstr "sekund"
+msgstr "sekundy"
 
 #: src/bin/ephoto_config.c:297
 msgid "Slide Transition"
@@ -110,11 +109,11 @@ msgstr "Přechod obrázků"
 
 #: src/bin/ephoto_config.c:380
 msgid "Open Link In Browser"
-msgstr ""
+msgstr "Otevřít link v prohlížeči"
 
 #: src/bin/ephoto_config.c:388
 msgid "Copy Link"
-msgstr ""
+msgstr "Kopírovat link"
 
 #: src/bin/ephoto_config.c:414
 msgid ""
@@ -143,9 +142,32 @@ msgid ""
 "b> Navigate Next<br/><b>End:</b> Navigate Last<br/><b>Escape:</b> Quit "
 "Slideshow<br/>"
 msgstr ""
+"<b><hilight>Všeobecné zkratky</hilight></b><br/><b>F1:</b> Panel nastavení<br/"
+"><b>F5:</b> Zahájení prezentace<br/><b>F11:</b> Přepnout Celou obrazovku<br/><b>Ctrl"
+"+Shift+f:</b> Přepnout Výběr souborů<br/><br/><b><hilight>Zkratky pro "
+"Prohlížeč miniatur</hilight></b><br/><b>Ctrl++:</b> Pǐblížit<br/><b>Ctrl+-:</b>"
+" Oddálit<br/><b>Ctrl+c:</b> Kopírovat obrázek<br/><b>Ctrl+x:</b> Vystříhnout obrázek"
+"<br/><b>Ctrl+v:</b> Vložiť obrázek<br/><b>Ctrl+a:</b> Vybrat vše<br/><b>Ctrl+f:</b> Přepnout "
+"Vyhledávání<br/><b>Ctrl+Tab:</b> Zobrazit obrázek<br/><b>Ctrl+Delete:</b> Vymazat "
+"obrázek<br/><b>F2:</b> Přejmenovat Image<br/><b>Escape:</b> Zrušit výběr<br/><br/"
+"><b><hilight>Zkratky pro Okno zobrazení</hilight></b><br/><b>Ctrl+Shift+0:</b> "
+"Přiblížit 1:1<br/><b>Ctrl++:</b> Přiblížit<br/><b>Ctrl+-:</b> Oddálit<br/><b>Ctrl"
+"+0:</b> Přispůsobit oknu<br/><b>Ctrl+Shift+l:</b> Otočit proti směru hodin<br/"
+"><b>Ctrl+l:</b> Převrátit vodorovne<br/><b>Ctrl+Shift+r:</b> Otočiť v směru hodin<br/"
+"><b>Ctrl+r:</b> Převrátit svisle<br/><b>Ctrl+Shift+s:</b> Ulož obrázek jako<br/"
+"><b>Ctrl+s:</b> Ulož obrázek<br/><b>Ctrl+c:</b> Kopírovat obrázek do schránky<br/"
+"><b>Ctrl+u:</b> Reset obrázku<br/><b>Ctrl+y:</b> Opakovat<br/><b>Ctrl+Shift+z:</b> "
+"Opakovat<br/><b>Ctrl+z:</b> Zpět<br/><b>Home:</b> První obrázek<br/><b>Levá "
+"šipka:</b> Předchozí obrázek<br/><b>Pravá šipka:</b> Další obrázek<br/"
+"><b>Medzera:</b> Další obrázek<br/><b>End:</b> Poslední obrázek<br/><b>Ctrl"
+"+Delete:</b> Smazat obrázek<br/><b>F2</b> Přejměnovat obrázek<br/><b>Escape:</b> "
+"Zpět do Zobrazení miniatur<br/><br/><b><hilight>Zkratky Prezentace</"
+"hilight></b><br/><b>Mezera:</b> Start/Pauza prezentace<br/><b>Home:</b> "
+"První obrázek<br/><b>Levá šipka:</b> Předchozí obrázek<br/><b>Pravá šipka:</"
+"b> Další obrázek<br/><b>End:</b> Poslední obrázek<br/><b>Escape:</b> Ukončení "
+"prezentace<br/>"
 
 #: src/bin/ephoto_config.c:510
-#, fuzzy
 msgid ""
 "Ephoto is a comprehensive image viewer based on the EFL. For "
 "moreinformation, please visit the Ephoto project page:<br/><a href=http://"
@@ -164,13 +186,12 @@ msgstr ""
 "enlightenment.org/apps/ephoto.git<br/><br/><b>Autoři:</b><br/>"
 
 #: src/bin/ephoto_config.c:673
-#, fuzzy
 msgid "Settings Panel"
 msgstr "Nastavení"
 
 #: src/bin/ephoto_config.c:725
 msgid "General"
-msgstr ""
+msgstr "Obecné nastavení"
 
 #: src/bin/ephoto_config.c:732 src/bin/ephoto_main.c:565
 #: src/bin/ephoto_main.c:568
@@ -179,7 +200,7 @@ msgstr "Prezentace"
 
 #: src/bin/ephoto_config.c:739
 msgid "Bindings"
-msgstr ""
+msgstr "Klávesové zkratky"
 
 #: src/bin/ephoto_config.c:746
 msgid "About"
@@ -187,73 +208,72 @@ msgstr "O programu"
 
 #: src/bin/ephoto_color.c:251
 msgid "Adjust Color Levels"
-msgstr ""
+msgstr "Upravit úroveň barev"
 
 #: src/bin/ephoto_color.c:257
 msgid "Blue"
-msgstr ""
+msgstr "Modrá"
 
 #: src/bin/ephoto_color.c:272
 msgid "Green"
-msgstr ""
+msgstr "Zelená"
 
 #: src/bin/ephoto_color.c:287
 msgid "Red"
-msgstr ""
+msgstr "Červená"
 
 #: src/bin/ephoto_cropper.c:702
-#, fuzzy
 msgid "Crop Image"
-msgstr "Chybný obrázek"
+msgstr "Ořezat obrázek"
 
 #: src/bin/ephoto_cropper.c:712
 msgid "Height"
-msgstr ""
+msgstr "Výška"
 
 #: src/bin/ephoto_cropper.c:725
 msgid "Width"
-msgstr ""
+msgstr "Šířka"
 
 #: src/bin/ephoto_filters.c:105
 msgid "Applying Filter"
-msgstr ""
+msgstr "Použít filtr"
 
 #: src/bin/ephoto_filters.c:116
 msgid "Please wait while this filter is applied to your image."
-msgstr ""
+msgstr "Prosím počkejte kým se filtr aplikuje na obrázek"
 
 #: src/bin/ephoto_hsv.c:332 src/bin/ephoto_single_browser.c:1865
 msgid "Hue/Saturation/Value"
-msgstr ""
+msgstr "Odstín/Sytost/Hodnota"
 
 #: src/bin/ephoto_hsv.c:338
 msgid "Value"
-msgstr ""
+msgstr "Hodnota"
 
 #: src/bin/ephoto_hsv.c:353
 msgid "Saturation"
-msgstr ""
+msgstr "Sytost"
 
 #: src/bin/ephoto_hsv.c:368
 msgid "Hue"
-msgstr ""
+msgstr "Odstín"
 
 #: src/bin/ephoto_main.c:290 src/bin/ephoto_main.c:291
 #: src/bin/ephoto_main.c:352 src/bin/ephoto_main.c:353
 #: src/bin/ephoto_main.c:679 src/bin/ephoto_main.c:680
 msgid "Hide Folders"
-msgstr ""
+msgstr "Skrýt adresáře"
 
 #: src/bin/ephoto_main.c:300 src/bin/ephoto_main.c:301
 #: src/bin/ephoto_main.c:362 src/bin/ephoto_main.c:363
 #: src/bin/ephoto_main.c:523 src/bin/ephoto_main.c:525
 #: src/bin/ephoto_main.c:671 src/bin/ephoto_main.c:672
 msgid "Show Folders"
-msgstr ""
+msgstr "Zobrazit adresáře"
 
 #: src/bin/ephoto_main.c:542
 msgid "Information"
-msgstr ""
+msgstr "Informace"
 
 #: src/bin/ephoto_main.c:582 src/bin/ephoto_main.c:585
 #: src/bin/ephoto_slideshow.c:943
@@ -263,47 +283,47 @@ msgstr "Nastavení"
 #: src/bin/ephoto_main.c:599 src/bin/ephoto_main.c:602
 #: src/bin/ephoto_slideshow.c:946
 msgid "Exit"
-msgstr ""
+msgstr "Ukončit"
 
 #: src/bin/ephoto_thumb_browser.c:964 src/bin/ephoto_thumb_browser.c:1361
 msgid "Search"
-msgstr ""
+msgstr "Hledat"
 
 #: src/bin/ephoto_thumb_browser.c:966
 msgid "Select All"
-msgstr ""
+msgstr "Vybrat vše"
 
 #: src/bin/ephoto_thumb_browser.c:969
 msgid "Select None"
-msgstr ""
+msgstr "Zrušit výběr"
 
 #: src/bin/ephoto_thumb_browser.c:973 src/bin/ephoto_single_browser.c:1947
 msgid "Rename"
-msgstr ""
+msgstr "Přejmenovat"
 
 #: src/bin/ephoto_thumb_browser.c:980
 msgid "Cut"
-msgstr ""
+msgstr "Vystříhnost"
 
 #: src/bin/ephoto_thumb_browser.c:982
 msgid "Copy"
-msgstr ""
+msgstr "Kopírovat"
 
 #: src/bin/ephoto_thumb_browser.c:988
 msgid "Paste"
-msgstr ""
+msgstr "Vložit"
 
 #: src/bin/ephoto_thumb_browser.c:995
 msgid "Empty Trash"
-msgstr ""
+msgstr "Vyprázdnit koš"
 
 #: src/bin/ephoto_thumb_browser.c:1000 src/bin/ephoto_single_browser.c:1949
 msgid "Delete"
-msgstr ""
+msgstr "Smazat"
 
 #: src/bin/ephoto_thumb_browser.c:1084
 msgid "No images matched your search"
-msgstr ""
+msgstr "Źadný obrázek nesplňuje kriteria hledání"
 
 #: src/bin/ephoto_thumb_browser.c:1087 src/bin/ephoto_thumb_browser.c:1392
 msgid "There are no images in this directory"
@@ -361,9 +381,8 @@ msgstr[1] "TB"
 msgstr[2] "TB"
 
 #: src/bin/ephoto_thumb_browser.c:2073 src/bin/ephoto_thumb_browser.c:2075
-#, fuzzy
 msgid "View Image"
-msgstr "obrázek"
+msgstr "Zobrazit obrázek"
 
 #: src/bin/ephoto_thumb_browser.c:2091 src/bin/ephoto_thumb_browser.c:2093
 #: src/bin/ephoto_single_browser.c:2475 src/bin/ephoto_single_browser.c:2477
@@ -377,27 +396,27 @@ msgstr "Oddálit"
 
 #: src/bin/ephoto_thumb_browser.c:2117
 msgid "Alphabetical Ascending"
-msgstr ""
+msgstr "Vzestupne podle názvu"
 
 #: src/bin/ephoto_thumb_browser.c:2120
 msgid "Alphabetical Descending"
-msgstr ""
+msgstr "Zestupne podle názvu"
 
 #: src/bin/ephoto_thumb_browser.c:2123
 msgid "Modification Time Ascending"
-msgstr ""
+msgstr "Vzestupne podle času"
 
 #: src/bin/ephoto_thumb_browser.c:2126
 msgid "Modification Time Descending"
-msgstr ""
+msgstr "Zestupne podle času"
 
 #: src/bin/ephoto_thumb_browser.c:2129
 msgid "Image Simalarity"
-msgstr ""
+msgstr "Podobnost obrázků"
 
 #: src/bin/ephoto_thumb_browser.c:2132 src/bin/ephoto_thumb_browser.c:2139
 msgid "Sort"
-msgstr ""
+msgstr "Setřídit"
 
 #: src/bin/ephoto_single_browser.c:125
 msgid "Type"
@@ -416,7 +435,6 @@ msgid "MODIFIED"
 msgstr ""
 
 #: src/bin/ephoto_single_browser.c:1004
-#, fuzzy
 msgid "Reset Image"
 msgstr "Resetovat"
 
@@ -447,7 +465,7 @@ msgstr "Upravit"
 
 #: src/bin/ephoto_single_browser.c:1847
 msgid "Transform"
-msgstr ""
+msgstr "Transformovat"
 
 #: src/bin/ephoto_single_browser.c:1850
 msgid "Crop"
@@ -455,7 +473,7 @@ msgstr "Oříznout"
 
 #: src/bin/ephoto_single_browser.c:1851
 msgid "Scale"
-msgstr ""
+msgstr "Měřítko"
 
 #: src/bin/ephoto_single_browser.c:1852 src/bin/ephoto_single_browser.c:2539
 #: src/bin/ephoto_single_browser.c:2541
@@ -477,67 +495,67 @@ msgstr "Překlopit svisle"
 
 #: src/bin/ephoto_single_browser.c:1860
 msgid "Adjustable Filters"
-msgstr ""
+msgstr "Nastavitelné filtry"
 
 #: src/bin/ephoto_single_browser.c:1867
 msgid "Color Levels"
-msgstr ""
+msgstr "Úroveň barvy"
 
 #: src/bin/ephoto_single_browser.c:1869
 msgid "Red Eye Removal"
-msgstr ""
+msgstr "Redukce červených očí"
 
 #: src/bin/ephoto_single_browser.c:1871
 msgid "Quick Filters"
-msgstr ""
+msgstr "Rychlé filtry"
 
 #: src/bin/ephoto_single_browser.c:1874
 msgid "Auto Equalize"
-msgstr ""
+msgstr "Autoúprava"
 
 #: src/bin/ephoto_single_browser.c:1876
 msgid "Black and White"
-msgstr ""
+msgstr "Černo-bílá"
 
 #: src/bin/ephoto_single_browser.c:1878
 msgid "Blur"
-msgstr ""
+msgstr "Rozmazat"
 
 #: src/bin/ephoto_single_browser.c:1880
 msgid "Dither"
-msgstr ""
+msgstr "Skreslit"
 
 #: src/bin/ephoto_single_browser.c:1882
 msgid "Edge Detect"
-msgstr ""
+msgstr "Detekce hran"
 
 #: src/bin/ephoto_single_browser.c:1884
 msgid "Emboss"
-msgstr ""
+msgstr "Zapustit"
 
 #: src/bin/ephoto_single_browser.c:1886
 msgid "Invert Colors"
-msgstr ""
+msgstr "Invertovat barvy"
 
 #: src/bin/ephoto_single_browser.c:1888
 msgid "Old Photo"
-msgstr ""
+msgstr "Stará fotografie"
 
 #: src/bin/ephoto_single_browser.c:1890
 msgid "Painting"
-msgstr ""
+msgstr "Malování"
 
 #: src/bin/ephoto_single_browser.c:1892
 msgid "Posterize"
-msgstr ""
+msgstr "Posterizace"
 
 #: src/bin/ephoto_single_browser.c:1894
 msgid "Sharpen"
-msgstr ""
+msgstr "Zaostřit"
 
 #: src/bin/ephoto_single_browser.c:1896
 msgid "Sketch"
-msgstr ""
+msgstr "Skice"
 
 #: src/bin/ephoto_single_browser.c:1908 src/bin/ephoto_single_browser.c:1942
 msgid "Save"
@@ -551,15 +569,15 @@ msgstr "Uložit jako"
 #: src/bin/ephoto_single_browser.c:1911 src/bin/ephoto_single_browser.c:1951
 #: src/bin/ephoto_single_browser.c:2594
 msgid "Upload"
-msgstr ""
+msgstr "Upload"
 
 #: src/bin/ephoto_single_browser.c:1913
 msgid "Undo"
-msgstr ""
+msgstr "Zpět"
 
 #: src/bin/ephoto_single_browser.c:1914
 msgid "Redo"
-msgstr ""
+msgstr "Opakovat"
 
 #: src/bin/ephoto_single_browser.c:1915 src/bin/ephoto_single_browser.c:1941
 msgid "Reset"
@@ -570,17 +588,16 @@ msgid "Close"
 msgstr "Zavřít"
 
 #: src/bin/ephoto_single_browser.c:1938
-#, fuzzy
 msgid "File"
-msgstr "Velikost souboru"
+msgstr "Soubor"
 
 #: src/bin/ephoto_single_browser.c:1945
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopírovat do schránky"
 
 #: src/bin/ephoto_single_browser.c:1955
 msgid "Properties"
-msgstr ""
+msgstr "Vlastnosti"
 
 #: src/bin/ephoto_single_browser.c:1959
 msgid "Zoom Fit"
@@ -592,7 +609,7 @@ msgstr "Přiblížení 1:1"
 
 #: src/bin/ephoto_single_browser.c:2457 src/bin/ephoto_single_browser.c:2459
 msgid "View Thumbnails"
-msgstr ""
+msgstr "Zobrazit miniatury"
 
 #: src/bin/ephoto_single_browser.c:2507 src/bin/ephoto_single_browser.c:2509
 #: src/bin/ephoto_slideshow.c:928
@@ -606,20 +623,20 @@ msgstr "Další"
 
 #: src/bin/ephoto_slideshow.c:708 src/bin/ephoto_slideshow.c:931
 msgid "Play"
-msgstr ""
+msgstr "Přehrát"
 
 #: src/bin/ephoto_slideshow.c:717 src/bin/ephoto_slideshow.c:1037
 msgid "Pause"
-msgstr ""
+msgstr "Zastavit"
 
 #: src/bin/ephoto_slideshow.c:766 src/bin/ephoto_slideshow.c:940
 #: src/bin/ephoto_slideshow.c:1048
 msgid "Fullscreen"
-msgstr ""
+msgstr "Celá obrazovka"
 
 #: src/bin/ephoto_slideshow.c:777 src/bin/ephoto_slideshow.c:1058
 msgid "Normal"
-msgstr ""
+msgstr "Normální"
 
 #: src/bin/ephoto_slideshow.c:924
 msgid "Back"
@@ -632,36 +649,3 @@ msgstr "První"
 #: src/bin/ephoto_slideshow.c:937
 msgid "Last"
 msgstr "Poslední"
-
-#~ msgid "Slideshow Options"
-#~ msgstr "Možnosti prezentace"
-
-#~ msgid "Cancel"
-#~ msgstr "Zrušit"
-
-#~ msgid "Show the file selector"
-#~ msgstr "Zobrazit výběr souborů"
-
-#~ msgid "Up"
-#~ msgstr "Nahoru"
-
-#~ msgid "Home"
-#~ msgstr "Domů"
-
-#~ msgid "Hide the file selector"
-#~ msgstr "Skrýt výběr souborů"
-
-#~ msgid "Apply"
-#~ msgstr "Použít"
-
-#~ msgid "Error: Image could not be saved here!"
-#~ msgstr "Chyba: obrázek zde nemůže být uložen!"
-
-#~ msgid "Ok"
-#~ msgstr "Ok"
-
-#~ msgid "Are you sure you want to overwrite this image?"
-#~ msgstr "Opravdu chcete přepsat tento obrázek?"
-
-#~ msgid "Image Files"
-#~ msgstr "Obrázky"
