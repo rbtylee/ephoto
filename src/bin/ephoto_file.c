@@ -60,7 +60,7 @@ ephoto_file_get_exif_data(const char *file)
                   exif_entry_get_value(ee, value, 1024);
                   eei->value = eina_stringshare_add(value);
                   list = eina_list_append(list, eei);
-		  exif_entry_unref(ee);
+                  exif_entry_unref(ee);
                }
           }
      }
@@ -123,7 +123,7 @@ _exif_list_free(Eina_List *list)
    EINA_LIST_FREE(list, eei)
      {
         eina_stringshare_del(eei->value);
-	free(eei);
+        free(eei);
      }
 }
 
