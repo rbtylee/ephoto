@@ -586,7 +586,9 @@ _new_dir_cancel_cb(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNUSED
    Evas_Object *popup = data;
    Evas_Event_Key_Down *ev = event_info;
 
-   if (!strcmp(ev->keyname, "Escape"))
+   if (!strcmp(ev->keyname, "Return"))
+     _new_dir_confirm(popup, NULL, NULL);
+   else if (!strcmp(ev->keyname, "Escape"))
      _new_dir_cancel(popup, NULL, NULL);
 }
 
@@ -722,7 +724,9 @@ _rename_keydown_cb(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNUSED
    Evas_Object *popup = data;
    Evas_Event_Key_Down *ev = event_info;
 
-   if (!strcmp(ev->keyname, "Escape"))
+   if (!strcmp(ev->keyname, "Return"))
+     _rename_confirm(popup, NULL, NULL);
+   else if (!strcmp(ev->keyname, "Escape"))
      _rename_cancel(popup, NULL, NULL);
 }
 
