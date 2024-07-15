@@ -1321,7 +1321,7 @@ _ephoto_thumb_search_cancel(void *data, Evas_Object *obj EINA_UNUSED,
         tb->totimages = 0;
         tb->totsize = 0;
      }
-   elm_object_focus_set(tb->main, EINA_TRUE);
+   elm_object_focus_set(tb->grid, EINA_TRUE);
    evas_object_del(tb->search);
    tb->search = NULL;
    elm_box_unpack(tb->gridbox, hbox);
