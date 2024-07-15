@@ -44,7 +44,7 @@ msgstr "Domovský priečinok"
 
 #: src/bin/ephoto_config.c:31 src/bin/ephoto_config.c:182
 msgid "Last Open Directory"
-msgstr "Posledný oitvorený priečinok"
+msgstr "Posledný otvorený priečinok"
 
 #: src/bin/ephoto_config.c:93 src/bin/ephoto_config.c:184
 #: src/bin/ephoto_config.c:197
@@ -61,7 +61,7 @@ msgstr "Upozornenie pred vykonaním systémových operácií"
 
 #: src/bin/ephoto_config.c:128
 msgid "Move Files When Dropped"
-msgstr "Presúnúť súbory po uvoľnení"
+msgstr "Presunúť súbory po uvoľnení"
 
 #: src/bin/ephoto_config.c:136
 msgid "Smooth Scale Images"
