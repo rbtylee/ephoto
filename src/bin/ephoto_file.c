@@ -580,11 +580,32 @@ _new_dir_cancel(void *data, Evas_Object *obj EINA_UNUSED,
 }
 
 static void
+_new_dir_cancel_cb(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNUSED,
+                      void *event_info)
+{
+   Evas_Object *popup = data;
+   Evas_Event_Key_Down *ev = event_info;
+
+   if (!strcmp(ev->keyname, "Escape"))
+     _new_dir_cancel(popup, NULL, NULL);
+}
+
+static void
+_cb_popup_del(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNUSED,
+                      void *event_info)
+{
+   Evas_Object *popup = data;
+
+   evas_object_del(popup);
+}
+
+static void
 _new_dir(Ephoto *ephoto, const char *file)
 {
    Evas_Object *popup, *box, *entry, *button, *ic;
 
    popup = elm_popup_add(ephoto->win);
+   evas_object_event_callback_add(popup, EVAS_CALLBACK_DEL, _cb_popup_del, popup);
    elm_object_part_text_set(popup, "title,text", _("New Directory"));
    elm_popup_orient_set(popup, ELM_POPUP_ORIENT_CENTER);
    evas_object_data_set(popup, "ephoto", ephoto);
@@ -609,6 +630,7 @@ _new_dir(Ephoto *ephoto, const char *file)
    elm_box_pack_end(box, entry);
    evas_object_show(entry);
    evas_object_data_set(popup, "entry", entry);
+   evas_object_event_callback_add(entry, EVAS_CALLBACK_KEY_DOWN, _new_dir_cancel_cb, popup);
 
    ic = elm_icon_add(popup);
    evas_object_size_hint_aspect_set(ic, EVAS_ASPECT_CONTROL_VERTICAL, 1, 1);
@@ -702,15 +724,6 @@ _rename_keydown_cb(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNUSED
 
    if (!strcmp(ev->keyname, "Escape"))
      _rename_cancel(popup, NULL, NULL);
-}
-
-static void
-_cb_popup_del(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNUSED,
-                      void *event_info)
-{
-   Evas_Object *popup = data;
-
-   evas_object_del(popup);
 }
 
 static void
