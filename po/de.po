@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ephoto 0.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-13 20:40+0200\n"
+"POT-Creation-Date: 2024-07-15 08:52+0200\n"
 "PO-Revision-Date: 2015-08-10 22:10+0200\n"
 "Last-Translator: Marcel Hollerbach <marcel-hollerbach@t-online.de>\n"
 "Language-Team: \n"
@@ -106,7 +106,7 @@ msgstr ""
 msgid "Slide Transition"
 msgstr ""
 
-#: src/bin/ephoto_config.c:380
+#: src/bin/ephoto_config.c:380 src/bin/ephoto_file.c:372
 msgid "Open Link In Browser"
 msgstr ""
 
@@ -193,6 +193,41 @@ msgstr ""
 msgid "Red"
 msgstr ""
 
+#: src/bin/ephoto_red_eye.c:202 src/bin/ephoto_single_browser.c:1869
+msgid "Red Eye Removal"
+msgstr ""
+
+#: src/bin/ephoto_red_eye.c:208
+msgid "Radius"
+msgstr ""
+
+#: src/bin/ephoto_red_eye.c:223
+msgid "<b>Click on an eye</b>"
+msgstr ""
+
+#: src/bin/ephoto_scale.c:217
+#, fuzzy
+msgid "Scale Image"
+msgstr "Zurücksetzen"
+
+#: src/bin/ephoto_scale.c:223
+msgid "Keep Aspect"
+msgstr ""
+
+#: src/bin/ephoto_editor.c:54 src/bin/ephoto_single_browser.c:1915
+#: src/bin/ephoto_single_browser.c:1941
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+#: src/bin/ephoto_editor.c:69
+msgid "Apply"
+msgstr "Anwenden"
+
+#: src/bin/ephoto_editor.c:84 src/bin/ephoto_file.c:629
+#: src/bin/ephoto_file.c:770
+msgid "Cancel"
+msgstr "Abbrechen"
+
 #: src/bin/ephoto_cropper.c:702
 msgid "Crop Image"
 msgstr ""
@@ -212,6 +247,240 @@ msgstr ""
 #: src/bin/ephoto_filters.c:116
 msgid "Please wait while this filter is applied to your image."
 msgstr ""
+
+#: src/bin/ephoto_file.c:160
+msgid "Image Properties"
+msgstr ""
+
+#: src/bin/ephoto_file.c:238 src/bin/ephoto_file.c:462
+msgid "Ok"
+msgstr ""
+
+#: src/bin/ephoto_file.c:308 src/bin/ephoto_file.c:320
+#: src/bin/ephoto_file.c:337 src/bin/ephoto_file.c:1220
+#: src/bin/ephoto_file.c:1232 src/bin/ephoto_file.c:1248
+#: src/bin/ephoto_file.c:1349 src/bin/ephoto_file.c:1427
+msgid "Save Failed"
+msgstr ""
+
+#: src/bin/ephoto_file.c:309 src/bin/ephoto_file.c:321
+#: src/bin/ephoto_file.c:338 src/bin/ephoto_file.c:1221
+#: src/bin/ephoto_file.c:1233 src/bin/ephoto_file.c:1249
+#: src/bin/ephoto_file.c:1350 src/bin/ephoto_file.c:1428
+msgid "Error: Image could not be saved here!"
+msgstr "Error, Bild konnte hier nicht gespeichert werden"
+
+#: src/bin/ephoto_file.c:407
+msgid "Image Uploaded"
+msgstr ""
+
+#: src/bin/ephoto_file.c:451 src/bin/ephoto_thumb_browser.c:982
+msgid "Copy"
+msgstr ""
+
+#: src/bin/ephoto_file.c:480
+msgid "There was an error uploading your image!"
+msgstr ""
+
+#: src/bin/ephoto_file.c:499
+msgid "Your image was uploaded to the following link:"
+msgstr ""
+
+#: src/bin/ephoto_file.c:564 src/bin/ephoto_file.c:668
+#: src/bin/ephoto_file.c:671 src/bin/ephoto_file.c:827
+msgid "Error"
+msgstr ""
+
+#: src/bin/ephoto_file.c:565
+#, fuzzy
+msgid "There was an error creating this directory."
+msgstr "Keine Bilder gefunden"
+
+#: src/bin/ephoto_file.c:588 src/bin/ephoto_file.c:603
+msgid "New Directory"
+msgstr ""
+
+#: src/bin/ephoto_file.c:618 src/bin/ephoto_single_browser.c:1908
+#: src/bin/ephoto_single_browser.c:1942
+msgid "Save"
+msgstr "Speichern"
+
+#: src/bin/ephoto_file.c:669
+#, fuzzy
+msgid "There was an error renaming this directory."
+msgstr "Keine Bilder gefunden"
+
+#: src/bin/ephoto_file.c:672
+msgid "There was an error renaming this file."
+msgstr ""
+
+#: src/bin/ephoto_file.c:721
+msgid "Rename Directory"
+msgstr ""
+
+#: src/bin/ephoto_file.c:723
+msgid "Rename File"
+msgstr ""
+
+#: src/bin/ephoto_file.c:759 src/bin/ephoto_thumb_browser.c:973
+#: src/bin/ephoto_single_browser.c:1947 src/bin/ephoto_directory_browser.c:689
+msgid "Rename"
+msgstr ""
+
+#: src/bin/ephoto_file.c:825
+msgid "There was an error completing your action on"
+msgstr ""
+
+#: src/bin/ephoto_file.c:826
+msgid "file"
+msgid_plural "files"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/bin/ephoto_file.c:887
+#, fuzzy
+msgid "Moving Files"
+msgstr "Bildershow"
+
+#: src/bin/ephoto_file.c:888
+msgid "Please wait while your files are moved."
+msgstr ""
+
+#: src/bin/ephoto_file.c:949
+msgid "Copying Files"
+msgstr ""
+
+#: src/bin/ephoto_file.c:950
+msgid "Please wait while your files are copied."
+msgstr ""
+
+#: src/bin/ephoto_file.c:1028
+msgid "Deleting Files"
+msgstr ""
+
+#: src/bin/ephoto_file.c:1029 src/bin/ephoto_file.c:1128
+msgid "Please wait while your files are deleted."
+msgstr ""
+
+#: src/bin/ephoto_file.c:1088
+msgid "Deleting Directory"
+msgstr ""
+
+#: src/bin/ephoto_file.c:1089
+msgid "Please wait while your directory is deleted."
+msgstr ""
+
+#: src/bin/ephoto_file.c:1127
+msgid "Emptying Trash"
+msgstr ""
+
+#: src/bin/ephoto_file.c:1154 src/bin/ephoto_file.c:1514
+msgid "Upload Image"
+msgstr ""
+
+#: src/bin/ephoto_file.c:1305
+#, fuzzy
+msgid "Overwrite Image"
+msgstr "Zurücksetzen"
+
+#: src/bin/ephoto_file.c:1306 src/bin/ephoto_file.c:1433
+msgid "Are you sure you want to overwrite this image?"
+msgstr "Bild überschreiben ?"
+
+#: src/bin/ephoto_file.c:1314 src/bin/ephoto_file.c:1440
+#: src/bin/ephoto_file.c:1522 src/bin/ephoto_file.c:1579
+#: src/bin/ephoto_file.c:1630 src/bin/ephoto_file.c:1681
+#: src/bin/ephoto_file.c:1728 src/bin/ephoto_file.c:1786
+#: src/bin/ephoto_file.c:1840 src/bin/ephoto_single_browser.c:1026
+msgid "Yes"
+msgstr "Ja"
+
+#: src/bin/ephoto_file.c:1327 src/bin/ephoto_file.c:1451
+#: src/bin/ephoto_file.c:1534 src/bin/ephoto_file.c:1592
+#: src/bin/ephoto_file.c:1643 src/bin/ephoto_file.c:1694
+#: src/bin/ephoto_file.c:1741 src/bin/ephoto_file.c:1799
+#: src/bin/ephoto_file.c:1853 src/bin/ephoto_single_browser.c:1037
+msgid "No"
+msgstr "Nein"
+
+#: src/bin/ephoto_file.c:1432
+#, fuzzy
+msgid "Save Image"
+msgstr "Zurücksetzen"
+
+#: src/bin/ephoto_file.c:1473
+#, fuzzy
+msgid "Save Image As"
+msgstr "Speichern als"
+
+#: src/bin/ephoto_file.c:1493
+msgid "Image Files"
+msgstr ""
+
+#: src/bin/ephoto_file.c:1515
+#, fuzzy
+msgid "Are you sure you want to upload this image publically to imgur.com?"
+msgstr "Bild überschreiben ?"
+
+#: src/bin/ephoto_file.c:1569
+#, fuzzy
+msgid "Are you sure you want to move these files to"
+msgstr "Bild überschreiben ?"
+
+#: src/bin/ephoto_file.c:1571
+msgid "Move Files"
+msgstr ""
+
+#: src/bin/ephoto_file.c:1620
+#, fuzzy
+msgid "Are you sure you want to copy these files to"
+msgstr "Bild überschreiben ?"
+
+#: src/bin/ephoto_file.c:1622 src/bin/ephoto_file.c:1719
+msgid "Copy Files"
+msgstr ""
+
+#: src/bin/ephoto_file.c:1672
+msgid "Paste Files"
+msgstr ""
+
+#: src/bin/ephoto_file.c:1673
+#, fuzzy
+msgid "Are you sure you want to paste these files here?"
+msgstr "Bild überschreiben ?"
+
+#: src/bin/ephoto_file.c:1720
+#, fuzzy
+msgid "Are you sure you want to copy these files here?"
+msgstr "Bild überschreiben ?"
+
+#: src/bin/ephoto_file.c:1773
+msgid "Delete Directory"
+msgstr ""
+
+#: src/bin/ephoto_file.c:1774
+#, fuzzy
+msgid "Are you sure you want to delete this directory?"
+msgstr "Bild überschreiben ?"
+
+#: src/bin/ephoto_file.c:1777
+msgid "Delete Files"
+msgstr ""
+
+#: src/bin/ephoto_file.c:1778
+#, fuzzy
+msgid "Are you sure you want to delete these files?"
+msgstr "Bild überschreiben ?"
+
+#: src/bin/ephoto_file.c:1831 src/bin/ephoto_thumb_browser.c:995
+#: src/bin/ephoto_directory_browser.c:697
+msgid "Empty Trash"
+msgstr ""
+
+#: src/bin/ephoto_file.c:1832
+#, fuzzy
+msgid "Are you sure you want to empty the trash?"
+msgstr "Einstellungen zurücksetzen?"
 
 #: src/bin/ephoto_hsv.c:332 src/bin/ephoto_single_browser.c:1865
 msgid "Hue/Saturation/Value"
@@ -268,27 +537,16 @@ msgstr ""
 msgid "Select None"
 msgstr ""
 
-#: src/bin/ephoto_thumb_browser.c:973 src/bin/ephoto_single_browser.c:1947
-msgid "Rename"
-msgstr ""
-
 #: src/bin/ephoto_thumb_browser.c:980
 msgid "Cut"
 msgstr ""
 
-#: src/bin/ephoto_thumb_browser.c:982
-msgid "Copy"
-msgstr ""
-
-#: src/bin/ephoto_thumb_browser.c:988
+#: src/bin/ephoto_thumb_browser.c:988 src/bin/ephoto_directory_browser.c:691
 msgid "Paste"
 msgstr ""
 
-#: src/bin/ephoto_thumb_browser.c:995
-msgid "Empty Trash"
-msgstr ""
-
 #: src/bin/ephoto_thumb_browser.c:1000 src/bin/ephoto_single_browser.c:1949
+#: src/bin/ephoto_directory_browser.c:702
 msgid "Delete"
 msgstr ""
 
@@ -408,14 +666,6 @@ msgstr "Zurücksetzen"
 msgid "Are you sure you want to reset your changes?"
 msgstr "Einstellungen zurücksetzen?"
 
-#: src/bin/ephoto_single_browser.c:1026
-msgid "Yes"
-msgstr "Ja"
-
-#: src/bin/ephoto_single_browser.c:1037
-msgid "No"
-msgstr "Nein"
-
 #: src/bin/ephoto_single_browser.c:1667
 msgid "This image does not exist or is corrupted!"
 msgstr ""
@@ -465,10 +715,6 @@ msgstr ""
 
 #: src/bin/ephoto_single_browser.c:1867
 msgid "Color Levels"
-msgstr ""
-
-#: src/bin/ephoto_single_browser.c:1869
-msgid "Red Eye Removal"
 msgstr ""
 
 #: src/bin/ephoto_single_browser.c:1871
@@ -523,10 +769,6 @@ msgstr ""
 msgid "Sketch"
 msgstr ""
 
-#: src/bin/ephoto_single_browser.c:1908 src/bin/ephoto_single_browser.c:1942
-msgid "Save"
-msgstr "Speichern"
-
 #: src/bin/ephoto_single_browser.c:1909 src/bin/ephoto_single_browser.c:1943
 #: src/bin/ephoto_single_browser.c:2587 src/bin/ephoto_single_browser.c:2589
 msgid "Save As"
@@ -544,10 +786,6 @@ msgstr ""
 #: src/bin/ephoto_single_browser.c:1914
 msgid "Redo"
 msgstr ""
-
-#: src/bin/ephoto_single_browser.c:1915 src/bin/ephoto_single_browser.c:1941
-msgid "Reset"
-msgstr "Zurücksetzen"
 
 #: src/bin/ephoto_single_browser.c:1916
 msgid "Close"
@@ -587,6 +825,27 @@ msgstr "Vorheriges"
 msgid "Next"
 msgstr "Nächstes"
 
+#: src/bin/ephoto_directory_browser.c:466 src/bin/ephoto_slideshow.c:924
+msgid "Back"
+msgstr "Zurück"
+
+#: src/bin/ephoto_directory_browser.c:501
+#: src/bin/ephoto_directory_browser.c:704
+msgid "Trash"
+msgstr ""
+
+#: src/bin/ephoto_directory_browser.c:678
+msgid "Root"
+msgstr ""
+
+#: src/bin/ephoto_directory_browser.c:680
+msgid "Home"
+msgstr "Heim Verzeichniss"
+
+#: src/bin/ephoto_directory_browser.c:684
+msgid "New Folder"
+msgstr ""
+
 #: src/bin/ephoto_slideshow.c:708 src/bin/ephoto_slideshow.c:931
 msgid "Play"
 msgstr ""
@@ -604,10 +863,6 @@ msgstr ""
 msgid "Normal"
 msgstr ""
 
-#: src/bin/ephoto_slideshow.c:924
-msgid "Back"
-msgstr "Zurück"
-
 #: src/bin/ephoto_slideshow.c:926
 msgid "First"
 msgstr "Erstes"
@@ -616,29 +871,14 @@ msgstr "Erstes"
 msgid "Last"
 msgstr "Letztes"
 
-#~ msgid "Cancel"
-#~ msgstr "Abbrechen"
-
 #~ msgid "Show the file selector"
 #~ msgstr "Zeige File auswahl"
 
 #~ msgid "Up"
 #~ msgstr "Hoch"
 
-#~ msgid "Home"
-#~ msgstr "Heim Verzeichniss"
-
 #~ msgid "Hide the file selector"
 #~ msgstr "Verstecke File auswahl"
 
-#~ msgid "Apply"
-#~ msgstr "Anwenden"
-
-#~ msgid "Error: Image could not be saved here!"
-#~ msgstr "Error, Bild konnte hier nicht gespeichert werden"
-
 #~ msgid "OK"
 #~ msgstr "Ok"
-
-#~ msgid "Are you sure you want to overwrite this image?"
-#~ msgstr "Bild überschreiben ?"

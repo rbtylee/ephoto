@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ephoto 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-13 20:40+0200\n"
+"POT-Creation-Date: 2024-07-15 08:52+0200\n"
 "PO-Revision-Date: 2021-04-23 19:51+0200\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
 "Language-Team: Dutch\n"
@@ -105,7 +105,7 @@ msgstr "seconden"
 msgid "Slide Transition"
 msgstr "Overgangseffect bij dia's"
 
-#: src/bin/ephoto_config.c:380
+#: src/bin/ephoto_config.c:380 src/bin/ephoto_file.c:372
 msgid "Open Link In Browser"
 msgstr "Open webkoppeling in webverkenner"
 
@@ -229,6 +229,40 @@ msgstr "Groen"
 msgid "Red"
 msgstr "Rood"
 
+#: src/bin/ephoto_red_eye.c:202 src/bin/ephoto_single_browser.c:1869
+msgid "Red Eye Removal"
+msgstr "Rode-ogen-verwijdering"
+
+#: src/bin/ephoto_red_eye.c:208
+msgid "Radius"
+msgstr "Straal"
+
+#: src/bin/ephoto_red_eye.c:223
+msgid "<b>Click on an eye</b>"
+msgstr "<b>Klik op een oog</b>"
+
+#: src/bin/ephoto_scale.c:217
+msgid "Scale Image"
+msgstr "Afbeelding herschalen"
+
+#: src/bin/ephoto_scale.c:223
+msgid "Keep Aspect"
+msgstr "Verhoudingen behouden"
+
+#: src/bin/ephoto_editor.c:54 src/bin/ephoto_single_browser.c:1915
+#: src/bin/ephoto_single_browser.c:1941
+msgid "Reset"
+msgstr "Terugzetten"
+
+#: src/bin/ephoto_editor.c:69
+msgid "Apply"
+msgstr "Toepassen"
+
+#: src/bin/ephoto_editor.c:84 src/bin/ephoto_file.c:629
+#: src/bin/ephoto_file.c:770
+msgid "Cancel"
+msgstr "Afbreken"
+
 #: src/bin/ephoto_cropper.c:702
 msgid "Crop Image"
 msgstr "Afbeelding bijknippen"
@@ -248,6 +282,228 @@ msgstr "Filter toepassen..."
 #: src/bin/ephoto_filters.c:116
 msgid "Please wait while this filter is applied to your image."
 msgstr "Wacht a.u.b. terwijl dit filter wordt toegepast op uw afbeelding."
+
+#: src/bin/ephoto_file.c:160
+msgid "Image Properties"
+msgstr "Eigenschappen van afbeelding"
+
+#: src/bin/ephoto_file.c:238 src/bin/ephoto_file.c:462
+msgid "Ok"
+msgstr "Oké"
+
+#: src/bin/ephoto_file.c:308 src/bin/ephoto_file.c:320
+#: src/bin/ephoto_file.c:337 src/bin/ephoto_file.c:1220
+#: src/bin/ephoto_file.c:1232 src/bin/ephoto_file.c:1248
+#: src/bin/ephoto_file.c:1349 src/bin/ephoto_file.c:1427
+msgid "Save Failed"
+msgstr "Opslaan mislukt"
+
+#: src/bin/ephoto_file.c:309 src/bin/ephoto_file.c:321
+#: src/bin/ephoto_file.c:338 src/bin/ephoto_file.c:1221
+#: src/bin/ephoto_file.c:1233 src/bin/ephoto_file.c:1249
+#: src/bin/ephoto_file.c:1350 src/bin/ephoto_file.c:1428
+msgid "Error: Image could not be saved here!"
+msgstr "Fout: afbeelding kon niet hier worden opgeslagen."
+
+#: src/bin/ephoto_file.c:407
+msgid "Image Uploaded"
+msgstr "Afbeelding opgestuurd"
+
+#: src/bin/ephoto_file.c:451 src/bin/ephoto_thumb_browser.c:982
+msgid "Copy"
+msgstr "Kopiëren"
+
+#: src/bin/ephoto_file.c:480
+msgid "There was an error uploading your image!"
+msgstr "Er is een fout opgetreden bij het opsturen van uw afbeelding."
+
+#: src/bin/ephoto_file.c:499
+msgid "Your image was uploaded to the following link:"
+msgstr "Uw afbeelding werd opgestuurd naar de volgende webkoppeling:"
+
+#: src/bin/ephoto_file.c:564 src/bin/ephoto_file.c:668
+#: src/bin/ephoto_file.c:671 src/bin/ephoto_file.c:827
+msgid "Error"
+msgstr "Fout"
+
+#: src/bin/ephoto_file.c:565
+msgid "There was an error creating this directory."
+msgstr "Er is een fout opgetreden bij het maken van deze map."
+
+#: src/bin/ephoto_file.c:588 src/bin/ephoto_file.c:603
+msgid "New Directory"
+msgstr "Nieuwe map"
+
+#: src/bin/ephoto_file.c:618 src/bin/ephoto_single_browser.c:1908
+#: src/bin/ephoto_single_browser.c:1942
+msgid "Save"
+msgstr "Opslaan"
+
+#: src/bin/ephoto_file.c:669
+msgid "There was an error renaming this directory."
+msgstr "Er is een fout opgetreden bij het hernoemen van deze map."
+
+#: src/bin/ephoto_file.c:672
+msgid "There was an error renaming this file."
+msgstr "Er is een fout opgetreden bij het hernoemen van dit bestand."
+
+#: src/bin/ephoto_file.c:721
+msgid "Rename Directory"
+msgstr "Map hernoemen"
+
+#: src/bin/ephoto_file.c:723
+msgid "Rename File"
+msgstr "Bestand hernoemen"
+
+#: src/bin/ephoto_file.c:759 src/bin/ephoto_thumb_browser.c:973
+#: src/bin/ephoto_single_browser.c:1947 src/bin/ephoto_directory_browser.c:689
+msgid "Rename"
+msgstr "Hernoemen"
+
+#: src/bin/ephoto_file.c:825
+msgid "There was an error completing your action on"
+msgstr "Er is een fout opgetreden bij het voltooien van uw actie op"
+
+#: src/bin/ephoto_file.c:826
+msgid "file"
+msgid_plural "files"
+msgstr[0] "bestand"
+msgstr[1] "bestanden"
+
+#: src/bin/ephoto_file.c:887
+msgid "Moving Files"
+msgstr "Bestanden verplaatsen..."
+
+#: src/bin/ephoto_file.c:888
+msgid "Please wait while your files are moved."
+msgstr "Wacht a.u.b. terwijl uw bestanden worden verplaatst."
+
+#: src/bin/ephoto_file.c:949
+msgid "Copying Files"
+msgstr "Bestanden kopiëren..."
+
+#: src/bin/ephoto_file.c:950
+msgid "Please wait while your files are copied."
+msgstr "Wacht a.u.b. terwijl uw bestanden worden gekopieerd."
+
+#: src/bin/ephoto_file.c:1028
+msgid "Deleting Files"
+msgstr "Bestanden verwijderen..."
+
+#: src/bin/ephoto_file.c:1029 src/bin/ephoto_file.c:1128
+msgid "Please wait while your files are deleted."
+msgstr "Wacht a.u.b. terwijl uw bestanden worden verwijderd."
+
+#: src/bin/ephoto_file.c:1088
+msgid "Deleting Directory"
+msgstr "Map verwijderen..."
+
+#: src/bin/ephoto_file.c:1089
+msgid "Please wait while your directory is deleted."
+msgstr "Wacht a.u.b. terwijl uw map wordt verwijderd."
+
+#: src/bin/ephoto_file.c:1127
+msgid "Emptying Trash"
+msgstr "Prullenbak ledigen..."
+
+#: src/bin/ephoto_file.c:1154 src/bin/ephoto_file.c:1514
+msgid "Upload Image"
+msgstr "Afbeelding opsturen"
+
+#: src/bin/ephoto_file.c:1305
+msgid "Overwrite Image"
+msgstr "Afbeelding overschrijven"
+
+#: src/bin/ephoto_file.c:1306 src/bin/ephoto_file.c:1433
+msgid "Are you sure you want to overwrite this image?"
+msgstr "Weet u zeker dat u deze afbeelding wilt overschrijven?"
+
+#: src/bin/ephoto_file.c:1314 src/bin/ephoto_file.c:1440
+#: src/bin/ephoto_file.c:1522 src/bin/ephoto_file.c:1579
+#: src/bin/ephoto_file.c:1630 src/bin/ephoto_file.c:1681
+#: src/bin/ephoto_file.c:1728 src/bin/ephoto_file.c:1786
+#: src/bin/ephoto_file.c:1840 src/bin/ephoto_single_browser.c:1026
+msgid "Yes"
+msgstr "Ja"
+
+#: src/bin/ephoto_file.c:1327 src/bin/ephoto_file.c:1451
+#: src/bin/ephoto_file.c:1534 src/bin/ephoto_file.c:1592
+#: src/bin/ephoto_file.c:1643 src/bin/ephoto_file.c:1694
+#: src/bin/ephoto_file.c:1741 src/bin/ephoto_file.c:1799
+#: src/bin/ephoto_file.c:1853 src/bin/ephoto_single_browser.c:1037
+msgid "No"
+msgstr "Nee"
+
+#: src/bin/ephoto_file.c:1432
+msgid "Save Image"
+msgstr "Afbeelding opslaan"
+
+#: src/bin/ephoto_file.c:1473
+msgid "Save Image As"
+msgstr "Afbeelding opslaan als"
+
+#: src/bin/ephoto_file.c:1493
+msgid "Image Files"
+msgstr "Afbeeldingsbestanden"
+
+#: src/bin/ephoto_file.c:1515
+msgid "Are you sure you want to upload this image publically to imgur.com?"
+msgstr ""
+"Weet u zeker dat u deze afbeelding publiekelijk zichtbaar wilt maken op "
+"imgur.com?"
+
+#: src/bin/ephoto_file.c:1569
+msgid "Are you sure you want to move these files to"
+msgstr "Weet u zeker dat u deze bestanden wilt verplaatsen naar"
+
+#: src/bin/ephoto_file.c:1571
+msgid "Move Files"
+msgstr "Bestanden verplaatsen"
+
+#: src/bin/ephoto_file.c:1620
+msgid "Are you sure you want to copy these files to"
+msgstr "Weet u zeker dat u deze bestanden wilt kopiëren naar"
+
+#: src/bin/ephoto_file.c:1622 src/bin/ephoto_file.c:1719
+msgid "Copy Files"
+msgstr "Bestanden kopiëren"
+
+#: src/bin/ephoto_file.c:1672
+msgid "Paste Files"
+msgstr "Bestanden plakken"
+
+#: src/bin/ephoto_file.c:1673
+msgid "Are you sure you want to paste these files here?"
+msgstr "Weet u zeker dat u deze bestanden hier wilt plakken?"
+
+#: src/bin/ephoto_file.c:1720
+msgid "Are you sure you want to copy these files here?"
+msgstr "Weet u zeker dat u deze bestanden hierheen wilt kopiëren?"
+
+#: src/bin/ephoto_file.c:1773
+msgid "Delete Directory"
+msgstr "Map verwijderen"
+
+#: src/bin/ephoto_file.c:1774
+msgid "Are you sure you want to delete this directory?"
+msgstr "Weet u zeker dat u deze map wilt verwijderen?"
+
+#: src/bin/ephoto_file.c:1777
+msgid "Delete Files"
+msgstr "Bestanden verwijderen"
+
+#: src/bin/ephoto_file.c:1778
+msgid "Are you sure you want to delete these files?"
+msgstr "Weet u zeker dat u deze bestanden wilt verwijderen?"
+
+#: src/bin/ephoto_file.c:1831 src/bin/ephoto_thumb_browser.c:995
+#: src/bin/ephoto_directory_browser.c:697
+msgid "Empty Trash"
+msgstr "Prullenbak ledigen"
+
+#: src/bin/ephoto_file.c:1832
+msgid "Are you sure you want to empty the trash?"
+msgstr "Weet u zeker dat u de prullenbak wilt ledigen?"
 
 #: src/bin/ephoto_hsv.c:332 src/bin/ephoto_single_browser.c:1865
 msgid "Hue/Saturation/Value"
@@ -304,27 +560,16 @@ msgstr "Alles kiezen"
 msgid "Select None"
 msgstr "Niets kiezen"
 
-#: src/bin/ephoto_thumb_browser.c:973 src/bin/ephoto_single_browser.c:1947
-msgid "Rename"
-msgstr "Hernoemen"
-
 #: src/bin/ephoto_thumb_browser.c:980
 msgid "Cut"
 msgstr "Knippen"
 
-#: src/bin/ephoto_thumb_browser.c:982
-msgid "Copy"
-msgstr "Kopiëren"
-
-#: src/bin/ephoto_thumb_browser.c:988
+#: src/bin/ephoto_thumb_browser.c:988 src/bin/ephoto_directory_browser.c:691
 msgid "Paste"
 msgstr "Plakken"
 
-#: src/bin/ephoto_thumb_browser.c:995
-msgid "Empty Trash"
-msgstr "Prullenbak ledigen"
-
 #: src/bin/ephoto_thumb_browser.c:1000 src/bin/ephoto_single_browser.c:1949
+#: src/bin/ephoto_directory_browser.c:702
 msgid "Delete"
 msgstr "Verwijderen"
 
@@ -443,14 +688,6 @@ msgstr "Afbeelding terugzetten"
 msgid "Are you sure you want to reset your changes?"
 msgstr "Weet u zeker dat u uw veranderingen wilt terugdraaien?"
 
-#: src/bin/ephoto_single_browser.c:1026
-msgid "Yes"
-msgstr "Ja"
-
-#: src/bin/ephoto_single_browser.c:1037
-msgid "No"
-msgstr "Nee"
-
 #: src/bin/ephoto_single_browser.c:1667
 msgid "This image does not exist or is corrupted!"
 msgstr "Deze afbeelding bestaat niet of is corrupt."
@@ -501,10 +738,6 @@ msgstr "Instelbare filters"
 #: src/bin/ephoto_single_browser.c:1867
 msgid "Color Levels"
 msgstr "Kleurniveaus"
-
-#: src/bin/ephoto_single_browser.c:1869
-msgid "Red Eye Removal"
-msgstr "Rode-ogen-verwijdering"
 
 #: src/bin/ephoto_single_browser.c:1871
 msgid "Quick Filters"
@@ -558,10 +791,6 @@ msgstr "Verscherpen"
 msgid "Sketch"
 msgstr "Schetsen"
 
-#: src/bin/ephoto_single_browser.c:1908 src/bin/ephoto_single_browser.c:1942
-msgid "Save"
-msgstr "Opslaan"
-
 #: src/bin/ephoto_single_browser.c:1909 src/bin/ephoto_single_browser.c:1943
 #: src/bin/ephoto_single_browser.c:2587 src/bin/ephoto_single_browser.c:2589
 msgid "Save As"
@@ -579,10 +808,6 @@ msgstr "Ongedaan maken"
 #: src/bin/ephoto_single_browser.c:1914
 msgid "Redo"
 msgstr "Opnieuw uitvoeren"
-
-#: src/bin/ephoto_single_browser.c:1915 src/bin/ephoto_single_browser.c:1941
-msgid "Reset"
-msgstr "Terugzetten"
 
 #: src/bin/ephoto_single_browser.c:1916
 msgid "Close"
@@ -622,6 +847,27 @@ msgstr "Vorige"
 msgid "Next"
 msgstr "Volgende"
 
+#: src/bin/ephoto_directory_browser.c:466 src/bin/ephoto_slideshow.c:924
+msgid "Back"
+msgstr "Terug"
+
+#: src/bin/ephoto_directory_browser.c:501
+#: src/bin/ephoto_directory_browser.c:704
+msgid "Trash"
+msgstr "Weggooien"
+
+#: src/bin/ephoto_directory_browser.c:678
+msgid "Root"
+msgstr "Beginmap"
+
+#: src/bin/ephoto_directory_browser.c:680
+msgid "Home"
+msgstr "Thuismap"
+
+#: src/bin/ephoto_directory_browser.c:684
+msgid "New Folder"
+msgstr "Nieuwe map"
+
 #: src/bin/ephoto_slideshow.c:708 src/bin/ephoto_slideshow.c:931
 msgid "Play"
 msgstr "Afspelen"
@@ -639,10 +885,6 @@ msgstr "Schermvullend"
 msgid "Normal"
 msgstr "Normaal"
 
-#: src/bin/ephoto_slideshow.c:924
-msgid "Back"
-msgstr "Terug"
-
 #: src/bin/ephoto_slideshow.c:926
 msgid "First"
 msgstr "Eerste"
@@ -651,171 +893,5 @@ msgstr "Eerste"
 msgid "Last"
 msgstr "Laatste"
 
-#~ msgid "<b>Click on an eye</b>"
-#~ msgstr "<b>Klik op een oog</b>"
-
-#~ msgid "Apply"
-#~ msgstr "Toepassen"
-
-#~ msgid "Are you sure you want to copy these files here?"
-#~ msgstr "Weet u zeker dat u deze bestanden hierheen wilt kopiëren?"
-
-#~ msgid "Are you sure you want to copy these files to"
-#~ msgstr "Weet u zeker dat u deze bestanden wilt kopiëren naar"
-
-#~ msgid "Are you sure you want to delete these files?"
-#~ msgstr "Weet u zeker dat u deze bestanden wilt verwijderen?"
-
-#~ msgid "Are you sure you want to delete this directory?"
-#~ msgstr "Weet u zeker dat u deze map wilt verwijderen?"
-
-#~ msgid "Are you sure you want to empty the trash?"
-#~ msgstr "Weet u zeker dat u de prullenbak wilt ledigen?"
-
-#~ msgid "Are you sure you want to move these files to"
-#~ msgstr "Weet u zeker dat u deze bestanden wilt verplaatsen naar"
-
-#~ msgid "Are you sure you want to overwrite this image?"
-#~ msgstr "Weet u zeker dat u deze afbeelding wilt overschrijven?"
-
-#~ msgid "Are you sure you want to paste these files here?"
-#~ msgstr "Weet u zeker dat u deze bestanden hier wilt plakken?"
-
-#~ msgid "Are you sure you want to upload this image publically to imgur.com?"
-#~ msgstr ""
-#~ "Weet u zeker dat u deze afbeelding publiekelijk zichtbaar wilt maken op "
-#~ "imgur.com?"
-
-#~ msgid "Cancel"
-#~ msgstr "Afbreken"
-
-#~ msgid "Copy Files"
-#~ msgstr "Bestanden kopiëren"
-
-#~ msgid "Copying Files"
-#~ msgstr "Bestanden kopiëren..."
-
-#~ msgid "Delete Directory"
-#~ msgstr "Map verwijderen"
-
-#~ msgid "Delete Files"
-#~ msgstr "Bestanden verwijderen"
-
-#~ msgid "Deleting Directory"
-#~ msgstr "Map verwijderen..."
-
-#~ msgid "Deleting Files"
-#~ msgstr "Bestanden verwijderen..."
-
-#~ msgid "Emptying Trash"
-#~ msgstr "Prullenbak ledigen..."
-
-#~ msgid "Error"
-#~ msgstr "Fout"
-
-#~ msgid "Error: Image could not be saved here!"
-#~ msgstr "Fout: afbeelding kon niet hier worden opgeslagen."
-
-#~ msgid "Home"
-#~ msgstr "Thuismap"
-
-#~ msgid "Image Files"
-#~ msgstr "Afbeeldingsbestanden"
-
-#~ msgid "Image Properties"
-#~ msgstr "Eigenschappen van afbeelding"
-
-#~ msgid "Image Uploaded"
-#~ msgstr "Afbeelding opgestuurd"
-
-#~ msgid "Keep Aspect"
-#~ msgstr "Verhoudingen behouden"
-
-#~ msgid "Move Files"
-#~ msgstr "Bestanden verplaatsen"
-
-#~ msgid "Moving Files"
-#~ msgstr "Bestanden verplaatsen..."
-
-#~ msgid "New Directory"
-#~ msgstr "Nieuwe map"
-
-#~ msgid "New Folder"
-#~ msgstr "Nieuwe map"
-
-#~ msgid "Ok"
-#~ msgstr "Oké"
-
 #~ msgid "Okay"
 #~ msgstr "Oké"
-
-#~ msgid "Overwrite Image"
-#~ msgstr "Afbeelding overschrijven"
-
-#~ msgid "Paste Files"
-#~ msgstr "Bestanden plakken"
-
-#~ msgid "Please wait while your directory is deleted."
-#~ msgstr "Wacht a.u.b. terwijl uw map wordt verwijderd."
-
-#~ msgid "Please wait while your files are copied."
-#~ msgstr "Wacht a.u.b. terwijl uw bestanden worden gekopieerd."
-
-#~ msgid "Please wait while your files are deleted."
-#~ msgstr "Wacht a.u.b. terwijl uw bestanden worden verwijderd."
-
-#~ msgid "Please wait while your files are moved."
-#~ msgstr "Wacht a.u.b. terwijl uw bestanden worden verplaatst."
-
-#~ msgid "Radius"
-#~ msgstr "Straal"
-
-#~ msgid "Rename Directory"
-#~ msgstr "Map hernoemen"
-
-#~ msgid "Rename File"
-#~ msgstr "Bestand hernoemen"
-
-#~ msgid "Root"
-#~ msgstr "Beginmap"
-
-#~ msgid "Save Failed"
-#~ msgstr "Opslaan mislukt"
-
-#~ msgid "Save Image"
-#~ msgstr "Afbeelding opslaan"
-
-#~ msgid "Save Image As"
-#~ msgstr "Afbeelding opslaan als"
-
-#~ msgid "Scale Image"
-#~ msgstr "Afbeelding herschalen"
-
-#~ msgid "There was an error completing your action on"
-#~ msgstr "Er is een fout opgetreden bij het voltooien van uw actie op"
-
-#~ msgid "There was an error creating this directory."
-#~ msgstr "Er is een fout opgetreden bij het maken van deze map."
-
-#~ msgid "There was an error renaming this directory."
-#~ msgstr "Er is een fout opgetreden bij het hernoemen van deze map."
-
-#~ msgid "There was an error renaming this file."
-#~ msgstr "Er is een fout opgetreden bij het hernoemen van dit bestand."
-
-#~ msgid "There was an error uploading your image!"
-#~ msgstr "Er is een fout opgetreden bij het opsturen van uw afbeelding."
-
-#~ msgid "Trash"
-#~ msgstr "Weggooien"
-
-#~ msgid "Upload Image"
-#~ msgstr "Afbeelding opsturen"
-
-#~ msgid "Your image was uploaded to the following link:"
-#~ msgstr "Uw afbeelding werd opgestuurd naar de volgende webkoppeling:"
-
-#~ msgid "file"
-#~ msgid_plural "files"
-#~ msgstr[0] "bestand"
-#~ msgstr[1] "bestanden"

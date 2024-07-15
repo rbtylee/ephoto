@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ephoto 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-13 20:40+0200\n"
+"POT-Creation-Date: 2024-07-15 08:52+0200\n"
 "PO-Revision-Date: 2017-11-04 00:00+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish\n"
@@ -104,7 +104,7 @@ msgstr "sekunder"
 msgid "Slide Transition"
 msgstr "Billedovergang"
 
-#: src/bin/ephoto_config.c:380
+#: src/bin/ephoto_config.c:380 src/bin/ephoto_file.c:372
 msgid "Open Link In Browser"
 msgstr "Åbn link i browser"
 
@@ -223,6 +223,42 @@ msgstr "Grøn"
 msgid "Red"
 msgstr "Rød"
 
+#: src/bin/ephoto_red_eye.c:202 src/bin/ephoto_single_browser.c:1869
+msgid "Red Eye Removal"
+msgstr "Fjern røde øjne"
+
+#: src/bin/ephoto_red_eye.c:208
+msgid "Radius"
+msgstr ""
+
+#: src/bin/ephoto_red_eye.c:223
+msgid "<b>Click on an eye</b>"
+msgstr ""
+
+#: src/bin/ephoto_scale.c:217
+#, fuzzy
+msgid "Scale Image"
+msgstr "Udjævnet skalering af billeder"
+
+#: src/bin/ephoto_scale.c:223
+#, fuzzy
+msgid "Keep Aspect"
+msgstr "Bevar højde-bredde-forhold på miniaturer"
+
+#: src/bin/ephoto_editor.c:54 src/bin/ephoto_single_browser.c:1915
+#: src/bin/ephoto_single_browser.c:1941
+msgid "Reset"
+msgstr "Nulstil"
+
+#: src/bin/ephoto_editor.c:69
+msgid "Apply"
+msgstr ""
+
+#: src/bin/ephoto_editor.c:84 src/bin/ephoto_file.c:629
+#: src/bin/ephoto_file.c:770
+msgid "Cancel"
+msgstr ""
+
 #: src/bin/ephoto_cropper.c:702
 msgid "Crop Image"
 msgstr "Beskær billede"
@@ -242,6 +278,259 @@ msgstr "Anvender filter"
 #: src/bin/ephoto_filters.c:116
 msgid "Please wait while this filter is applied to your image."
 msgstr "Vent venligst mens filteret anvendes på dit billede."
+
+#: src/bin/ephoto_file.c:160
+msgid "Image Properties"
+msgstr ""
+
+#: src/bin/ephoto_file.c:238 src/bin/ephoto_file.c:462
+msgid "Ok"
+msgstr ""
+
+#: src/bin/ephoto_file.c:308 src/bin/ephoto_file.c:320
+#: src/bin/ephoto_file.c:337 src/bin/ephoto_file.c:1220
+#: src/bin/ephoto_file.c:1232 src/bin/ephoto_file.c:1248
+#: src/bin/ephoto_file.c:1349 src/bin/ephoto_file.c:1427
+msgid "Save Failed"
+msgstr ""
+
+#: src/bin/ephoto_file.c:309 src/bin/ephoto_file.c:321
+#: src/bin/ephoto_file.c:338 src/bin/ephoto_file.c:1221
+#: src/bin/ephoto_file.c:1233 src/bin/ephoto_file.c:1249
+#: src/bin/ephoto_file.c:1350 src/bin/ephoto_file.c:1428
+msgid "Error: Image could not be saved here!"
+msgstr ""
+
+#: src/bin/ephoto_file.c:407
+#, fuzzy
+msgid "Image Uploaded"
+msgstr "Upload"
+
+#: src/bin/ephoto_file.c:451 src/bin/ephoto_thumb_browser.c:982
+msgid "Copy"
+msgstr "Kopiér"
+
+#: src/bin/ephoto_file.c:480
+msgid "There was an error uploading your image!"
+msgstr ""
+
+#: src/bin/ephoto_file.c:499
+msgid "Your image was uploaded to the following link:"
+msgstr ""
+
+#: src/bin/ephoto_file.c:564 src/bin/ephoto_file.c:668
+#: src/bin/ephoto_file.c:671 src/bin/ephoto_file.c:827
+msgid "Error"
+msgstr ""
+
+#: src/bin/ephoto_file.c:565
+#, fuzzy
+msgid "There was an error creating this directory."
+msgstr "Der er ingen billeder i mappen"
+
+#: src/bin/ephoto_file.c:588 src/bin/ephoto_file.c:603
+#, fuzzy
+msgid "New Directory"
+msgstr "Hjemmemappe"
+
+#: src/bin/ephoto_file.c:618 src/bin/ephoto_single_browser.c:1908
+#: src/bin/ephoto_single_browser.c:1942
+msgid "Save"
+msgstr "Gem"
+
+#: src/bin/ephoto_file.c:669
+#, fuzzy
+msgid "There was an error renaming this directory."
+msgstr "Der er ingen billeder i mappen"
+
+#: src/bin/ephoto_file.c:672
+msgid "There was an error renaming this file."
+msgstr ""
+
+#: src/bin/ephoto_file.c:721
+#, fuzzy
+msgid "Rename Directory"
+msgstr "Hjemmemappe"
+
+#: src/bin/ephoto_file.c:723
+#, fuzzy
+msgid "Rename File"
+msgstr "Omdøb"
+
+#: src/bin/ephoto_file.c:759 src/bin/ephoto_thumb_browser.c:973
+#: src/bin/ephoto_single_browser.c:1947 src/bin/ephoto_directory_browser.c:689
+msgid "Rename"
+msgstr "Omdøb"
+
+#: src/bin/ephoto_file.c:825
+msgid "There was an error completing your action on"
+msgstr ""
+
+#: src/bin/ephoto_file.c:826
+msgid "file"
+msgid_plural "files"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/bin/ephoto_file.c:887
+#, fuzzy
+msgid "Moving Files"
+msgstr "Flytter diasshow"
+
+#: src/bin/ephoto_file.c:888
+#, fuzzy
+msgid "Please wait while your files are moved."
+msgstr "Vent venligst mens filteret anvendes på dit billede."
+
+#: src/bin/ephoto_file.c:949
+#, fuzzy
+msgid "Copying Files"
+msgstr "Anvender filter"
+
+#: src/bin/ephoto_file.c:950
+#, fuzzy
+msgid "Please wait while your files are copied."
+msgstr "Vent venligst mens filteret anvendes på dit billede."
+
+#: src/bin/ephoto_file.c:1028
+#, fuzzy
+msgid "Deleting Files"
+msgstr "Anvender filter"
+
+#: src/bin/ephoto_file.c:1029 src/bin/ephoto_file.c:1128
+#, fuzzy
+msgid "Please wait while your files are deleted."
+msgstr "Vent venligst mens filteret anvendes på dit billede."
+
+#: src/bin/ephoto_file.c:1088
+#, fuzzy
+msgid "Deleting Directory"
+msgstr "Rodmappe"
+
+#: src/bin/ephoto_file.c:1089
+#, fuzzy
+msgid "Please wait while your directory is deleted."
+msgstr "Vent venligst mens filteret anvendes på dit billede."
+
+#: src/bin/ephoto_file.c:1127
+#, fuzzy
+msgid "Emptying Trash"
+msgstr "Tøm papirkurv"
+
+#: src/bin/ephoto_file.c:1154 src/bin/ephoto_file.c:1514
+#, fuzzy
+msgid "Upload Image"
+msgstr "Dårligt billede"
+
+#: src/bin/ephoto_file.c:1305
+#, fuzzy
+msgid "Overwrite Image"
+msgstr "Vis billede"
+
+#: src/bin/ephoto_file.c:1306 src/bin/ephoto_file.c:1433
+#, fuzzy
+msgid "Are you sure you want to overwrite this image?"
+msgstr "Er du sikker på, at du vil nulstille dine ændringer?"
+
+#: src/bin/ephoto_file.c:1314 src/bin/ephoto_file.c:1440
+#: src/bin/ephoto_file.c:1522 src/bin/ephoto_file.c:1579
+#: src/bin/ephoto_file.c:1630 src/bin/ephoto_file.c:1681
+#: src/bin/ephoto_file.c:1728 src/bin/ephoto_file.c:1786
+#: src/bin/ephoto_file.c:1840 src/bin/ephoto_single_browser.c:1026
+msgid "Yes"
+msgstr "Ja"
+
+#: src/bin/ephoto_file.c:1327 src/bin/ephoto_file.c:1451
+#: src/bin/ephoto_file.c:1534 src/bin/ephoto_file.c:1592
+#: src/bin/ephoto_file.c:1643 src/bin/ephoto_file.c:1694
+#: src/bin/ephoto_file.c:1741 src/bin/ephoto_file.c:1799
+#: src/bin/ephoto_file.c:1853 src/bin/ephoto_single_browser.c:1037
+msgid "No"
+msgstr "Nej"
+
+#: src/bin/ephoto_file.c:1432
+#, fuzzy
+msgid "Save Image"
+msgstr "Dårligt billede"
+
+#: src/bin/ephoto_file.c:1473
+#, fuzzy
+msgid "Save Image As"
+msgstr "Gem som"
+
+#: src/bin/ephoto_file.c:1493
+msgid "Image Files"
+msgstr ""
+
+#: src/bin/ephoto_file.c:1515
+#, fuzzy
+msgid "Are you sure you want to upload this image publically to imgur.com?"
+msgstr "Er du sikker på, at du vil nulstille dine ændringer?"
+
+#: src/bin/ephoto_file.c:1569
+#, fuzzy
+msgid "Are you sure you want to move these files to"
+msgstr "Er du sikker på, at du vil nulstille dine ændringer?"
+
+#: src/bin/ephoto_file.c:1571
+#, fuzzy
+msgid "Move Files"
+msgstr "Flyt filer når de slippes"
+
+#: src/bin/ephoto_file.c:1620
+#, fuzzy
+msgid "Are you sure you want to copy these files to"
+msgstr "Er du sikker på, at du vil nulstille dine ændringer?"
+
+#: src/bin/ephoto_file.c:1622 src/bin/ephoto_file.c:1719
+#, fuzzy
+msgid "Copy Files"
+msgstr "Kopiér link"
+
+#: src/bin/ephoto_file.c:1672
+#, fuzzy
+msgid "Paste Files"
+msgstr "Indsæt"
+
+#: src/bin/ephoto_file.c:1673
+#, fuzzy
+msgid "Are you sure you want to paste these files here?"
+msgstr "Er du sikker på, at du vil nulstille dine ændringer?"
+
+#: src/bin/ephoto_file.c:1720
+#, fuzzy
+msgid "Are you sure you want to copy these files here?"
+msgstr "Er du sikker på, at du vil nulstille dine ændringer?"
+
+#: src/bin/ephoto_file.c:1773
+#, fuzzy
+msgid "Delete Directory"
+msgstr "Hjemmemappe"
+
+#: src/bin/ephoto_file.c:1774
+#, fuzzy
+msgid "Are you sure you want to delete this directory?"
+msgstr "Er du sikker på, at du vil nulstille dine ændringer?"
+
+#: src/bin/ephoto_file.c:1777
+#, fuzzy
+msgid "Delete Files"
+msgstr "Slet"
+
+#: src/bin/ephoto_file.c:1778
+#, fuzzy
+msgid "Are you sure you want to delete these files?"
+msgstr "Er du sikker på, at du vil nulstille dine ændringer?"
+
+#: src/bin/ephoto_file.c:1831 src/bin/ephoto_thumb_browser.c:995
+#: src/bin/ephoto_directory_browser.c:697
+msgid "Empty Trash"
+msgstr "Tøm papirkurv"
+
+#: src/bin/ephoto_file.c:1832
+#, fuzzy
+msgid "Are you sure you want to empty the trash?"
+msgstr "Er du sikker på, at du vil nulstille dine ændringer?"
 
 #: src/bin/ephoto_hsv.c:332 src/bin/ephoto_single_browser.c:1865
 msgid "Hue/Saturation/Value"
@@ -298,27 +587,16 @@ msgstr "Vælg alle"
 msgid "Select None"
 msgstr "Vælg ingen"
 
-#: src/bin/ephoto_thumb_browser.c:973 src/bin/ephoto_single_browser.c:1947
-msgid "Rename"
-msgstr "Omdøb"
-
 #: src/bin/ephoto_thumb_browser.c:980
 msgid "Cut"
 msgstr "Klip"
 
-#: src/bin/ephoto_thumb_browser.c:982
-msgid "Copy"
-msgstr "Kopiér"
-
-#: src/bin/ephoto_thumb_browser.c:988
+#: src/bin/ephoto_thumb_browser.c:988 src/bin/ephoto_directory_browser.c:691
 msgid "Paste"
 msgstr "Indsæt"
 
-#: src/bin/ephoto_thumb_browser.c:995
-msgid "Empty Trash"
-msgstr "Tøm papirkurv"
-
 #: src/bin/ephoto_thumb_browser.c:1000 src/bin/ephoto_single_browser.c:1949
+#: src/bin/ephoto_directory_browser.c:702
 msgid "Delete"
 msgstr "Slet"
 
@@ -437,14 +715,6 @@ msgstr "Nulstil billede"
 msgid "Are you sure you want to reset your changes?"
 msgstr "Er du sikker på, at du vil nulstille dine ændringer?"
 
-#: src/bin/ephoto_single_browser.c:1026
-msgid "Yes"
-msgstr "Ja"
-
-#: src/bin/ephoto_single_browser.c:1037
-msgid "No"
-msgstr "Nej"
-
 #: src/bin/ephoto_single_browser.c:1667
 msgid "This image does not exist or is corrupted!"
 msgstr "Billedet findes ikke eller er ødelagt!"
@@ -495,10 +765,6 @@ msgstr "Justerbare filtre"
 #: src/bin/ephoto_single_browser.c:1867
 msgid "Color Levels"
 msgstr "Farveniveauer"
-
-#: src/bin/ephoto_single_browser.c:1869
-msgid "Red Eye Removal"
-msgstr "Fjern røde øjne"
 
 #: src/bin/ephoto_single_browser.c:1871
 msgid "Quick Filters"
@@ -552,10 +818,6 @@ msgstr "Skarp"
 msgid "Sketch"
 msgstr "Skitse"
 
-#: src/bin/ephoto_single_browser.c:1908 src/bin/ephoto_single_browser.c:1942
-msgid "Save"
-msgstr "Gem"
-
 #: src/bin/ephoto_single_browser.c:1909 src/bin/ephoto_single_browser.c:1943
 #: src/bin/ephoto_single_browser.c:2587 src/bin/ephoto_single_browser.c:2589
 msgid "Save As"
@@ -573,10 +835,6 @@ msgstr "Fortryd"
 #: src/bin/ephoto_single_browser.c:1914
 msgid "Redo"
 msgstr "Omgør"
-
-#: src/bin/ephoto_single_browser.c:1915 src/bin/ephoto_single_browser.c:1941
-msgid "Reset"
-msgstr "Nulstil"
 
 #: src/bin/ephoto_single_browser.c:1916
 msgid "Close"
@@ -616,6 +874,29 @@ msgstr "Forrige"
 msgid "Next"
 msgstr "Næste"
 
+#: src/bin/ephoto_directory_browser.c:466 src/bin/ephoto_slideshow.c:924
+msgid "Back"
+msgstr "Tilbage"
+
+#: src/bin/ephoto_directory_browser.c:501
+#: src/bin/ephoto_directory_browser.c:704
+#, fuzzy
+msgid "Trash"
+msgstr "Tøm papirkurv"
+
+#: src/bin/ephoto_directory_browser.c:678
+msgid "Root"
+msgstr ""
+
+#: src/bin/ephoto_directory_browser.c:680
+msgid "Home"
+msgstr ""
+
+#: src/bin/ephoto_directory_browser.c:684
+#, fuzzy
+msgid "New Folder"
+msgstr "Vis mapper"
+
 #: src/bin/ephoto_slideshow.c:708 src/bin/ephoto_slideshow.c:931
 msgid "Play"
 msgstr "Afspil"
@@ -632,10 +913,6 @@ msgstr "Fuldskærm"
 #: src/bin/ephoto_slideshow.c:777 src/bin/ephoto_slideshow.c:1058
 msgid "Normal"
 msgstr "Normal"
-
-#: src/bin/ephoto_slideshow.c:924
-msgid "Back"
-msgstr "Tilbage"
 
 #: src/bin/ephoto_slideshow.c:926
 msgid "First"
