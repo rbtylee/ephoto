@@ -237,7 +237,7 @@ msgstr "<b>Klikni na oko</b>"
 
 #: src/bin/ephoto_scale.c:217
 msgid "Scale Image"
-msgstr "Zmeniť mierku obrázku"
+msgstr "Zmeniť veľkosť obrázku"
 
 #: src/bin/ephoto_scale.c:223
 msgid "Keep Aspect"
@@ -290,14 +290,14 @@ msgstr "OK"
 #: src/bin/ephoto_file.c:1232 src/bin/ephoto_file.c:1248
 #: src/bin/ephoto_file.c:1349 src/bin/ephoto_file.c:1427
 msgid "Save Failed"
-msgstr ""
+msgstr "Ukladanie zlyhalo"
 
 #: src/bin/ephoto_file.c:309 src/bin/ephoto_file.c:321
 #: src/bin/ephoto_file.c:338 src/bin/ephoto_file.c:1221
 #: src/bin/ephoto_file.c:1233 src/bin/ephoto_file.c:1249
 #: src/bin/ephoto_file.c:1350 src/bin/ephoto_file.c:1428
 msgid "Error: Image could not be saved here!"
-msgstr "Chyba: Súbor tu nemôže byť uložený!"
+msgstr "Chyba: Súbor nemôže byť uložený tu!"
 
 #: src/bin/ephoto_file.c:407
 msgid "Image Uploaded"
@@ -309,11 +309,11 @@ msgstr "Kopírovať"
 
 #: src/bin/ephoto_file.c:480
 msgid "There was an error uploading your image!"
-msgstr "Chyba počas nahrávania obrázku"
+msgstr "Chyba počas nahrávania obrázku!"
 
 #: src/bin/ephoto_file.c:499
 msgid "Your image was uploaded to the following link:"
-msgstr ""
+msgstr "Váš obrázok bol nahraný na tento link:"
 
 #: src/bin/ephoto_file.c:564 src/bin/ephoto_file.c:668
 #: src/bin/ephoto_file.c:671 src/bin/ephoto_file.c:827
@@ -322,7 +322,7 @@ msgstr "Chyba"
 
 #: src/bin/ephoto_file.c:565
 msgid "There was an error creating this directory."
-msgstr "Chyba počas vytvárania priečinku"
+msgstr "Chyba počas vytvárania tohto priečinku."
 
 #: src/bin/ephoto_file.c:588 src/bin/ephoto_file.c:603
 msgid "New Directory"
@@ -335,15 +335,15 @@ msgstr "Uložiť"
 
 #: src/bin/ephoto_file.c:669
 msgid "There was an error renaming this directory."
-msgstr "Chyba počas premenovania priečinku"
+msgstr "Chyba počas premenovania tohto priečinku."
 
 #: src/bin/ephoto_file.c:672
 msgid "There was an error renaming this file."
-msgstr "Chyba počas premenovania súboru"
+msgstr "Chyba počas premenovania súboru."
 
 #: src/bin/ephoto_file.c:721
 msgid "Rename Directory"
-msgstr "Premenovař priečinok"
+msgstr "Premenovať priečinok"
 
 #: src/bin/ephoto_file.c:723
 msgid "Rename File"
@@ -356,7 +356,7 @@ msgstr "Premenovať"
 
 #: src/bin/ephoto_file.c:825
 msgid "There was an error completing your action on"
-msgstr "Chyba počas vykonávania činnosti"
+msgstr "Počas vykonávania operácie došlo k chybe"
 
 #: src/bin/ephoto_file.c:826
 msgid "file"
@@ -710,7 +710,7 @@ msgstr "Orezať"
 
 #: src/bin/ephoto_single_browser.c:1851
 msgid "Scale"
-msgstr "Mierka"
+msgstr "Veľkosť"
 
 #: src/bin/ephoto_single_browser.c:1852 src/bin/ephoto_single_browser.c:2539
 #: src/bin/ephoto_single_browser.c:2541
