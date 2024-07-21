@@ -32,6 +32,7 @@ data/themes/default/ephoto.edj
 data/themes/default/images/Makefile
 data/themes/default/images/Makefile.in
 data/themes/ephoto.edj
+debian
 depcomp
 ephoto.spec
 install-sh
@@ -112,4 +113,4 @@ src/bin/ephoto_ql_la-ephoto_slideshow.lo
 src/bin/ephoto_ql_la-ephoto_thumb_browser.lo
 src/bin/ephoto_thumbnail
 src/bin/stamp-h1
-
+.vscode
