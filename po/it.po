@@ -816,7 +816,7 @@ msgstr "File"
 
 #: src/bin/ephoto_single_browser.c:1945
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Copia negli appunti"
 
 #: src/bin/ephoto_single_browser.c:1955
 msgid "Properties"

@@ -871,11 +871,11 @@ msgstr "Datoteka"
 
 #: src/bin/ephoto_single_browser.c:1945
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopiraj v odložišče"
 
 #: src/bin/ephoto_single_browser.c:1955
 msgid "Properties"
-msgstr ""
+msgstr "Lastnosti"
 
 #: src/bin/ephoto_single_browser.c:1959
 msgid "Zoom Fit"
