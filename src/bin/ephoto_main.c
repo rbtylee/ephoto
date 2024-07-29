@@ -49,22 +49,25 @@ _ephoto_thumb_browser_show(Ephoto *ephoto, Ephoto_Entry *entry)
    evas_object_freeze_events_set(ephoto->single_browser, EINA_TRUE);
    evas_object_freeze_events_set(ephoto->slideshow, EINA_TRUE);
    evas_object_freeze_events_set(ephoto->thumb_browser, EINA_FALSE);
-   if ((entry) && (entry->item) && (!ephoto->thumb_browser_dirty))
+   if (!ephoto->entry_free)
      {
-        Eina_List *l;
-        Elm_Object_Item *it;
+       if ((entry) && (entry->item) && (!ephoto->thumb_browser_dirty))
+         {
+           Eina_List *l;
+           Elm_Object_Item *it;
 
-        l = eina_list_clone(elm_gengrid_selected_items_get(entry->gengrid));
-        if (eina_list_count(l) <= 1)
-          {
-             EINA_LIST_FREE(l, it)
-               elm_gengrid_item_selected_set(it, EINA_FALSE);
-             elm_gengrid_item_bring_in(entry->item, ELM_GENGRID_ITEM_SCROLLTO_IN);
-             elm_gengrid_item_selected_set(entry->item, EINA_TRUE);
-          }
+           l = eina_list_clone(elm_gengrid_selected_items_get(entry->gengrid));
+           if (eina_list_count(l) <= 1)
+             {
+               EINA_LIST_FREE(l, it)
+                 elm_gengrid_item_selected_set(it, EINA_FALSE);
+               elm_gengrid_item_bring_in(entry->item, ELM_GENGRID_ITEM_SCROLLTO_IN);
+               elm_gengrid_item_selected_set(entry->item, EINA_TRUE);
+             }
+         }
+      else
+        ephoto_thumb_browser_recalc(ephoto);
      }
-   else
-     ephoto_thumb_browser_recalc(ephoto);
    ephoto_single_browser_entry_set(ephoto->single_browser, NULL);
    ephoto_slideshow_entry_set(ephoto->slideshow, NULL);
 }
@@ -1022,6 +1025,7 @@ ephoto_directory_set(Ephoto *ephoto, const char *path, Evas_Object *expanded,
      eina_list_append(ephoto->monitor_handlers,
                       ecore_event_handler_add(EIO_MONITOR_FILE_DELETED,
                                               _monitor_cb, ephoto));
+   ephoto->entry_free = 0;
    free(rp);
 }
 

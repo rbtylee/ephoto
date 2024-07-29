@@ -312,6 +312,7 @@ _monitor_cb(void *data, int type,
 
    if (eina_list_count(sb->history) > 1)
      return ECORE_CALLBACK_PASS_ON;
+
    if (type == EIO_MONITOR_FILE_MODIFIED)
      {
         if (ecore_file_exists(sb->entry->path))
@@ -340,10 +341,9 @@ _monitor_cb(void *data, int type,
      }
    else if (type == EIO_MONITOR_FILE_DELETED)
      {
-        if (!ecore_file_exists(sb->pending_path)) {
-          sb->entry->path = sb->pending_path;
+        if (sb->ephoto->entry_free)
+        //~ if (!ecore_file_exists(sb->entry->path)) {
           _ephoto_main_back(sb, NULL, NULL);
-        }
      }
    return ECORE_CALLBACK_PASS_ON;
 }

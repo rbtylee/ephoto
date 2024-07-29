@@ -391,12 +391,12 @@ _dir_item_icon_get(void *data, Evas_Object *obj,
 }
 
 static void
-_dir_item_del(void *data, Evas_Object *obj EINA_UNUSED)
+_dir_item_del(void *data EINA_UNUSED, Evas_Object *obj EINA_UNUSED)
 {
-   Ephoto_Entry *e = data;
+   //~ Ephoto_Entry *e = data;
 
-   if (!e->no_delete)
-     ephoto_entry_free(e->ephoto, e);
+   //~ if (!e->no_delete)
+     //~ ephoto_entry_free(e->ephoto, e);
 }
 
 static Eina_Bool

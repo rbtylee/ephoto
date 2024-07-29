@@ -2026,6 +2026,7 @@ ephoto_thumb_browser_remove(Ephoto *ephoto, Ephoto_Entry *entry)
         ephoto_thumb_browser_update_info_label(tb->ephoto);
         elm_object_item_del(entry->item);
         ephoto_entry_free(tb->ephoto, entry);
+        tb->ephoto->entry_free = 1;
      }
 }
 

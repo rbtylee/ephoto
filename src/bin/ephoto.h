@@ -286,6 +286,7 @@ struct _Ephoto
    char                      *url_ret;
    char                      *upload_error;
    int                        file_errors;
+   int                        entry_free;
 
    const char                *top_directory;
    const char                *config_path;
