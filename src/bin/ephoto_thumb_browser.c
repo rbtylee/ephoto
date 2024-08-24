@@ -12,8 +12,8 @@
 #define DRAG_TIMEOUT        0.3
 #define ANIM_TIME           0.2
 
-//static Eina_Bool _5s_cancel = EINA_FALSE;
-//static Ecore_Timer *_5s_timeout = NULL;
+static Eina_Bool _5s_cancel = EINA_FALSE;
+static Ecore_Timer *_5s_timeout = NULL;
 
 typedef struct _Ephoto_Thumb_Browser Ephoto_Thumb_Browser;
 
@@ -80,7 +80,7 @@ static void  _ephoto_thumb_search_cancel(void *data, Evas_Object *obj EINA_UNUSE
                                          void *event_info EINA_UNUSED);
 static void  _ephoto_thumb_search_start(void *data, Evas_Object *obj EINA_UNUSED,
                                         void *event_info EINA_UNUSED);
-//static char *_drag_data_extract(char **drag_data);
+static char *_drag_data_extract(char **drag_data);
 
 /*Common Callbacks*/
 static void
@@ -113,7 +113,6 @@ _menu_empty_cb(void *data, Evas_Object *obj EINA_UNUSED,
    ephoto_file_empty_trash(tb->ephoto, paths);
 }
 
-#if 0
 static Eina_Bool
 _5s_timeout_gone(void *data)
 {
@@ -403,7 +402,6 @@ _dnd_item_data_get(Evas_Object *obj, Elm_Object_Item *it,
    else
      return EINA_FALSE;
 }
-#endif
 
 /*Thumb Pane Callbacks*/
 static char *
@@ -1203,7 +1201,8 @@ _ephoto_thumb_search_go(void *data, Evas_Object *obj EINA_UNUSED,
                                   _ephoto_thumb_activated, tb);
    evas_object_event_callback_add(tb->grid, EVAS_CALLBACK_MOUSE_UP,
                                   _grid_mouse_up_cb, tb);
-   // elm_drag_item_container_add(tb->grid, ANIM_TIME, DRAG_TIMEOUT, _dnd_item_get, _dnd_item_data_get);
+   elm_drag_item_container_add(tb->grid, ANIM_TIME, DRAG_TIMEOUT,
+                               _dnd_item_get, _dnd_item_data_get);
    evas_object_data_set(tb->grid, "thumb_browser", tb);
    _ephoto_thumb_zoom_set(tb, tb->ephoto->config->thumb_size);
    elm_box_pack_end(tb->gridbox, tb->grid);
@@ -1417,11 +1416,11 @@ _ephoto_thumb_view_add(Ephoto_Thumb_Browser *tb)
                                   _grid_mouse_up_cb, tb);
    evas_object_event_callback_add(tb->grid, EVAS_CALLBACK_MOUSE_WHEEL,
                                   _grid_mouse_wheel, tb);
-   /*elm_drag_item_container_add(tb->grid, ANIM_TIME, DRAG_TIMEOUT,
+   elm_drag_item_container_add(tb->grid, ANIM_TIME, DRAG_TIMEOUT,
                                _dnd_item_get, _dnd_item_data_get);
    elm_drop_item_container_add(tb->grid, ELM_SEL_FORMAT_TARGETS,
                                _drop_item_getcb, _drop_enter, tb, _drop_leave, tb, _drop_pos, tb,
-                               _drop_dropcb, NULL);*/
+                               _drop_dropcb, NULL);
    evas_object_data_set(tb->grid, "thumb_browser", tb);
    elm_box_pack_end(tb->gridbox, tb->grid);
    evas_object_show(tb->grid);
