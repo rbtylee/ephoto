@@ -1416,8 +1416,8 @@ _ephoto_thumb_view_add(Ephoto_Thumb_Browser *tb)
                                   _grid_mouse_up_cb, tb);
    evas_object_event_callback_add(tb->grid, EVAS_CALLBACK_MOUSE_WHEEL,
                                   _grid_mouse_wheel, tb);
-   elm_drag_item_container_add(tb->grid, ANIM_TIME, DRAG_TIMEOUT,
-                               _dnd_item_get, _dnd_item_data_get);
+   //~ elm_drag_item_container_add(tb->grid, ANIM_TIME, DRAG_TIMEOUT,
+                               //~ _dnd_item_get, _dnd_item_data_get);
    elm_drop_item_container_add(tb->grid, ELM_SEL_FORMAT_TARGETS,
                                _drop_item_getcb, _drop_enter, tb, _drop_leave, tb, _drop_pos, tb,
                                _drop_dropcb, NULL);
