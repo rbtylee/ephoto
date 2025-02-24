@@ -15,7 +15,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: src/bin/ephoto_bcg.c:325 src/bin/ephoto_single_browser.c:1863
 msgid "Brightness/Contrast/Gamma"
