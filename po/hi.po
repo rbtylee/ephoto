@@ -1,853 +1,861 @@
 # Hindi translations for ephoto package.
 # This file is put in the public domain.
 #
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Indraneel Rajeevan <https://github.com/indraneel12>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ephoto\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2024-07-15 08:52+0200\n"
-"PO-Revision-Date: 2024-07-15 08:52+0200\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2025-02-25 15:02+0530\n"
+"Last-Translator: Indraneel Rajeevan <https://github.com/indraneel12>\n"
 "Language-Team: Hindi\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: src/bin/ephoto_bcg.c:325 src/bin/ephoto_single_browser.c:1863
 msgid "Brightness/Contrast/Gamma"
-msgstr ""
+msgstr "चमक/कॉन्ट्रास्ट/गामा"
 
 #: src/bin/ephoto_bcg.c:331
 msgid "Gamma"
-msgstr ""
+msgstr "गामा"
 
 #: src/bin/ephoto_bcg.c:346
 msgid "Contrast"
-msgstr ""
+msgstr "कॉन्ट्रास्ट"
 
 #: src/bin/ephoto_bcg.c:361
 msgid "Brightness"
-msgstr ""
+msgstr "चमक"
 
 #: src/bin/ephoto_config.c:27 src/bin/ephoto_config.c:178
 msgid "Root Directory"
-msgstr ""
+msgstr "रूट डायरेक्टरी"
 
 #: src/bin/ephoto_config.c:29 src/bin/ephoto_config.c:180
 msgid "Home Directory"
-msgstr ""
+msgstr "होम डायरेक्टरी"
 
 #: src/bin/ephoto_config.c:31 src/bin/ephoto_config.c:182
 msgid "Last Open Directory"
-msgstr ""
+msgstr "अंतिम खुली डायरेक्टरी"
 
-#: src/bin/ephoto_config.c:93 src/bin/ephoto_config.c:184
-#: src/bin/ephoto_config.c:197
+#: src/bin/ephoto_config.c:93 src/bin/ephoto_config.c:184 src/bin/ephoto_config.c:197
 msgid "Custom Directory"
-msgstr ""
+msgstr "कस्टम डायरेक्टरी"
 
 #: src/bin/ephoto_config.c:112
 msgid "Show Folders On Start"
-msgstr ""
+msgstr "प्रारंभ पर फ़ोल्डर दिखाएँ"
 
 #: src/bin/ephoto_config.c:120
 msgid "Prompt Before Changing The Filesystem"
-msgstr ""
+msgstr "फ़ाइल सिस्टम बदलने से पहले संकेत"
 
 #: src/bin/ephoto_config.c:128
 msgid "Move Files When Dropped"
-msgstr ""
+msgstr "फ़ाइलें गिराए जाने पर उन्हें स्थानांतरित करें"
 
 #: src/bin/ephoto_config.c:136
 msgid "Smooth Scale Images"
-msgstr ""
+msgstr "स्मूथ स्केल तस्वीरें"
 
 #: src/bin/ephoto_config.c:144
 msgid "Keep Aspect on Thumbnails"
-msgstr ""
+msgstr "थंबनेल पर एस्पेक्ट्स बनाए रखें"
 
 #: src/bin/ephoto_config.c:152
 msgid "File Panel Size"
-msgstr ""
+msgstr "फ़ाइल पैनल का आकार"
 
 #: src/bin/ephoto_config.c:159
 msgid "Weight (1.0 Max)"
-msgstr ""
+msgstr "वजन (1.0 अधिकतम)"
 
 #: src/bin/ephoto_config.c:171
 msgid "Top Level Directory"
-msgstr ""
+msgstr "शीर्ष स्तरीय डायरेक्टरी"
 
 #: src/bin/ephoto_config.c:222
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "सेकंड"
+msgstr[1] "सेकंड"
 
 #: src/bin/ephoto_config.c:267
 msgid "Moving Slideshow"
-msgstr ""
+msgstr "चलती स्लाइडशो"
 
 #: src/bin/ephoto_config.c:276
 msgid "Show Each Slide For"
-msgstr ""
+msgstr "प्रत्येक स्लाइड को दिखाएँ"
 
 #: src/bin/ephoto_config.c:285
 msgid "seconds"
-msgstr ""
+msgstr "सेकंड"
 
 #: src/bin/ephoto_config.c:297
 msgid "Slide Transition"
-msgstr ""
+msgstr "स्लाइड संक्रमण"
 
 #: src/bin/ephoto_config.c:380 src/bin/ephoto_file.c:372
 msgid "Open Link In Browser"
-msgstr ""
+msgstr "ब्राउज़र में लिंक खोलें"
 
 #: src/bin/ephoto_config.c:388
 msgid "Copy Link"
-msgstr ""
+msgstr "लिंक कॉपी करें"
 
 #: src/bin/ephoto_config.c:414
 msgid ""
-"<b><hilight>General Bindings</hilight></b><br/><b>F1:</b> Settings Panel<br/"
-"><b>F5:</b> Start Slideshow<br/><b>F11:</b> Toggle Fullscreen<br/"
-"><b>Ctrl+Shift+f:</b> Toggle File Selector<br/><br/><b><hilight>Thumbnail "
-"Browser Bindings</hilight></b><br/><b>Ctrl++:</b> Zoom In<br/><b>Ctrl+-:</b> "
-"Zoom Out<br/><b>Ctrl+c:</b> Copy Image<br/><b>Ctrl+x:</b> Cut Image<br/"
-"><b>Ctrl+v:</b> Paste Image<br/><b>Ctrl+a:</b> Select All<br/><b>Ctrl+f:</b> "
-"Toggle Search<br/><b>Ctrl+Tab:</b> View Image<br/><b>Ctrl+Delete:</b> Delete "
-"Image<br/><b>F2:</b> Rename Image<br/><b>Escape:</b> Clear Selection<br/><br/"
-"><b><hilight>Single Browser Bindings</hilight></b><br/><b>Ctrl+Shift+0:</b> "
-"Zoom 1:1<br/><b>Ctrl++:</b> Zoom In<br/><b>Ctrl+-:</b> Zoom Out<br/"
-"><b>Ctrl+0:</b> Zoom Fit<br/><b>Ctrl+Shift+l:</b> Rotate Counter "
-"Clockwise<br/><b>Ctrl+l:</b> Flip Horizontal<br/><b>Ctrl+Shift+r:</b> Rotate "
-"Clockwise<br/><b>Ctrl+r:</b> Flip Vertical<br/><b>Ctrl+Shift+s:</b> Save "
-"Image As<br/><b>Ctrl+s:</b> Save Image<br/><b>Ctrl+c:</b> Copy Image to "
-"Clipboard<br/><b>Ctrl+u:</b> Reset Image<br/><b>Ctrl+y:</b> Redo<br/"
-"><b>Ctrl+Shift+z:</b> Redo<br/><b>Ctrl+z:</b> Undo<br/><b>Home:</b> Navigate "
-"First<br/><b>Left Arrow:</b> Navigate Previous<br/><b>Right Arrow:</b> "
-"Navigate Next<br/><b>Space:</b> Navigate Next<br/><b>End:</b> Navigate "
-"Last<br/><b>Ctrl+Delete:</b> Delete Image<br/><b>F2</b> Rename Image<br/"
-"><b>Escape:</b> Return to Thumbnail Browser<br/><br/><b><hilight>Slideshow "
-"Bindings</hilight></b><br/><b>Space:</b> Play/Pause Slideshow<br/><b>Home:</"
-"b> Navigate First<br/><b>Left Arrow:</b> Navigate Previous<br/><b>Right "
-"Arrow:</b> Navigate Next<br/><b>End:</b> Navigate Last<br/><b>Escape:</b> "
-"Quit Slideshow<br/>"
+"<b><hilight>General Bindings</hilight></b><br/><b>F1:</b> Settings Panel<br/><b>F5:</b> "
+"Start Slideshow<br/><b>F11:</b> Toggle Fullscreen<br/><b>Ctrl+Shift+f:</b> Toggle File "
+"Selector<br/><br/><b><hilight>Thumbnail Browser Bindings</hilight></b><br/><b>Ctrl++:</b> "
+"Zoom In<br/><b>Ctrl+-:</b> Zoom Out<br/><b>Ctrl+c:</b> Copy Image<br/><b>Ctrl+x:</b> Cut "
+"Image<br/><b>Ctrl+v:</b> Paste Image<br/><b>Ctrl+a:</b> Select All<br/><b>Ctrl+f:</b> "
+"Toggle Search<br/><b>Ctrl+Tab:</b> View Image<br/><b>Ctrl+Delete:</b> Delete Image<br/"
+"><b>F2:</b> Rename Image<br/><b>Escape:</b> Clear Selection<br/><br/><b><hilight>Single "
+"Browser Bindings</hilight></b><br/><b>Ctrl+Shift+0:</b> Zoom 1:1<br/><b>Ctrl++:</b> Zoom "
+"In<br/><b>Ctrl+-:</b> Zoom Out<br/><b>Ctrl+0:</b> Zoom Fit<br/><b>Ctrl+Shift+l:</b> "
+"Rotate Counter Clockwise<br/><b>Ctrl+l:</b> Flip Horizontal<br/><b>Ctrl+Shift+r:</b> "
+"Rotate Clockwise<br/><b>Ctrl+r:</b> Flip Vertical<br/><b>Ctrl+Shift+s:</b> Save Image "
+"As<br/><b>Ctrl+s:</b> Save Image<br/><b>Ctrl+c:</b> Copy Image to Clipboard<br/><b>Ctrl+u:"
+"</b> Reset Image<br/><b>Ctrl+y:</b> Redo<br/><b>Ctrl+Shift+z:</b> Redo<br/><b>Ctrl+z:</b> "
+"Undo<br/><b>Home:</b> Navigate First<br/><b>Left Arrow:</b> Navigate Previous<br/"
+"><b>Right Arrow:</b> Navigate Next<br/><b>Space:</b> Navigate Next<br/><b>End:</b> "
+"Navigate Last<br/><b>Ctrl+Delete:</b> Delete Image<br/><b>F2</b> Rename Image<br/"
+"><b>Escape:</b> Return to Thumbnail Browser<br/><br/><b><hilight>Slideshow Bindings</"
+"hilight></b><br/><b>Space:</b> Play/Pause Slideshow<br/><b>Home:</b> Navigate First<br/"
+"><b>Left Arrow:</b> Navigate Previous<br/><b>Right Arrow:</b> Navigate Next<br/><b>End:</"
+"b> Navigate Last<br/><b>Escape:</b> Quit Slideshow<br/>"
 msgstr ""
+"<b><hilight>सामान्य बाइंडिंग्स</hilight></b><br/><b>F1:</b> सेटिंग्स पैनल<br/><b>F5:</b> स्लाइडशो "
+"शुरू करें<br/><b>F11:</b> फ़ुलस्क्रीन टॉगल करें<br/><b>Ctrl+Shift+f:</b> फ़ाइल सेलेक्टर टॉगल करें<br/><br/"
+"><b><hilight>थंबनेल ब्राउज़र बाइंडिंग्स</hilight></b><br/><b>Ctrl++:</b> ज़ूम-इन<br/><b>Ctrl+-:</"
+"b> ज़ूम-औट<br/><b>Ctrl+c:</b> तस्वीर कॉपी करें<br/><b>Ctrl+x:</b> तस्वीर कट करें<br/><b>Ctrl+v:</"
+"b> तस्वीर पेस्ट करें<br/><b>Ctrl+a:</b> सबको सेलेक्ट करें<br/><b>Ctrl+f:</b> सर्च टॉगल करें<br/"
+"><b>Ctrl+Tab:</b> तस्वीर देखें<br/><b>Ctrl+Delete:</b> तस्वीर नष्ट करें<br/><b>F2:</b> तस्वीर का "
+"नाम बदलें<br/><b>Escape:</b> सिलेक्शन साफ़ करें<br/><br/><b><hilight>सिंगल ब्राउज़र बाइंडिंग्स</"
+"hilight></b><br/><b>Ctrl+Shift+0:</b> ज़ूम 1:1<br/><b>Ctrl++:</b> ज़ूम-इन<br/><b>Ctrl+-:</b> "
+"ज़ूम-औट<br/><b>Ctrl+0:</b> ज़ूम-फ़िट<br/><b>Ctrl+Shift+l:</b> बाईं ओर घुमाएं<br/><b>Ctrl+l:</b> "
+"क्षैतिज पलटें<br/><b>Ctrl+Shift+r:</b> दाईं ओर घुमाएं<br/><b>Ctrl+r:</b> ऊर्ध्वाधर पलटें<br/"
+"><b>Ctrl+Shift+s:</b> तस्वीर को इस तरह सहेजें<br/><b>Ctrl+s:</b> तस्वीर को सहेजें<br/><b>Ctrl+c:</"
+"b> तस्वीर को क्लिपबोर्ड पर कॉपी करें<br/><b>Ctrl+u:</b> तस्वीर रीसेट करें<br/><b>Ctrl+y:</b> पुनः "
+"करें<br/><b>Ctrl+Shift+z:</b> पुनः करें<br/><b>Ctrl+z:</b> पूर्ववत करें<br/><b>Home:</b> पहले पर "
+"जाएँ<br/><b>Left Arrow:</b> पिछले पर जाएँ<br/><b>Right Arrow:</b> अगले पर जाएँ<br/><b>Space:</"
+"b> अगले पर जाएँ<br/><b>End:</b> आखिरी पर जाएँ<br/><b>Ctrl+Delete:</b> तस्वीर नष्ट करें<br/"
+"><b>F2</b> तस्वीर का नाम बदलें<br/><b>Escape:</b> थंबनेल ब्राउज़र पर वापस लौटें<br/><br/"
+"><b><hilight>स्लाइडशो बाइंडिंग्स</hilight></b><br/><b>Space:</b> स्लाइडशो प्ले/पॉस करें<br/"
+"><b>Home:</b> पहले पर जाएँ<br/><b>Left Arrow:</b> पिछले पर जाएँ<br/><b>Right Arrow:</b> अगले "
+"पर जाएँ<br/><b>End:</b> आखिरी पर जाएँ<br/><b>Escape:</b> स्लाइडशो छोड़ें<br/>"
 
 #: src/bin/ephoto_config.c:510
 msgid ""
-"Ephoto is a comprehensive image viewer based on the EFL. For "
-"moreinformation, please visit the Ephoto project page:<br/><a href=http://"
-"www.smhouston.us/ephoto/>http://www.smhouston.us/ephoto/</a><br/><br/>Ephoto "
-"also has a page on the Enlightenment wiki:<br/><a href=https://phab."
-"enlightenment.org/w/projects/ephoto>https://phab.enlightenment.org/w/"
-"projects/ephoto</a><br/><br/>Ephoto's source can be found through "
-"Enlightenment's git:<br/><a href=http://git.enlightenment.org/apps/ephoto."
-"git>http://git.enlightenment.org/apps/ephoto.git</a><br/><br/><b>Authors:</"
-"b><br/>"
+"Ephoto is a comprehensive image viewer based on the EFL. For moreinformation, please "
+"visit the Ephoto project page:<br/><a href=http://www.smhouston.us/ephoto/>http://www."
+"smhouston.us/ephoto/</a><br/><br/>Ephoto also has a page on the Enlightenment wiki:<br/"
+"><a href=https://phab.enlightenment.org/w/projects/ephoto>https://phab.enlightenment.org/"
+"w/projects/ephoto</a><br/><br/>Ephoto's source can be found through Enlightenment's git:"
+"<br/><a href=http://git.enlightenment.org/apps/ephoto.git>http://git.enlightenment.org/"
+"apps/ephoto.git</a><br/><br/><b>Authors:</b><br/>"
 msgstr ""
+"ईफ़ोटो EFL पर आधारित एक व्यापक फ़ोटो व्यूवर है। अधिक जानकारी के लिए कृपया ईफ़ोटो परियोजना पृष्ठ पर "
+"जाएं:<br/><a href=http://www.smhouston.us/ephoto/>http://www.smhouston.us/ephoto/</a><br/"
+"><br/>ईफ़ोटो का एनलाइटनमेंट विकी पर भी एक पृष्ठ है:<br/><a href=https://phab.enlightenment.org/"
+"w/projects/ephoto>https://phab.enlightenment.org/w/projects/ephoto</a><br/><br/>ईफ़ोटो का "
+"स्रोत एनलाइटनमेंट के गिट के माध्यम से पाया जा सकता है:<br/><a href=http://git.enlightenment.org/"
+"apps/ephoto.git>http://git.enlightenment.org/apps/ephoto.git</a><br/><br/><b>लेखक:</b><br/>"
 
 #: src/bin/ephoto_config.c:673
 msgid "Settings Panel"
-msgstr ""
+msgstr "सेटिंग्स पैनल"
 
 #: src/bin/ephoto_config.c:725
 msgid "General"
-msgstr ""
+msgstr "सामान्य"
 
-#: src/bin/ephoto_config.c:732 src/bin/ephoto_main.c:565
-#: src/bin/ephoto_main.c:568
+#: src/bin/ephoto_config.c:732 src/bin/ephoto_main.c:565 src/bin/ephoto_main.c:568
 msgid "Slideshow"
-msgstr ""
+msgstr "स्लाइडशो"
 
 #: src/bin/ephoto_config.c:739
 msgid "Bindings"
-msgstr ""
+msgstr "बाइंडिंग्स"
 
 #: src/bin/ephoto_config.c:746
 msgid "About"
-msgstr ""
+msgstr "इस बारे में"
 
 #: src/bin/ephoto_color.c:251
 msgid "Adjust Color Levels"
-msgstr ""
+msgstr "रंग स्तर समायोजित करें"
 
 #: src/bin/ephoto_color.c:257
 msgid "Blue"
-msgstr ""
+msgstr "नीला"
 
 #: src/bin/ephoto_color.c:272
 msgid "Green"
-msgstr ""
+msgstr "हरा"
 
 #: src/bin/ephoto_color.c:287
 msgid "Red"
-msgstr ""
+msgstr "लाल"
 
 #: src/bin/ephoto_red_eye.c:202 src/bin/ephoto_single_browser.c:1869
 msgid "Red Eye Removal"
-msgstr ""
+msgstr "लाल-आँख हटाना"
 
 #: src/bin/ephoto_red_eye.c:208
 msgid "Radius"
-msgstr ""
+msgstr "त्रिज्या"
 
 #: src/bin/ephoto_red_eye.c:223
 msgid "<b>Click on an eye</b>"
-msgstr ""
+msgstr "<b>आँख पर क्लिक करें</b>"
 
 #: src/bin/ephoto_scale.c:217
 msgid "Scale Image"
-msgstr ""
+msgstr "तस्वीर का आकार निर्धारित करें"
 
 #: src/bin/ephoto_scale.c:223
 msgid "Keep Aspect"
-msgstr ""
+msgstr "तस्वीर का पहलू बनाए रखें"
 
 #: src/bin/ephoto_editor.c:54 src/bin/ephoto_single_browser.c:1915
 #: src/bin/ephoto_single_browser.c:1941
 msgid "Reset"
-msgstr ""
+msgstr "रीसेट करें"
 
 #: src/bin/ephoto_editor.c:69
 msgid "Apply"
-msgstr ""
+msgstr "लागू करें"
 
-#: src/bin/ephoto_editor.c:84 src/bin/ephoto_file.c:629
-#: src/bin/ephoto_file.c:770
+#: src/bin/ephoto_editor.c:84 src/bin/ephoto_file.c:629 src/bin/ephoto_file.c:770
 msgid "Cancel"
-msgstr ""
+msgstr "रद्द करें"
 
 #: src/bin/ephoto_cropper.c:702
 msgid "Crop Image"
-msgstr ""
+msgstr "तस्वीर क्रॉप करें"
 
 #: src/bin/ephoto_cropper.c:712
 msgid "Height"
-msgstr ""
+msgstr "ऊंचाई"
 
 #: src/bin/ephoto_cropper.c:725
 msgid "Width"
-msgstr ""
+msgstr "चौड़ाई"
 
 #: src/bin/ephoto_filters.c:105
 msgid "Applying Filter"
-msgstr ""
+msgstr "फ़िल्टर लागू करें"
 
 #: src/bin/ephoto_filters.c:116
 msgid "Please wait while this filter is applied to your image."
-msgstr ""
+msgstr "कृपया इस फ़िल्टर के आपके तस्वीर पर लागू होने तक प्रतीक्षा करें।"
 
 #: src/bin/ephoto_file.c:160
 msgid "Image Properties"
-msgstr ""
+msgstr "तस्वीर के गुण"
 
 #: src/bin/ephoto_file.c:238 src/bin/ephoto_file.c:462
 msgid "Ok"
-msgstr ""
+msgstr "ठीक है"
 
-#: src/bin/ephoto_file.c:308 src/bin/ephoto_file.c:320
-#: src/bin/ephoto_file.c:337 src/bin/ephoto_file.c:1220
-#: src/bin/ephoto_file.c:1232 src/bin/ephoto_file.c:1248
+#: src/bin/ephoto_file.c:308 src/bin/ephoto_file.c:320 src/bin/ephoto_file.c:337
+#: src/bin/ephoto_file.c:1220 src/bin/ephoto_file.c:1232 src/bin/ephoto_file.c:1248
 #: src/bin/ephoto_file.c:1349 src/bin/ephoto_file.c:1427
 msgid "Save Failed"
-msgstr ""
+msgstr "सहेजना असफल"
 
-#: src/bin/ephoto_file.c:309 src/bin/ephoto_file.c:321
-#: src/bin/ephoto_file.c:338 src/bin/ephoto_file.c:1221
-#: src/bin/ephoto_file.c:1233 src/bin/ephoto_file.c:1249
+#: src/bin/ephoto_file.c:309 src/bin/ephoto_file.c:321 src/bin/ephoto_file.c:338
+#: src/bin/ephoto_file.c:1221 src/bin/ephoto_file.c:1233 src/bin/ephoto_file.c:1249
 #: src/bin/ephoto_file.c:1350 src/bin/ephoto_file.c:1428
 msgid "Error: Image could not be saved here!"
-msgstr ""
+msgstr "त्रुटि: तस्वीर यहां सहेजा नहीं जा सका!"
 
 #: src/bin/ephoto_file.c:407
 msgid "Image Uploaded"
-msgstr ""
+msgstr "तस्वीर अपलोड किया गया"
 
 #: src/bin/ephoto_file.c:451 src/bin/ephoto_thumb_browser.c:982
 msgid "Copy"
-msgstr ""
+msgstr "कॉपी"
 
 #: src/bin/ephoto_file.c:480
 msgid "There was an error uploading your image!"
-msgstr ""
+msgstr "आपकी तस्वीर अपलोड करते समय एक त्रुटि हुई!"
 
 #: src/bin/ephoto_file.c:499
 msgid "Your image was uploaded to the following link:"
-msgstr ""
+msgstr "आपकी तस्वीर इस लिंक पर अपलोड की गई:"
 
-#: src/bin/ephoto_file.c:564 src/bin/ephoto_file.c:668
-#: src/bin/ephoto_file.c:671 src/bin/ephoto_file.c:827
+#: src/bin/ephoto_file.c:564 src/bin/ephoto_file.c:668 src/bin/ephoto_file.c:671
+#: src/bin/ephoto_file.c:827
 msgid "Error"
-msgstr ""
+msgstr "त्रुटि"
 
 #: src/bin/ephoto_file.c:565
 msgid "There was an error creating this directory."
-msgstr ""
+msgstr "इस डायरेक्टरी को बनाते समय एक त्रुटि हुई।"
 
 #: src/bin/ephoto_file.c:588 src/bin/ephoto_file.c:603
 msgid "New Directory"
-msgstr ""
+msgstr "नई डायरेक्टरी"
 
 #: src/bin/ephoto_file.c:618 src/bin/ephoto_single_browser.c:1908
 #: src/bin/ephoto_single_browser.c:1942
 msgid "Save"
-msgstr ""
+msgstr "सहेजें"
 
 #: src/bin/ephoto_file.c:669
 msgid "There was an error renaming this directory."
-msgstr ""
+msgstr "इस डायरेक्टरी का नाम बदलने में त्रुटि हुई।"
 
 #: src/bin/ephoto_file.c:672
 msgid "There was an error renaming this file."
-msgstr ""
+msgstr "इस फ़ाइल का नाम बदलने में त्रुटि हुई।"
 
 #: src/bin/ephoto_file.c:721
 msgid "Rename Directory"
-msgstr ""
+msgstr "डायरेक्टरी का नाम बदलें"
 
 #: src/bin/ephoto_file.c:723
 msgid "Rename File"
-msgstr ""
+msgstr "फ़ाइल का नाम बदलें"
 
 #: src/bin/ephoto_file.c:759 src/bin/ephoto_thumb_browser.c:973
 #: src/bin/ephoto_single_browser.c:1947 src/bin/ephoto_directory_browser.c:689
 msgid "Rename"
-msgstr ""
+msgstr "नाम बदलें"
 
 #: src/bin/ephoto_file.c:825
 msgid "There was an error completing your action on"
-msgstr ""
+msgstr "आपकी कार्रवाई पूर्ण करते समय एक त्रुटि हुई, कारण यह"
 
 #: src/bin/ephoto_file.c:826
 msgid "file"
 msgid_plural "files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "फ़ाइल"
+msgstr[1] "फ़ाइलें"
 
 #: src/bin/ephoto_file.c:887
 msgid "Moving Files"
-msgstr ""
+msgstr "फ़ाइलें स्थानांतरित की जा रही हैं"
 
 #: src/bin/ephoto_file.c:888
 msgid "Please wait while your files are moved."
-msgstr ""
+msgstr "कृपया अपनी फ़ाइलें स्थानांतरित होने तक प्रतीक्षा करें।"
 
 #: src/bin/ephoto_file.c:949
 msgid "Copying Files"
-msgstr ""
+msgstr "फ़ाइलें कॉपी की जा रही हैं"
 
 #: src/bin/ephoto_file.c:950
 msgid "Please wait while your files are copied."
-msgstr ""
+msgstr "कृपया अपनी फ़ाइलें कॉपी होने तक प्रतीक्षा करें।"
 
 #: src/bin/ephoto_file.c:1028
 msgid "Deleting Files"
-msgstr ""
+msgstr "फ़ाइलें हटाई जा रही हैं"
 
 #: src/bin/ephoto_file.c:1029 src/bin/ephoto_file.c:1128
 msgid "Please wait while your files are deleted."
-msgstr ""
+msgstr "कृपया अपनी फ़ाइलें हटाये जाने तक प्रतीक्षा करें।"
 
 #: src/bin/ephoto_file.c:1088
 msgid "Deleting Directory"
-msgstr ""
+msgstr "डायरेक्टरीयाँ हटाई जा रही हैं"
 
 #: src/bin/ephoto_file.c:1089
 msgid "Please wait while your directory is deleted."
-msgstr ""
+msgstr "कृपया अपनी डायरेक्टरीयाँ हटाये जाने तक प्रतीक्षा करें।"
 
 #: src/bin/ephoto_file.c:1127
 msgid "Emptying Trash"
-msgstr ""
+msgstr "कचरा खाली किया जा रहा है"
 
 #: src/bin/ephoto_file.c:1154 src/bin/ephoto_file.c:1514
 msgid "Upload Image"
-msgstr ""
+msgstr "तस्वीर अपलोड करें"
 
 #: src/bin/ephoto_file.c:1305
 msgid "Overwrite Image"
-msgstr ""
+msgstr "तस्वीर अधिलेखित करें"
 
 #: src/bin/ephoto_file.c:1306 src/bin/ephoto_file.c:1433
 msgid "Are you sure you want to overwrite this image?"
-msgstr ""
+msgstr "क्या आप वाकई इस तस्वीर को अधिलेखित करना चाहते हैं?"
 
-#: src/bin/ephoto_file.c:1314 src/bin/ephoto_file.c:1440
-#: src/bin/ephoto_file.c:1522 src/bin/ephoto_file.c:1579
-#: src/bin/ephoto_file.c:1630 src/bin/ephoto_file.c:1681
-#: src/bin/ephoto_file.c:1728 src/bin/ephoto_file.c:1786
-#: src/bin/ephoto_file.c:1840 src/bin/ephoto_single_browser.c:1026
+#: src/bin/ephoto_file.c:1314 src/bin/ephoto_file.c:1440 src/bin/ephoto_file.c:1522
+#: src/bin/ephoto_file.c:1579 src/bin/ephoto_file.c:1630 src/bin/ephoto_file.c:1681
+#: src/bin/ephoto_file.c:1728 src/bin/ephoto_file.c:1786 src/bin/ephoto_file.c:1840
+#: src/bin/ephoto_single_browser.c:1026
 msgid "Yes"
-msgstr ""
+msgstr "हाँ"
 
-#: src/bin/ephoto_file.c:1327 src/bin/ephoto_file.c:1451
-#: src/bin/ephoto_file.c:1534 src/bin/ephoto_file.c:1592
-#: src/bin/ephoto_file.c:1643 src/bin/ephoto_file.c:1694
-#: src/bin/ephoto_file.c:1741 src/bin/ephoto_file.c:1799
-#: src/bin/ephoto_file.c:1853 src/bin/ephoto_single_browser.c:1037
+#: src/bin/ephoto_file.c:1327 src/bin/ephoto_file.c:1451 src/bin/ephoto_file.c:1534
+#: src/bin/ephoto_file.c:1592 src/bin/ephoto_file.c:1643 src/bin/ephoto_file.c:1694
+#: src/bin/ephoto_file.c:1741 src/bin/ephoto_file.c:1799 src/bin/ephoto_file.c:1853
+#: src/bin/ephoto_single_browser.c:1037
 msgid "No"
-msgstr ""
+msgstr "नहीं"
 
 #: src/bin/ephoto_file.c:1432
 msgid "Save Image"
-msgstr ""
+msgstr "तस्वीर को सहेजें"
 
 #: src/bin/ephoto_file.c:1473
 msgid "Save Image As"
-msgstr ""
+msgstr "तस्वीर को इस तरह सहेजें"
 
 #: src/bin/ephoto_file.c:1493
 msgid "Image Files"
-msgstr ""
+msgstr "इमेज फ़ाइलें"
 
 #: src/bin/ephoto_file.c:1515
 msgid "Are you sure you want to upload this image publically to imgur.com?"
-msgstr ""
+msgstr "क्या आप वाकई इस तस्वीर को सार्वजनिक रूप से imgur.com पर अपलोड करना चाहते हैं?"
 
 #: src/bin/ephoto_file.c:1569
 msgid "Are you sure you want to move these files to"
-msgstr ""
+msgstr "क्या आप वाकई इन फ़ाइलों को इस जगह ले जाना चाहते हैं"
 
 #: src/bin/ephoto_file.c:1571
 msgid "Move Files"
-msgstr ""
+msgstr "फ़ाइलें स्थानांतरित करें"
 
 #: src/bin/ephoto_file.c:1620
 msgid "Are you sure you want to copy these files to"
-msgstr ""
+msgstr "क्या आप वाकई इन फ़ाइलों को इस जगह कॉपी करना चाहते हैं"
 
 #: src/bin/ephoto_file.c:1622 src/bin/ephoto_file.c:1719
 msgid "Copy Files"
-msgstr ""
+msgstr "फ़ाइलें कॉपी करें"
 
 #: src/bin/ephoto_file.c:1672
 msgid "Paste Files"
-msgstr ""
+msgstr "फ़ाइलें पेस्ट् करें"
 
 #: src/bin/ephoto_file.c:1673
 msgid "Are you sure you want to paste these files here?"
-msgstr ""
+msgstr "क्या आप वाकई इन फ़ाइलों को यहां पेस्ट् करना चाहते हैं?"
 
 #: src/bin/ephoto_file.c:1720
 msgid "Are you sure you want to copy these files here?"
-msgstr ""
+msgstr "क्या आप वाकई इन फ़ाइलों को यहां कॉपी करना चाहते हैं?"
 
 #: src/bin/ephoto_file.c:1773
 msgid "Delete Directory"
-msgstr ""
+msgstr "डायरेक्टरी नष्ट करें"
 
 #: src/bin/ephoto_file.c:1774
 msgid "Are you sure you want to delete this directory?"
-msgstr ""
+msgstr "क्या आप वाकई इस डायरेक्टरी को हटाना चाहते हैं?"
 
 #: src/bin/ephoto_file.c:1777
 msgid "Delete Files"
-msgstr ""
+msgstr "फ़ाइल नष्ट करें"
 
 #: src/bin/ephoto_file.c:1778
 msgid "Are you sure you want to delete these files?"
-msgstr ""
+msgstr "क्या आप वाकई इन फ़ाइलों को हटाना चाहते हैं?"
 
 #: src/bin/ephoto_file.c:1831 src/bin/ephoto_thumb_browser.c:995
 #: src/bin/ephoto_directory_browser.c:697
 msgid "Empty Trash"
-msgstr ""
+msgstr "कचरा खाली करें"
 
 #: src/bin/ephoto_file.c:1832
 msgid "Are you sure you want to empty the trash?"
-msgstr ""
+msgstr "क्या आप वाकई कचरा खाली करना चाहते हैं?"
 
 #: src/bin/ephoto_hsv.c:332 src/bin/ephoto_single_browser.c:1865
 msgid "Hue/Saturation/Value"
-msgstr ""
+msgstr "ह्यू/सॅचुरेशन/वॅल्यू"
 
 #: src/bin/ephoto_hsv.c:338
 msgid "Value"
-msgstr ""
+msgstr "वॅल्यू"
 
 #: src/bin/ephoto_hsv.c:353
 msgid "Saturation"
-msgstr ""
+msgstr "सॅचुरेशन"
 
 #: src/bin/ephoto_hsv.c:368
 msgid "Hue"
-msgstr ""
+msgstr "ह्यू"
 
-#: src/bin/ephoto_main.c:290 src/bin/ephoto_main.c:291
-#: src/bin/ephoto_main.c:352 src/bin/ephoto_main.c:353
-#: src/bin/ephoto_main.c:679 src/bin/ephoto_main.c:680
+#: src/bin/ephoto_main.c:290 src/bin/ephoto_main.c:291 src/bin/ephoto_main.c:352
+#: src/bin/ephoto_main.c:353 src/bin/ephoto_main.c:679 src/bin/ephoto_main.c:680
 msgid "Hide Folders"
-msgstr ""
+msgstr "फ़ोल्डरें छिपाएँ"
 
-#: src/bin/ephoto_main.c:300 src/bin/ephoto_main.c:301
-#: src/bin/ephoto_main.c:362 src/bin/ephoto_main.c:363
-#: src/bin/ephoto_main.c:523 src/bin/ephoto_main.c:525
+#: src/bin/ephoto_main.c:300 src/bin/ephoto_main.c:301 src/bin/ephoto_main.c:362
+#: src/bin/ephoto_main.c:363 src/bin/ephoto_main.c:523 src/bin/ephoto_main.c:525
 #: src/bin/ephoto_main.c:671 src/bin/ephoto_main.c:672
 msgid "Show Folders"
-msgstr ""
+msgstr "फ़ोल्डरें दिखाएँ"
 
 #: src/bin/ephoto_main.c:542
 msgid "Information"
-msgstr ""
+msgstr "जानकारी"
 
-#: src/bin/ephoto_main.c:582 src/bin/ephoto_main.c:585
-#: src/bin/ephoto_slideshow.c:943
+#: src/bin/ephoto_main.c:582 src/bin/ephoto_main.c:585 src/bin/ephoto_slideshow.c:943
 msgid "Settings"
-msgstr ""
+msgstr "सेटिंग्स"
 
-#: src/bin/ephoto_main.c:599 src/bin/ephoto_main.c:602
-#: src/bin/ephoto_slideshow.c:946
+#: src/bin/ephoto_main.c:599 src/bin/ephoto_main.c:602 src/bin/ephoto_slideshow.c:946
 msgid "Exit"
-msgstr ""
+msgstr "बाहर जाना"
 
 #: src/bin/ephoto_thumb_browser.c:964 src/bin/ephoto_thumb_browser.c:1361
 msgid "Search"
-msgstr ""
+msgstr "खोज"
 
 #: src/bin/ephoto_thumb_browser.c:966
 msgid "Select All"
-msgstr ""
+msgstr "सबको सेलेक्ट करें"
 
 #: src/bin/ephoto_thumb_browser.c:969
 msgid "Select None"
-msgstr ""
+msgstr "कुछ मत सेलेक्ट करें"
 
 #: src/bin/ephoto_thumb_browser.c:980
 msgid "Cut"
-msgstr ""
+msgstr "कट"
 
 #: src/bin/ephoto_thumb_browser.c:988 src/bin/ephoto_directory_browser.c:691
 msgid "Paste"
-msgstr ""
+msgstr "पेस्ट्"
 
 #: src/bin/ephoto_thumb_browser.c:1000 src/bin/ephoto_single_browser.c:1949
 #: src/bin/ephoto_directory_browser.c:702
 msgid "Delete"
-msgstr ""
+msgstr "डिलीट"
 
 #: src/bin/ephoto_thumb_browser.c:1084
 msgid "No images matched your search"
-msgstr ""
+msgstr "आपकी खोज से कोई तस्वीर मेल नहीं खायी"
 
 #: src/bin/ephoto_thumb_browser.c:1087 src/bin/ephoto_thumb_browser.c:1392
 msgid "There are no images in this directory"
-msgstr ""
+msgstr "इस डायरेक्टरी में कोई तस्वीरें नहीं है"
 
 #: src/bin/ephoto_thumb_browser.c:1089 src/bin/ephoto_thumb_browser.c:1129
 msgid "Total"
-msgstr ""
+msgstr "कुल"
 
 #: src/bin/ephoto_thumb_browser.c:1089 src/bin/ephoto_thumb_browser.c:1129
 msgid "image"
 msgid_plural "images"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "तस्वीर"
+msgstr[1] "तस्वीरें"
 
 #: src/bin/ephoto_thumb_browser.c:1089 src/bin/ephoto_thumb_browser.c:1130
 msgid "Size"
-msgstr ""
+msgstr "आकार"
 
 #: src/bin/ephoto_thumb_browser.c:1090 src/bin/ephoto_thumb_browser.c:1099
 #: src/bin/ephoto_single_browser.c:143
 msgid "B"
 msgid_plural "B"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "B"
+msgstr[1] "B"
 
 #: src/bin/ephoto_thumb_browser.c:1106 src/bin/ephoto_single_browser.c:150
 msgid "KB"
 msgid_plural "KB"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "KB"
+msgstr[1] "KB"
 
 #: src/bin/ephoto_thumb_browser.c:1112 src/bin/ephoto_single_browser.c:156
 msgid "MB"
 msgid_plural "MB"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "MB"
+msgstr[1] "MB"
 
 #: src/bin/ephoto_thumb_browser.c:1118 src/bin/ephoto_single_browser.c:162
 msgid "GB"
 msgid_plural "GB"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "GB"
+msgstr[1] "GB"
 
 #: src/bin/ephoto_thumb_browser.c:1123 src/bin/ephoto_single_browser.c:167
 msgid "TB"
 msgid_plural "TB"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "TB"
+msgstr[1] "TB"
 
 #: src/bin/ephoto_thumb_browser.c:2073 src/bin/ephoto_thumb_browser.c:2075
 msgid "View Image"
-msgstr ""
+msgstr "तस्वीर देखें"
 
 #: src/bin/ephoto_thumb_browser.c:2091 src/bin/ephoto_thumb_browser.c:2093
 #: src/bin/ephoto_single_browser.c:2475 src/bin/ephoto_single_browser.c:2477
 msgid "Zoom In"
-msgstr ""
+msgstr "ज़ूम-इन"
 
 #: src/bin/ephoto_thumb_browser.c:2107 src/bin/ephoto_thumb_browser.c:2109
 #: src/bin/ephoto_single_browser.c:2491 src/bin/ephoto_single_browser.c:2493
 msgid "Zoom Out"
-msgstr ""
+msgstr "ज़ूम-औट"
 
 #: src/bin/ephoto_thumb_browser.c:2117
 msgid "Alphabetical Ascending"
-msgstr ""
+msgstr "वर्णानुक्रम आरोही"
 
 #: src/bin/ephoto_thumb_browser.c:2120
 msgid "Alphabetical Descending"
-msgstr ""
+msgstr "वर्णानुक्रम अवरोही"
 
 #: src/bin/ephoto_thumb_browser.c:2123
 msgid "Modification Time Ascending"
-msgstr ""
+msgstr "संशोधन समय आरोही"
 
 #: src/bin/ephoto_thumb_browser.c:2126
 msgid "Modification Time Descending"
-msgstr ""
+msgstr "संशोधन समय अवरोही"
 
 #: src/bin/ephoto_thumb_browser.c:2129
 msgid "Image Simalarity"
-msgstr ""
+msgstr "तस्वीर समानता"
 
 #: src/bin/ephoto_thumb_browser.c:2132 src/bin/ephoto_thumb_browser.c:2139
 msgid "Sort"
-msgstr ""
+msgstr "क्रमबद्ध करें"
 
 #: src/bin/ephoto_single_browser.c:125
 msgid "Type"
-msgstr ""
+msgstr "प्रकार"
 
 #: src/bin/ephoto_single_browser.c:126
 msgid "Resolution"
-msgstr ""
+msgstr "रिजोल्यूशन"
 
 #: src/bin/ephoto_single_browser.c:126
 msgid "File Size"
-msgstr ""
+msgstr "फ़ाइल का साइज़"
 
 #: src/bin/ephoto_single_browser.c:541 src/bin/ephoto_single_browser.c:2405
 msgid "MODIFIED"
-msgstr ""
+msgstr "संशोधित"
 
 #: src/bin/ephoto_single_browser.c:1004
 msgid "Reset Image"
-msgstr ""
+msgstr "तस्वीर रीसेट करें"
 
 #: src/bin/ephoto_single_browser.c:1015
 msgid "Are you sure you want to reset your changes?"
-msgstr ""
+msgstr "क्या आप वाकई अपने परिवर्तनों को रीसेट करना चाहते हैं?"
 
 #: src/bin/ephoto_single_browser.c:1667
 msgid "This image does not exist or is corrupted!"
-msgstr ""
+msgstr "यह तस्वीर मौजूद नहीं है या दूषित है!"
 
 #: src/bin/ephoto_single_browser.c:1672
 msgid "Bad Image"
-msgstr ""
+msgstr "दूषित तस्वीर"
 
 #: src/bin/ephoto_single_browser.c:1812 src/bin/ephoto_single_browser.c:1940
 #: src/bin/ephoto_single_browser.c:2571 src/bin/ephoto_single_browser.c:2573
 msgid "Edit"
-msgstr ""
+msgstr "एडिट करें"
 
 #: src/bin/ephoto_single_browser.c:1847
 msgid "Transform"
-msgstr ""
+msgstr "ट्रांसफ़ॉर्म करें"
 
 #: src/bin/ephoto_single_browser.c:1850
 msgid "Crop"
-msgstr ""
+msgstr "क्रॉप करें"
 
 #: src/bin/ephoto_single_browser.c:1851
 msgid "Scale"
-msgstr ""
+msgstr "स्केल करें"
 
 #: src/bin/ephoto_single_browser.c:1852 src/bin/ephoto_single_browser.c:2539
 #: src/bin/ephoto_single_browser.c:2541
 msgid "Rotate Left"
-msgstr ""
+msgstr "बाईं ओर घुमाएं"
 
 #: src/bin/ephoto_single_browser.c:1854 src/bin/ephoto_single_browser.c:2555
 #: src/bin/ephoto_single_browser.c:2557
 msgid "Rotate Right"
-msgstr ""
+msgstr "दाईं ओर घुमाएं"
 
 #: src/bin/ephoto_single_browser.c:1856 src/bin/ephoto_single_browser.c:1963
 msgid "Flip Horizontal"
-msgstr ""
+msgstr "क्षैतिज पलटें"
 
 #: src/bin/ephoto_single_browser.c:1858 src/bin/ephoto_single_browser.c:1965
 msgid "Flip Vertical"
-msgstr ""
+msgstr "ऊर्ध्वाधर पलटें"
 
 #: src/bin/ephoto_single_browser.c:1860
 msgid "Adjustable Filters"
-msgstr ""
+msgstr "समायोज्य फिल्टरें"
 
 #: src/bin/ephoto_single_browser.c:1867
 msgid "Color Levels"
-msgstr ""
+msgstr "रंग स्तर"
 
 #: src/bin/ephoto_single_browser.c:1871
 msgid "Quick Filters"
-msgstr ""
+msgstr "त्वरित फिल्टरें"
 
 #: src/bin/ephoto_single_browser.c:1874
 msgid "Auto Equalize"
-msgstr ""
+msgstr "ऑटो इक्वलाइज़ करें"
 
 #: src/bin/ephoto_single_browser.c:1876
 msgid "Black and White"
-msgstr ""
+msgstr "ब्लैक-एंड-व्हाइट करें"
 
 #: src/bin/ephoto_single_browser.c:1878
 msgid "Blur"
-msgstr ""
+msgstr "धुंधला करें"
 
 #: src/bin/ephoto_single_browser.c:1880
 msgid "Dither"
-msgstr ""
+msgstr "डिथर करें"
 
 #: src/bin/ephoto_single_browser.c:1882
 msgid "Edge Detect"
-msgstr ""
+msgstr "एज भांपना"
 
 #: src/bin/ephoto_single_browser.c:1884
 msgid "Emboss"
-msgstr ""
+msgstr "एम्बॉस करें"
 
 #: src/bin/ephoto_single_browser.c:1886
 msgid "Invert Colors"
-msgstr ""
+msgstr "रंग उलटें"
 
 #: src/bin/ephoto_single_browser.c:1888
 msgid "Old Photo"
-msgstr ""
+msgstr "पुरानी तस्वीर"
 
 #: src/bin/ephoto_single_browser.c:1890
 msgid "Painting"
-msgstr ""
+msgstr "चित्रकारी"
 
 #: src/bin/ephoto_single_browser.c:1892
 msgid "Posterize"
-msgstr ""
+msgstr "पोस्टराइज़ करें"
 
 #: src/bin/ephoto_single_browser.c:1894
 msgid "Sharpen"
-msgstr ""
+msgstr "पैना करें"
 
 #: src/bin/ephoto_single_browser.c:1896
 msgid "Sketch"
-msgstr ""
+msgstr "स्केच करें"
 
 #: src/bin/ephoto_single_browser.c:1909 src/bin/ephoto_single_browser.c:1943
 #: src/bin/ephoto_single_browser.c:2587 src/bin/ephoto_single_browser.c:2589
 msgid "Save As"
-msgstr ""
+msgstr "इस तरह सहेजें"
 
 #: src/bin/ephoto_single_browser.c:1911 src/bin/ephoto_single_browser.c:1951
 #: src/bin/ephoto_single_browser.c:2594
 msgid "Upload"
-msgstr ""
+msgstr "अपलोड करें"
 
 #: src/bin/ephoto_single_browser.c:1913
 msgid "Undo"
-msgstr ""
+msgstr "पूर्ववत करें"
 
 #: src/bin/ephoto_single_browser.c:1914
 msgid "Redo"
-msgstr ""
+msgstr "पुनः करें"
 
 #: src/bin/ephoto_single_browser.c:1916
 msgid "Close"
-msgstr ""
+msgstr "बंद करें"
 
 #: src/bin/ephoto_single_browser.c:1938
 msgid "File"
-msgstr ""
+msgstr "फ़ाइल"
 
 #: src/bin/ephoto_single_browser.c:1945
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "क्लिपबोर्ड पर कॉपी करें"
 
 #: src/bin/ephoto_single_browser.c:1955
 msgid "Properties"
-msgstr ""
+msgstr "गुण"
 
 #: src/bin/ephoto_single_browser.c:1959
 msgid "Zoom Fit"
-msgstr ""
+msgstr "ज़ूम-फ़िट"
 
 #: src/bin/ephoto_single_browser.c:1961
 msgid "Zoom 1:1"
-msgstr ""
+msgstr "ज़ूम 1:1"
 
 #: src/bin/ephoto_single_browser.c:2457 src/bin/ephoto_single_browser.c:2459
 msgid "View Thumbnails"
-msgstr ""
+msgstr "थंबनेलें देखें"
 
 #: src/bin/ephoto_single_browser.c:2507 src/bin/ephoto_single_browser.c:2509
 #: src/bin/ephoto_slideshow.c:928
 msgid "Previous"
-msgstr ""
+msgstr "पहले का"
 
 #: src/bin/ephoto_single_browser.c:2523 src/bin/ephoto_single_browser.c:2525
 #: src/bin/ephoto_slideshow.c:934
 msgid "Next"
-msgstr ""
+msgstr "अगला"
 
 #: src/bin/ephoto_directory_browser.c:466 src/bin/ephoto_slideshow.c:924
 msgid "Back"
-msgstr ""
+msgstr "पीछे"
 
-#: src/bin/ephoto_directory_browser.c:501
-#: src/bin/ephoto_directory_browser.c:704
+#: src/bin/ephoto_directory_browser.c:501 src/bin/ephoto_directory_browser.c:704
 msgid "Trash"
-msgstr ""
+msgstr "कचरा"
 
 #: src/bin/ephoto_directory_browser.c:678
 msgid "Root"
-msgstr ""
+msgstr "रूट"
 
 #: src/bin/ephoto_directory_browser.c:680
 msgid "Home"
-msgstr ""
+msgstr "होम"
 
 #: src/bin/ephoto_directory_browser.c:684
 msgid "New Folder"
-msgstr ""
+msgstr "नया फ़ोल्डर"
 
 #: src/bin/ephoto_slideshow.c:708 src/bin/ephoto_slideshow.c:931
 msgid "Play"
-msgstr ""
+msgstr "प्ले करें"
 
 #: src/bin/ephoto_slideshow.c:717 src/bin/ephoto_slideshow.c:1037
 msgid "Pause"
-msgstr ""
+msgstr "पॉस करें"
 
 #: src/bin/ephoto_slideshow.c:766 src/bin/ephoto_slideshow.c:940
 #: src/bin/ephoto_slideshow.c:1048
 msgid "Fullscreen"
-msgstr ""
+msgstr "फ़ुलस्क्रीन"
 
 #: src/bin/ephoto_slideshow.c:777 src/bin/ephoto_slideshow.c:1058
 msgid "Normal"
-msgstr ""
+msgstr "साधारण"
 
 #: src/bin/ephoto_slideshow.c:926
 msgid "First"
-msgstr ""
+msgstr "पहला"
 
 #: src/bin/ephoto_slideshow.c:937
 msgid "Last"
-msgstr ""
+msgstr "अंतिम"
