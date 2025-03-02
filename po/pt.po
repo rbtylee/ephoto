@@ -1,14 +1,14 @@
 # Portuguese translation for Ephoto.
 # Copyright (C) 2015 Stephen "okra" Houston
 # This file is distributed under the same license as the ephoto package.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2024.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ephoto\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-15 08:52+0200\n"
-"PO-Revision-Date: 2024-07-23 20:21+0100\n"
+"PO-Revision-Date: 2025-03-02 22:43+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <hugokarvalho@hotmail.com>\n"
 "Language: pt\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/bin/ephoto_bcg.c:325 src/bin/ephoto_single_browser.c:1863
 msgid "Brightness/Contrast/Gamma"
@@ -365,7 +365,7 @@ msgstr "Ocorreu um erro ao completar a sua ação em"
 msgid "file"
 msgid_plural "files"
 msgstr[0] "ficheiro"
-msgstr[1] "arquivos"
+msgstr[1] "ficheiros"
 
 #: src/bin/ephoto_file.c:887
 msgid "Moving Files"
@@ -449,7 +449,7 @@ msgstr "Carregar esta imagem publicamente para o imgur.com?"
 
 #: src/bin/ephoto_file.c:1569
 msgid "Are you sure you want to move these files to"
-msgstr "Tem a certeza de que deseja mover estes ficheiros para"
+msgstr "Pretende mover estes ficheiros para"
 
 #: src/bin/ephoto_file.c:1571
 msgid "Move Files"
@@ -457,7 +457,7 @@ msgstr "Mover ficheiros"
 
 #: src/bin/ephoto_file.c:1620
 msgid "Are you sure you want to copy these files to"
-msgstr "Tem a certeza de que deseja copiar estes ficheiros para"
+msgstr "Pretende copiar estes ficheiros para"
 
 #: src/bin/ephoto_file.c:1622 src/bin/ephoto_file.c:1719
 msgid "Copy Files"
