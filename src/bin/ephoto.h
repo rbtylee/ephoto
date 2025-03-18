@@ -371,7 +371,7 @@ _ephoto_eina_file_direct_info_image_useful(const Eina_File_Direct_Info *info)
       "ari", "arw", "bay", "crw", "cr2", "cap", "dcs", "dcr", "dng", "drf",
       "eip", "erf", "fff", "iiq", "k25", "kdc", "mdc", "mef", "mos", "mrw",
       "nef", "nrw", "obm", "orf", "pef", "ptx", "pxn", "r3d", "raf", "raw",
-      "rwl", "rw2", "rwz", "sr2", "srf", "srw", "tif", "x3f"
+      "rwl", "rw2", "rwz", "sr2", "srf", "srw", "tif", "x3f", "avif", "heif", "jxl"
    };
 
    bname = info->path + info->name_start;
@@ -402,7 +402,7 @@ _ephoto_file_image_can_save(const char *ext)
 
    const char *filters[] = {
       "png", "jpeg", "jpg", "eet", "xpm", "tiff", "tif", "gif", "svg", "webp",
-      "pmaps", "bmp", "wbmp", "ico", "generic"
+      "pmaps", "bmp", "wbmp", "avif", "jxl", "heif", "ico", "generic"
    };
    count = sizeof(filters) / sizeof(filters[0]);
    for (i = 0; i < count; i++)
