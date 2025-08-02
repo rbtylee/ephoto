@@ -3,6 +3,7 @@ TODO:
 -Add more effects, filters as necessary
 -Implement an Instagram like quick filter panel.
 -Clean up cropper
+-Cropper takes 100% CPU while running
 ==Slideshow==
 -Smoother movement
 ==Thumb Browser==
