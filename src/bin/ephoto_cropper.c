@@ -48,12 +48,12 @@ _calculate_cropper_size(void *data, Evas_Object *obj EINA_UNUSED,
 
    if (ec->resizing)
      {
-       msg = alloca(sizeof(Edje_Message_Int_Set) + (3 * sizeof(int)));
-       msg->count = 3;
-       msg->val[0] = 11;
-       msg->val[1] = nw;
-       msg->val[2] = nh;
-       edje_object_message_send(elm_layout_edje_get(ec->layout),
+        msg = alloca(sizeof(Edje_Message_Int_Set) + (3 * sizeof(int)));
+        msg->count = 3;
+        msg->val[0] = 11;
+        msg->val[1] = nw;
+        msg->val[2] = nh;
+        edje_object_message_send(elm_layout_edje_get(ec->layout),
                                 EDJE_MESSAGE_INT_SET, 1, msg);
      }
 }
