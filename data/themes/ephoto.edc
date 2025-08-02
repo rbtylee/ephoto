@@ -1198,7 +1198,6 @@ collections {
             }
          }
          rect { name: "shader_left";
-
             scale: 1;
             mouse_events: 0;
             clip_to: "clipper";
