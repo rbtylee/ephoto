@@ -1,6 +1,7 @@
 #define FIXED_SIZE(_W, _H) \
    min: _W _H; max: _W _H;
 
+efl_version: 1 27;
 collections {
    images {
       image: "sel_border.png" COMP;
