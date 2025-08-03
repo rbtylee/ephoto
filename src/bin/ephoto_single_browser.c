@@ -2607,7 +2607,7 @@ ephoto_single_browser_show_controls(Ephoto *ephoto)
    elm_object_part_content_set(but, "icon", ic);
    elm_object_tooltip_text_set(but, _("Upload to imgur"));
    elm_object_tooltip_orient_set(but, ELM_TOOLTIP_ORIENT_TOP);
-   evas_object_smart_callback_add(but, "clicked", _clipboard_copy, sb);
+   evas_object_smart_callback_add(but, "clicked", _upload_image, sb);
    elm_box_pack_end(ephoto->controls_right, but);
    evas_object_show(but);
 }
