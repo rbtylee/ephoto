@@ -2593,8 +2593,23 @@ ephoto_single_browser_show_controls(Ephoto *ephoto)
    evas_object_smart_callback_add(but, "clicked", _save_image_as, sb);
    elm_box_pack_end(ephoto->controls_right, but);
    evas_object_show(but);
-   _edit_function_item_add(ephoto->controls_right, "document-send", _("Upload"), _upload_image,
-                           sb);
+   
+   
+   ic = elm_icon_add(ephoto->controls_right);
+   evas_object_size_hint_min_set(ic, 20 * elm_config_scale_get(),
+                                 20 * elm_config_scale_get());
+   
+   ret = elm_icon_standard_set(ic, "document-send");
+   evas_object_size_hint_aspect_set(ic, EVAS_ASPECT_CONTROL_BOTH, 1, 1);
+   but = elm_button_add(ephoto->controls_right);
+   if (!ret)
+     elm_object_text_set(but, _("Upload"));
+   elm_object_part_content_set(but, "icon", ic);
+   elm_object_tooltip_text_set(but, _("Upload to imgur"));
+   elm_object_tooltip_orient_set(but, ELM_TOOLTIP_ORIENT_TOP);
+   evas_object_smart_callback_add(but, "clicked", _clipboard_copy, sb);
+   elm_box_pack_end(ephoto->controls_right, but);
+   evas_object_show(but);
 }
 
 Evas_Object *
