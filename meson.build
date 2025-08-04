@@ -19,6 +19,7 @@ elm  = dependency('elementary', required: true,  version: efl_version)
 edje = dependency('edje',       required: true,  version: efl_version)
 eipc = dependency('ecore-ipc',  required: true,  version: efl_version)
 exif = dependency('libexif',    required: false, version: '>= 0.6.0')
+heif = dependency('libheif',    required: false, version: '>= 0.12.0')
 
 ##### dir locations
 dir_prefix = get_option('prefix')
