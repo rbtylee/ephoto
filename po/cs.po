@@ -848,9 +848,8 @@ msgid "Next"
 msgstr "Další"
 
 #: src/bin/ephoto_single_browser.c:2608
-#, fuzzy
 msgid "Upload to imgur"
-msgstr "Nahrání obrázku"
+msgstr "Nahrát na imgur"
 
 #: src/bin/ephoto_directory_browser.c:466 src/bin/ephoto_slideshow.c:924
 msgid "Back"
