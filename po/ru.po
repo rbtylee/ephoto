@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ephoto 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-15 08:52+0200\n"
+"POT-Creation-Date: 2025-08-05 20:09+0200\n"
 "PO-Revision-Date: 2021-05-05 21:00+0300\n"
 "Last-Translator: Ihar Areshchankau <r0bur@tut.by>\n"
 "Language-Team: Russian <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11? 0: n%10>=2 && n%10<=4 "
 "&& (n%100<10 || n%100>=20) ? 1: 2;\n"
 
-#: src/bin/ephoto_bcg.c:325 src/bin/ephoto_single_browser.c:1863
+#: src/bin/ephoto_bcg.c:325 src/bin/ephoto_single_browser.c:1865
 msgid "Brightness/Contrast/Gamma"
 msgstr "Яркость/Контрастность/Гамма"
 
@@ -118,58 +118,58 @@ msgstr "Копировать ссылку"
 #, fuzzy
 msgid ""
 "<b><hilight>General Bindings</hilight></b><br/><b>F1:</b> Settings Panel<br/"
-"><b>F5:</b> Start Slideshow<br/><b>F11:</b> Toggle Fullscreen<br/><b>Ctrl"
-"+Shift+f:</b> Toggle File Selector<br/><br/><b><hilight>Thumbnail Browser "
-"Bindings</hilight></b><br/><b>Ctrl++:</b> Zoom In<br/><b>Ctrl+-:</b> Zoom "
-"Out<br/><b>Ctrl+c:</b> Copy Image<br/><b>Ctrl+x:</b> Cut Image<br/><b>Ctrl+v:"
-"</b> Paste Image<br/><b>Ctrl+a:</b> Select All<br/><b>Ctrl+f:</b> Toggle "
-"Search<br/><b>Ctrl+Tab:</b> View Image<br/><b>Ctrl+Delete:</b> Delete "
+"><b>F5:</b> Start Slideshow<br/><b>F11:</b> Toggle Fullscreen<br/"
+"><b>Ctrl+Shift+f:</b> Toggle File Selector<br/><br/><b><hilight>Thumbnail "
+"Browser Bindings</hilight></b><br/><b>Ctrl++:</b> Zoom In<br/><b>Ctrl+-:</b> "
+"Zoom Out<br/><b>Ctrl+c:</b> Copy Image<br/><b>Ctrl+x:</b> Cut Image<br/"
+"><b>Ctrl+v:</b> Paste Image<br/><b>Ctrl+a:</b> Select All<br/><b>Ctrl+f:</b> "
+"Toggle Search<br/><b>Ctrl+Tab:</b> View Image<br/><b>Ctrl+Delete:</b> Delete "
 "Image<br/><b>F2:</b> Rename Image<br/><b>Escape:</b> Clear Selection<br/><br/"
 "><b><hilight>Single Browser Bindings</hilight></b><br/><b>Ctrl+Shift+0:</b> "
-"Zoom 1:1<br/><b>Ctrl++:</b> Zoom In<br/><b>Ctrl+-:</b> Zoom Out<br/><b>Ctrl"
-"+0:</b> Zoom Fit<br/><b>Ctrl+Shift+l:</b> Rotate Counter Clockwise<br/"
-"><b>Ctrl+l:</b> Flip Horizontal<br/><b>Ctrl+Shift+r:</b> Rotate Clockwise<br/"
-"><b>Ctrl+r:</b> Flip Vertical<br/><b>Ctrl+Shift+s:</b> Save Image As<br/"
-"><b>Ctrl+s:</b> Save Image<br/><b>Ctrl+c:</b> Copy Image to Clipboard<br/"
-"><b>Ctrl+u:</b> Reset Image<br/><b>Ctrl+y:</b> Redo<br/><b>Ctrl+Shift+z:</b> "
-"Redo<br/><b>Ctrl+z:</b> Undo<br/><b>Home:</b> Navigate First<br/><b>Left "
-"Arrow:</b> Navigate Previous<br/><b>Right Arrow:</b> Navigate Next<br/"
-"><b>Space:</b> Navigate Next<br/><b>End:</b> Navigate Last<br/><b>Ctrl"
-"+Delete:</b> Delete Image<br/><b>F2</b> Rename Image<br/><b>Escape:</b> "
-"Return to Thumbnail Browser<br/><br/><b><hilight>Slideshow Bindings</"
-"hilight></b><br/><b>Space:</b> Play/Pause Slideshow<br/><b>Home:</b> "
-"Navigate First<br/><b>Left Arrow:</b> Navigate Previous<br/><b>Right Arrow:</"
-"b> Navigate Next<br/><b>End:</b> Navigate Last<br/><b>Escape:</b> Quit "
-"Slideshow<br/>"
+"Zoom 1:1<br/><b>Ctrl++:</b> Zoom In<br/><b>Ctrl+-:</b> Zoom Out<br/"
+"><b>Ctrl+0:</b> Zoom Fit<br/><b>Ctrl+Shift+l:</b> Rotate Counter "
+"Clockwise<br/><b>Ctrl+l:</b> Flip Horizontal<br/><b>Ctrl+Shift+r:</b> Rotate "
+"Clockwise<br/><b>Ctrl+r:</b> Flip Vertical<br/><b>Ctrl+Shift+s:</b> Save "
+"Image As<br/><b>Ctrl+s:</b> Save Image<br/><b>Ctrl+c:</b> Copy Image to "
+"Clipboard<br/><b>Ctrl+u:</b> Reset Image<br/><b>Ctrl+y:</b> Redo<br/"
+"><b>Ctrl+Shift+z:</b> Redo<br/><b>Ctrl+z:</b> Undo<br/><b>Home:</b> Navigate "
+"First<br/><b>Left Arrow:</b> Navigate Previous<br/><b>Right Arrow:</b> "
+"Navigate Next<br/><b>Space:</b> Navigate Next<br/><b>End:</b> Navigate "
+"Last<br/><b>Ctrl+Delete:</b> Delete Image<br/><b>F2</b> Rename Image<br/"
+"><b>Escape:</b> Return to Thumbnail Browser<br/><br/><b><hilight>Slideshow "
+"Bindings</hilight></b><br/><b>Space:</b> Play/Pause Slideshow<br/><b>Home:</"
+"b> Navigate First<br/><b>Left Arrow:</b> Navigate Previous<br/><b>Right "
+"Arrow:</b> Navigate Next<br/><b>End:</b> Navigate Last<br/><b>Escape:</b> "
+"Quit Slideshow<br/>"
 msgstr ""
 "<b><hilight>Основные команды</hilight></b><br/><b>F1:</b> Панель настроек<br/"
 "><b>F5:</b> Запустить демонстрацию слайдов<br/><b>F11:</b> Полноэкранный "
 "режим<br/><b>Ctrl+Shift+f:</b> Дерево каталогов<br/><br/><b><hilight>Команды "
-"при просмотре  эскизов</hilight></b><br/><b>Ctrl++:</b> Увеличить<br/><b>Ctrl"
-"+-:</b> Уменьшить<br/><b>Ctrl+Tab:</b> Просмотр изображения<br/><b>Ctrl+c:</"
-"b> Копировать изображение<br/><b>Ctrl+x:</b> Вырезать изображение<br/><b>Ctrl"
-"+v:</b> Вставить изображение<br/><b>Ctrl+a:</b> Выбрать все<br/><b>Ctrl+f:</"
-"b> Поиск<br/><b>Ctrl+Delete:</b> Удалить изображение<br/><b>F2:</b> "
-"Переименовать изображение<br/><b>Escape:</b> Снять выделение<br/><br/"
-"><b><hilight>Команды при просмотре изображения</hilight></b><br/><b>Ctrl"
-"+Shift+0:</b> Уместить целиком<br/><b>Ctrl++:</b> Увеличить<br/><b>Ctrl+-:</"
-"b> Уменьшить<br/><b>Ctrl+0:</b> Масштаб 1:1<br/><b>Ctrl+Shift+l:</b> "
-"Отразить по горизонтали<br/><b>Ctrl+l:</b> Повернуть против часовой "
-"стрелки<br/><b>Ctrl+Shift+r:</b> Отразить по вертикали<br/><b>Ctrl+r:</b> "
-"Повернуть по часовой стрелке<br/><b>Ctrl+Shift+s:</b> Сохранить изображение "
-"<br/><b>Ctrl+s:</b> Сохранить изображение как<br/><b>Ctrl+u:</b> "
-"Восстановить изображение<br/><b>Ctrl+z:</b> Отменить действие<br/><b>Ctrl"
-"+Shift+z:</b> Отменить отмену<br/><b>Ctrl+y:</b> Отменить отмену<br/><b>Home:"
-"</b> К первому изображению<br/><b>Стрелка влево:</b> Предыдущее "
-"изображение<br/><b>Стрелка вправо:</b> Следующее изображение<br/><b>Пробел:</"
-"b> Следующее изображение<br/><b>End:</b> К последнему изображению<br/><b>Ctrl"
-"+Delete:</b> Удалить изображение<br/><b>F2:</b> Переименовать изображение<br/"
-"><b>Escape:</b> Возврат в просмотр эскизов<br/><br/><b><hilight>Команды в "
-"режиме демонстрации слайдов</hilight></b><br/><b>Space:</b> Воспроизведение/"
-"Пауза демонстрации<br/><b>Home:</b> К первому изображению<br/><b>Стрелка "
-"влево:</b> Предыдущее изображение<br/><b>Стрелка вправо:</b> Следующее "
-"изображение<br/><b>End:</b> К последнему изображению<br/><b>Escape:</b> "
-"Завершить демонстрацию<br/>"
+"при просмотре  эскизов</hilight></b><br/><b>Ctrl++:</b> Увеличить<br/"
+"><b>Ctrl+-:</b> Уменьшить<br/><b>Ctrl+Tab:</b> Просмотр изображения<br/"
+"><b>Ctrl+c:</b> Копировать изображение<br/><b>Ctrl+x:</b> Вырезать "
+"изображение<br/><b>Ctrl+v:</b> Вставить изображение<br/><b>Ctrl+a:</b> "
+"Выбрать все<br/><b>Ctrl+f:</b> Поиск<br/><b>Ctrl+Delete:</b> Удалить "
+"изображение<br/><b>F2:</b> Переименовать изображение<br/><b>Escape:</b> "
+"Снять выделение<br/><br/><b><hilight>Команды при просмотре изображения</"
+"hilight></b><br/><b>Ctrl+Shift+0:</b> Уместить целиком<br/><b>Ctrl++:</b> "
+"Увеличить<br/><b>Ctrl+-:</b> Уменьшить<br/><b>Ctrl+0:</b> Масштаб 1:1<br/"
+"><b>Ctrl+Shift+l:</b> Отразить по горизонтали<br/><b>Ctrl+l:</b> Повернуть "
+"против часовой стрелки<br/><b>Ctrl+Shift+r:</b> Отразить по вертикали<br/"
+"><b>Ctrl+r:</b> Повернуть по часовой стрелке<br/><b>Ctrl+Shift+s:</b> "
+"Сохранить изображение <br/><b>Ctrl+s:</b> Сохранить изображение как<br/"
+"><b>Ctrl+u:</b> Восстановить изображение<br/><b>Ctrl+z:</b> Отменить "
+"действие<br/><b>Ctrl+Shift+z:</b> Отменить отмену<br/><b>Ctrl+y:</b> "
+"Отменить отмену<br/><b>Home:</b> К первому изображению<br/><b>Стрелка влево:"
+"</b> Предыдущее изображение<br/><b>Стрелка вправо:</b> Следующее "
+"изображение<br/><b>Пробел:</b> Следующее изображение<br/><b>End:</b> К "
+"последнему изображению<br/><b>Ctrl+Delete:</b> Удалить изображение<br/><b>F2:"
+"</b> Переименовать изображение<br/><b>Escape:</b> Возврат в просмотр "
+"эскизов<br/><br/><b><hilight>Команды в режиме демонстрации слайдов</"
+"hilight></b><br/><b>Space:</b> Воспроизведение/Пауза демонстрации<br/"
+"><b>Home:</b> К первому изображению<br/><b>Стрелка влево:</b> Предыдущее "
+"изображение<br/><b>Стрелка вправо:</b> Следующее изображение<br/><b>End:</b> "
+"К последнему изображению<br/><b>Escape:</b> Завершить демонстрацию<br/>"
 
 #: src/bin/ephoto_config.c:510
 msgid ""
@@ -201,8 +201,8 @@ msgstr "Панель настроек"
 msgid "General"
 msgstr "Основные"
 
-#: src/bin/ephoto_config.c:732 src/bin/ephoto_main.c:565
-#: src/bin/ephoto_main.c:568
+#: src/bin/ephoto_config.c:732 src/bin/ephoto_main.c:568
+#: src/bin/ephoto_main.c:571
 msgid "Slideshow"
 msgstr "Демонстрация слайдов"
 
@@ -230,7 +230,7 @@ msgstr "Зелёный"
 msgid "Red"
 msgstr "Красный"
 
-#: src/bin/ephoto_red_eye.c:202 src/bin/ephoto_single_browser.c:1869
+#: src/bin/ephoto_red_eye.c:202 src/bin/ephoto_single_browser.c:1871
 msgid "Red Eye Removal"
 msgstr "Удаление эффекта красных глаз"
 
@@ -250,8 +250,8 @@ msgstr "Масштабировать изображение"
 msgid "Keep Aspect"
 msgstr "Сохранять пропорции"
 
-#: src/bin/ephoto_editor.c:54 src/bin/ephoto_single_browser.c:1915
-#: src/bin/ephoto_single_browser.c:1941
+#: src/bin/ephoto_editor.c:54 src/bin/ephoto_single_browser.c:1917
+#: src/bin/ephoto_single_browser.c:1943
 msgid "Reset"
 msgstr "Восстановить"
 
@@ -259,22 +259,22 @@ msgstr "Восстановить"
 msgid "Apply"
 msgstr "Применить"
 
-#: src/bin/ephoto_editor.c:84 src/bin/ephoto_file.c:629
-#: src/bin/ephoto_file.c:770
+#: src/bin/ephoto_editor.c:84 src/bin/ephoto_file.c:653
+#: src/bin/ephoto_file.c:792
 msgid "Cancel"
 msgstr "Отмена"
 
-#: src/bin/ephoto_cropper.c:702
+#: src/bin/ephoto_cropper.c:705
 msgid "Crop Image"
 msgstr "Обрезать изображение"
 
-#: src/bin/ephoto_cropper.c:712
-msgid "Height"
-msgstr "Высота"
-
-#: src/bin/ephoto_cropper.c:725
+#: src/bin/ephoto_cropper.c:715
 msgid "Width"
 msgstr "Ширина"
+
+#: src/bin/ephoto_cropper.c:728
+msgid "Height"
+msgstr "Высота"
 
 #: src/bin/ephoto_filters.c:105
 msgid "Applying Filter"
@@ -294,16 +294,16 @@ msgid "Ok"
 msgstr "Ок"
 
 #: src/bin/ephoto_file.c:308 src/bin/ephoto_file.c:320
-#: src/bin/ephoto_file.c:337 src/bin/ephoto_file.c:1220
-#: src/bin/ephoto_file.c:1232 src/bin/ephoto_file.c:1248
-#: src/bin/ephoto_file.c:1349 src/bin/ephoto_file.c:1427
+#: src/bin/ephoto_file.c:337 src/bin/ephoto_file.c:1242
+#: src/bin/ephoto_file.c:1254 src/bin/ephoto_file.c:1270
+#: src/bin/ephoto_file.c:1371 src/bin/ephoto_file.c:1449
 msgid "Save Failed"
 msgstr "Сбой сохранения"
 
 #: src/bin/ephoto_file.c:309 src/bin/ephoto_file.c:321
-#: src/bin/ephoto_file.c:338 src/bin/ephoto_file.c:1221
-#: src/bin/ephoto_file.c:1233 src/bin/ephoto_file.c:1249
-#: src/bin/ephoto_file.c:1350 src/bin/ephoto_file.c:1428
+#: src/bin/ephoto_file.c:338 src/bin/ephoto_file.c:1243
+#: src/bin/ephoto_file.c:1255 src/bin/ephoto_file.c:1271
+#: src/bin/ephoto_file.c:1372 src/bin/ephoto_file.c:1450
 msgid "Error: Image could not be saved here!"
 msgstr "Ошибка: Изображение не может быть записано сюда!"
 
@@ -311,7 +311,7 @@ msgstr "Ошибка: Изображение не может быть запис
 msgid "Image Uploaded"
 msgstr "Изображение загружено"
 
-#: src/bin/ephoto_file.c:451 src/bin/ephoto_thumb_browser.c:982
+#: src/bin/ephoto_file.c:451 src/bin/ephoto_thumb_browser.c:980
 msgid "Copy"
 msgstr "Копировать"
 
@@ -323,8 +323,8 @@ msgstr "Произошла ошибка при загрузке вашего и�
 msgid "Your image was uploaded to the following link:"
 msgstr "Ваше изображение было загружено по следующей ссылке:"
 
-#: src/bin/ephoto_file.c:564 src/bin/ephoto_file.c:668
-#: src/bin/ephoto_file.c:671 src/bin/ephoto_file.c:827
+#: src/bin/ephoto_file.c:564 src/bin/ephoto_file.c:692
+#: src/bin/ephoto_file.c:695 src/bin/ephoto_file.c:849
 msgid "Error"
 msgstr "Ошибка"
 
@@ -332,183 +332,183 @@ msgstr "Ошибка"
 msgid "There was an error creating this directory."
 msgstr "Произошла ошибка при создании этого каталога."
 
-#: src/bin/ephoto_file.c:588 src/bin/ephoto_file.c:603
+#: src/bin/ephoto_file.c:611 src/bin/ephoto_file.c:626
 msgid "New Directory"
 msgstr "Новый каталог"
 
-#: src/bin/ephoto_file.c:618 src/bin/ephoto_single_browser.c:1908
-#: src/bin/ephoto_single_browser.c:1942
+#: src/bin/ephoto_file.c:642 src/bin/ephoto_single_browser.c:1910
+#: src/bin/ephoto_single_browser.c:1944
 msgid "Save"
 msgstr "Сохранить"
 
-#: src/bin/ephoto_file.c:669
+#: src/bin/ephoto_file.c:693
 msgid "There was an error renaming this directory."
 msgstr "Произошла ошибка при переименовании этого каталога."
 
-#: src/bin/ephoto_file.c:672
+#: src/bin/ephoto_file.c:696
 msgid "There was an error renaming this file."
 msgstr "Произошла ошибка при переименовании этого файла."
 
-#: src/bin/ephoto_file.c:721
+#: src/bin/ephoto_file.c:742
 msgid "Rename Directory"
 msgstr "Переименовать каталог"
 
-#: src/bin/ephoto_file.c:723
+#: src/bin/ephoto_file.c:744
 msgid "Rename File"
 msgstr "Переименовать файл"
 
-#: src/bin/ephoto_file.c:759 src/bin/ephoto_thumb_browser.c:973
-#: src/bin/ephoto_single_browser.c:1947 src/bin/ephoto_directory_browser.c:689
+#: src/bin/ephoto_file.c:781 src/bin/ephoto_thumb_browser.c:971
+#: src/bin/ephoto_single_browser.c:1949 src/bin/ephoto_directory_browser.c:689
 msgid "Rename"
 msgstr "Переименовать"
 
-#: src/bin/ephoto_file.c:825
+#: src/bin/ephoto_file.c:847
 msgid "There was an error completing your action on"
 msgstr "Произошла ошибка при выполнении действия над"
 
-#: src/bin/ephoto_file.c:826
+#: src/bin/ephoto_file.c:848
 msgid "file"
 msgid_plural "files"
 msgstr[0] "файл"
 msgstr[1] "файла"
 msgstr[2] "файлов"
 
-#: src/bin/ephoto_file.c:887
+#: src/bin/ephoto_file.c:909
 msgid "Moving Files"
 msgstr "Перемещение файлов"
 
-#: src/bin/ephoto_file.c:888
+#: src/bin/ephoto_file.c:910
 msgid "Please wait while your files are moved."
 msgstr "Подождите, пожалуйста, пока ваши файлы будут перемещены."
 
-#: src/bin/ephoto_file.c:949
+#: src/bin/ephoto_file.c:971
 msgid "Copying Files"
 msgstr "Копирование файлов"
 
-#: src/bin/ephoto_file.c:950
+#: src/bin/ephoto_file.c:972
 msgid "Please wait while your files are copied."
 msgstr "Подождите, пожалуйста, пока ваши файлы будут скопированы."
 
-#: src/bin/ephoto_file.c:1028
+#: src/bin/ephoto_file.c:1050
 msgid "Deleting Files"
 msgstr "Удаление файлов"
 
-#: src/bin/ephoto_file.c:1029 src/bin/ephoto_file.c:1128
+#: src/bin/ephoto_file.c:1051 src/bin/ephoto_file.c:1150
 msgid "Please wait while your files are deleted."
 msgstr "Подождите, пожалуйста, пока ваши файлы будут удалены."
 
-#: src/bin/ephoto_file.c:1088
+#: src/bin/ephoto_file.c:1110
 msgid "Deleting Directory"
 msgstr "Удаление каталога"
 
-#: src/bin/ephoto_file.c:1089
+#: src/bin/ephoto_file.c:1111
 msgid "Please wait while your directory is deleted."
 msgstr "Подождите, пожалуйста, пока ваш каталог будет удалён."
 
-#: src/bin/ephoto_file.c:1127
+#: src/bin/ephoto_file.c:1149
 msgid "Emptying Trash"
 msgstr "Очистка корзины"
 
-#: src/bin/ephoto_file.c:1154 src/bin/ephoto_file.c:1514
+#: src/bin/ephoto_file.c:1176 src/bin/ephoto_file.c:1536
 msgid "Upload Image"
 msgstr "Загрузить изображение"
 
-#: src/bin/ephoto_file.c:1305
+#: src/bin/ephoto_file.c:1327
 msgid "Overwrite Image"
 msgstr "Перезаписать изображение"
 
-#: src/bin/ephoto_file.c:1306 src/bin/ephoto_file.c:1433
+#: src/bin/ephoto_file.c:1328 src/bin/ephoto_file.c:1455
 msgid "Are you sure you want to overwrite this image?"
 msgstr "Вы уверены, что хотите перезаписать это изображение?"
 
-#: src/bin/ephoto_file.c:1314 src/bin/ephoto_file.c:1440
-#: src/bin/ephoto_file.c:1522 src/bin/ephoto_file.c:1579
-#: src/bin/ephoto_file.c:1630 src/bin/ephoto_file.c:1681
-#: src/bin/ephoto_file.c:1728 src/bin/ephoto_file.c:1786
-#: src/bin/ephoto_file.c:1840 src/bin/ephoto_single_browser.c:1026
+#: src/bin/ephoto_file.c:1336 src/bin/ephoto_file.c:1462
+#: src/bin/ephoto_file.c:1544 src/bin/ephoto_file.c:1601
+#: src/bin/ephoto_file.c:1652 src/bin/ephoto_file.c:1703
+#: src/bin/ephoto_file.c:1750 src/bin/ephoto_file.c:1808
+#: src/bin/ephoto_file.c:1862 src/bin/ephoto_single_browser.c:1028
 msgid "Yes"
 msgstr "Да"
 
-#: src/bin/ephoto_file.c:1327 src/bin/ephoto_file.c:1451
-#: src/bin/ephoto_file.c:1534 src/bin/ephoto_file.c:1592
-#: src/bin/ephoto_file.c:1643 src/bin/ephoto_file.c:1694
-#: src/bin/ephoto_file.c:1741 src/bin/ephoto_file.c:1799
-#: src/bin/ephoto_file.c:1853 src/bin/ephoto_single_browser.c:1037
+#: src/bin/ephoto_file.c:1349 src/bin/ephoto_file.c:1473
+#: src/bin/ephoto_file.c:1556 src/bin/ephoto_file.c:1614
+#: src/bin/ephoto_file.c:1665 src/bin/ephoto_file.c:1716
+#: src/bin/ephoto_file.c:1763 src/bin/ephoto_file.c:1821
+#: src/bin/ephoto_file.c:1875 src/bin/ephoto_single_browser.c:1039
 msgid "No"
 msgstr "Нет"
 
-#: src/bin/ephoto_file.c:1432
+#: src/bin/ephoto_file.c:1454
 msgid "Save Image"
 msgstr "Сохранить изображение"
 
-#: src/bin/ephoto_file.c:1473
+#: src/bin/ephoto_file.c:1495
 msgid "Save Image As"
 msgstr "Сохранить изображение как"
 
-#: src/bin/ephoto_file.c:1493
+#: src/bin/ephoto_file.c:1515
 msgid "Image Files"
 msgstr "Файлы изображений"
 
-#: src/bin/ephoto_file.c:1515
+#: src/bin/ephoto_file.c:1537
 msgid "Are you sure you want to upload this image publically to imgur.com?"
 msgstr ""
 "Вы уверены, что хотите загрузить это изображение в открытый доступ на imgur."
 "com?"
 
-#: src/bin/ephoto_file.c:1569
+#: src/bin/ephoto_file.c:1591
 msgid "Are you sure you want to move these files to"
 msgstr "Вы уверены, что хотите переместить эти файлы в"
 
-#: src/bin/ephoto_file.c:1571
+#: src/bin/ephoto_file.c:1593
 msgid "Move Files"
 msgstr "Переместить файлы"
 
-#: src/bin/ephoto_file.c:1620
+#: src/bin/ephoto_file.c:1642
 msgid "Are you sure you want to copy these files to"
 msgstr "Вы уверены, что хотите скопировать эти файлы в"
 
-#: src/bin/ephoto_file.c:1622 src/bin/ephoto_file.c:1719
+#: src/bin/ephoto_file.c:1644 src/bin/ephoto_file.c:1741
 msgid "Copy Files"
 msgstr "Копировать файлы"
 
-#: src/bin/ephoto_file.c:1672
+#: src/bin/ephoto_file.c:1694
 msgid "Paste Files"
 msgstr "Вставить файлы"
 
-#: src/bin/ephoto_file.c:1673
+#: src/bin/ephoto_file.c:1695
 msgid "Are you sure you want to paste these files here?"
 msgstr "Вы уверены, что хотите вставить эти файлы сюда?"
 
-#: src/bin/ephoto_file.c:1720
+#: src/bin/ephoto_file.c:1742
 msgid "Are you sure you want to copy these files here?"
 msgstr "Вы уверены, что хотите скопировать эти файлы сюда?"
 
-#: src/bin/ephoto_file.c:1773
+#: src/bin/ephoto_file.c:1795
 msgid "Delete Directory"
 msgstr "Удалить каталог"
 
-#: src/bin/ephoto_file.c:1774
+#: src/bin/ephoto_file.c:1796
 msgid "Are you sure you want to delete this directory?"
 msgstr "Вы уверены, что хотите удалить этот каталог?"
 
-#: src/bin/ephoto_file.c:1777
+#: src/bin/ephoto_file.c:1799
 msgid "Delete Files"
 msgstr "Удалить файлы"
 
-#: src/bin/ephoto_file.c:1778
+#: src/bin/ephoto_file.c:1800
 msgid "Are you sure you want to delete these files?"
 msgstr "Вы уверены, что хотите удалить эти файлы?"
 
-#: src/bin/ephoto_file.c:1831 src/bin/ephoto_thumb_browser.c:995
+#: src/bin/ephoto_file.c:1853 src/bin/ephoto_thumb_browser.c:993
 #: src/bin/ephoto_directory_browser.c:697
 msgid "Empty Trash"
 msgstr "Очистить корзину"
 
-#: src/bin/ephoto_file.c:1832
+#: src/bin/ephoto_file.c:1854
 msgid "Are you sure you want to empty the trash?"
 msgstr "Вы уверены, что хотите очистить корзину?"
 
-#: src/bin/ephoto_hsv.c:332 src/bin/ephoto_single_browser.c:1865
+#: src/bin/ephoto_hsv.c:332 src/bin/ephoto_single_browser.c:1867
 msgid "Hue/Saturation/Value"
 msgstr "Оттенок/Насыщенность/Уровень"
 
@@ -524,82 +524,82 @@ msgstr "Насыщенность"
 msgid "Hue"
 msgstr "Оттенок"
 
-#: src/bin/ephoto_main.c:290 src/bin/ephoto_main.c:291
-#: src/bin/ephoto_main.c:352 src/bin/ephoto_main.c:353
-#: src/bin/ephoto_main.c:679 src/bin/ephoto_main.c:680
+#: src/bin/ephoto_main.c:293 src/bin/ephoto_main.c:294
+#: src/bin/ephoto_main.c:355 src/bin/ephoto_main.c:356
+#: src/bin/ephoto_main.c:682 src/bin/ephoto_main.c:683
 msgid "Hide Folders"
 msgstr "Скрыть каталоги"
 
-#: src/bin/ephoto_main.c:300 src/bin/ephoto_main.c:301
-#: src/bin/ephoto_main.c:362 src/bin/ephoto_main.c:363
-#: src/bin/ephoto_main.c:523 src/bin/ephoto_main.c:525
-#: src/bin/ephoto_main.c:671 src/bin/ephoto_main.c:672
+#: src/bin/ephoto_main.c:303 src/bin/ephoto_main.c:304
+#: src/bin/ephoto_main.c:365 src/bin/ephoto_main.c:366
+#: src/bin/ephoto_main.c:526 src/bin/ephoto_main.c:528
+#: src/bin/ephoto_main.c:674 src/bin/ephoto_main.c:675
 msgid "Show Folders"
 msgstr "Показать каталоги"
 
-#: src/bin/ephoto_main.c:542
+#: src/bin/ephoto_main.c:545
 msgid "Information"
 msgstr "Информация"
 
-#: src/bin/ephoto_main.c:582 src/bin/ephoto_main.c:585
+#: src/bin/ephoto_main.c:585 src/bin/ephoto_main.c:588
 #: src/bin/ephoto_slideshow.c:943
 msgid "Settings"
 msgstr "Настройки"
 
-#: src/bin/ephoto_main.c:599 src/bin/ephoto_main.c:602
+#: src/bin/ephoto_main.c:602 src/bin/ephoto_main.c:605
 #: src/bin/ephoto_slideshow.c:946
 msgid "Exit"
 msgstr "Выход"
 
-#: src/bin/ephoto_thumb_browser.c:964 src/bin/ephoto_thumb_browser.c:1361
+#: src/bin/ephoto_thumb_browser.c:962 src/bin/ephoto_thumb_browser.c:1360
 msgid "Search"
 msgstr "Поиск"
 
-#: src/bin/ephoto_thumb_browser.c:966
+#: src/bin/ephoto_thumb_browser.c:964
 msgid "Select All"
 msgstr "Выделить всё"
 
-#: src/bin/ephoto_thumb_browser.c:969
+#: src/bin/ephoto_thumb_browser.c:967
 msgid "Select None"
 msgstr "Снять выделение"
 
-#: src/bin/ephoto_thumb_browser.c:980
+#: src/bin/ephoto_thumb_browser.c:978
 msgid "Cut"
 msgstr "Вырезать"
 
-#: src/bin/ephoto_thumb_browser.c:988 src/bin/ephoto_directory_browser.c:691
+#: src/bin/ephoto_thumb_browser.c:986 src/bin/ephoto_directory_browser.c:691
 msgid "Paste"
 msgstr "Вставить"
 
-#: src/bin/ephoto_thumb_browser.c:1000 src/bin/ephoto_single_browser.c:1949
+#: src/bin/ephoto_thumb_browser.c:998 src/bin/ephoto_single_browser.c:1951
 #: src/bin/ephoto_directory_browser.c:702
 msgid "Delete"
 msgstr "Удалить"
 
-#: src/bin/ephoto_thumb_browser.c:1084
+#: src/bin/ephoto_thumb_browser.c:1082
 msgid "No images matched your search"
 msgstr "Нет изображений, соответствующих условию поиска"
 
-#: src/bin/ephoto_thumb_browser.c:1087 src/bin/ephoto_thumb_browser.c:1392
+#: src/bin/ephoto_thumb_browser.c:1085 src/bin/ephoto_thumb_browser.c:1391
 msgid "There are no images in this directory"
 msgstr "В этом каталоге нет изображений"
 
-#: src/bin/ephoto_thumb_browser.c:1089 src/bin/ephoto_thumb_browser.c:1129
+#: src/bin/ephoto_thumb_browser.c:1087 src/bin/ephoto_thumb_browser.c:1127
 msgid "Total"
 msgstr "Всего"
 
-#: src/bin/ephoto_thumb_browser.c:1089 src/bin/ephoto_thumb_browser.c:1129
+#: src/bin/ephoto_thumb_browser.c:1087 src/bin/ephoto_thumb_browser.c:1127
 msgid "image"
 msgid_plural "images"
 msgstr[0] "изображение"
 msgstr[1] "изображения"
 msgstr[2] "изображений"
 
-#: src/bin/ephoto_thumb_browser.c:1089 src/bin/ephoto_thumb_browser.c:1130
+#: src/bin/ephoto_thumb_browser.c:1087 src/bin/ephoto_thumb_browser.c:1128
 msgid "Size"
 msgstr "Размер"
 
-#: src/bin/ephoto_thumb_browser.c:1090 src/bin/ephoto_thumb_browser.c:1099
+#: src/bin/ephoto_thumb_browser.c:1088 src/bin/ephoto_thumb_browser.c:1097
 #: src/bin/ephoto_single_browser.c:143
 msgid "B"
 msgid_plural "B"
@@ -607,28 +607,28 @@ msgstr[0] "б"
 msgstr[1] "б"
 msgstr[2] "б"
 
-#: src/bin/ephoto_thumb_browser.c:1106 src/bin/ephoto_single_browser.c:150
+#: src/bin/ephoto_thumb_browser.c:1104 src/bin/ephoto_single_browser.c:150
 msgid "KB"
 msgid_plural "KB"
 msgstr[0] "Кб"
 msgstr[1] "Кб"
 msgstr[2] "Кб"
 
-#: src/bin/ephoto_thumb_browser.c:1112 src/bin/ephoto_single_browser.c:156
+#: src/bin/ephoto_thumb_browser.c:1110 src/bin/ephoto_single_browser.c:156
 msgid "MB"
 msgid_plural "MB"
 msgstr[0] "Мб"
 msgstr[1] "Мб"
 msgstr[2] "Мб"
 
-#: src/bin/ephoto_thumb_browser.c:1118 src/bin/ephoto_single_browser.c:162
+#: src/bin/ephoto_thumb_browser.c:1116 src/bin/ephoto_single_browser.c:162
 msgid "GB"
 msgid_plural "GB"
 msgstr[0] "Гб"
 msgstr[1] "Гб"
 msgstr[2] "Гб"
 
-#: src/bin/ephoto_thumb_browser.c:1123 src/bin/ephoto_single_browser.c:167
+#: src/bin/ephoto_thumb_browser.c:1121 src/bin/ephoto_single_browser.c:167
 msgid "TB"
 msgid_plural "TB"
 msgstr[0] "Тб"
@@ -640,12 +640,12 @@ msgid "View Image"
 msgstr "Просмотр изображения"
 
 #: src/bin/ephoto_thumb_browser.c:2091 src/bin/ephoto_thumb_browser.c:2093
-#: src/bin/ephoto_single_browser.c:2475 src/bin/ephoto_single_browser.c:2477
+#: src/bin/ephoto_single_browser.c:2477 src/bin/ephoto_single_browser.c:2479
 msgid "Zoom In"
 msgstr "Увеличить"
 
 #: src/bin/ephoto_thumb_browser.c:2107 src/bin/ephoto_thumb_browser.c:2109
-#: src/bin/ephoto_single_browser.c:2491 src/bin/ephoto_single_browser.c:2493
+#: src/bin/ephoto_single_browser.c:2493 src/bin/ephoto_single_browser.c:2495
 msgid "Zoom Out"
 msgstr "Уменьшить"
 
@@ -685,176 +685,181 @@ msgstr "Разрешение"
 msgid "File Size"
 msgstr "Размер файла"
 
-#: src/bin/ephoto_single_browser.c:541 src/bin/ephoto_single_browser.c:2405
+#: src/bin/ephoto_single_browser.c:543 src/bin/ephoto_single_browser.c:2407
 msgid "MODIFIED"
 msgstr "ИЗМЕНЕНО"
 
-#: src/bin/ephoto_single_browser.c:1004
+#: src/bin/ephoto_single_browser.c:1006
 msgid "Reset Image"
 msgstr "Восстановить изображение"
 
-#: src/bin/ephoto_single_browser.c:1015
+#: src/bin/ephoto_single_browser.c:1017
 msgid "Are you sure you want to reset your changes?"
 msgstr "Вы уверены, что хотите отменить выполненные изменения?"
 
-#: src/bin/ephoto_single_browser.c:1667
+#: src/bin/ephoto_single_browser.c:1669
 msgid "This image does not exist or is corrupted!"
 msgstr "Это изображение не существует или повреждено!"
 
-#: src/bin/ephoto_single_browser.c:1672
+#: src/bin/ephoto_single_browser.c:1674
 msgid "Bad Image"
 msgstr "Изображение повреждено"
 
-#: src/bin/ephoto_single_browser.c:1812 src/bin/ephoto_single_browser.c:1940
-#: src/bin/ephoto_single_browser.c:2571 src/bin/ephoto_single_browser.c:2573
+#: src/bin/ephoto_single_browser.c:1814 src/bin/ephoto_single_browser.c:1942
+#: src/bin/ephoto_single_browser.c:2573 src/bin/ephoto_single_browser.c:2575
 msgid "Edit"
 msgstr "Правка"
 
-#: src/bin/ephoto_single_browser.c:1847
+#: src/bin/ephoto_single_browser.c:1849
 msgid "Transform"
 msgstr "Преобразование"
 
-#: src/bin/ephoto_single_browser.c:1850
+#: src/bin/ephoto_single_browser.c:1852
 msgid "Crop"
 msgstr "Обрезать"
 
-#: src/bin/ephoto_single_browser.c:1851
+#: src/bin/ephoto_single_browser.c:1853
 msgid "Scale"
 msgstr "Масштаб"
 
-#: src/bin/ephoto_single_browser.c:1852 src/bin/ephoto_single_browser.c:2539
-#: src/bin/ephoto_single_browser.c:2541
+#: src/bin/ephoto_single_browser.c:1854 src/bin/ephoto_single_browser.c:2541
+#: src/bin/ephoto_single_browser.c:2543
 msgid "Rotate Left"
 msgstr "Повернуть влево"
 
-#: src/bin/ephoto_single_browser.c:1854 src/bin/ephoto_single_browser.c:2555
-#: src/bin/ephoto_single_browser.c:2557
+#: src/bin/ephoto_single_browser.c:1856 src/bin/ephoto_single_browser.c:2557
+#: src/bin/ephoto_single_browser.c:2559
 msgid "Rotate Right"
 msgstr "Повернуть вправо"
 
-#: src/bin/ephoto_single_browser.c:1856 src/bin/ephoto_single_browser.c:1963
+#: src/bin/ephoto_single_browser.c:1858 src/bin/ephoto_single_browser.c:1965
 msgid "Flip Horizontal"
 msgstr "Отразить горизонтально"
 
-#: src/bin/ephoto_single_browser.c:1858 src/bin/ephoto_single_browser.c:1965
+#: src/bin/ephoto_single_browser.c:1860 src/bin/ephoto_single_browser.c:1967
 msgid "Flip Vertical"
 msgstr "Отразить вертикально"
 
-#: src/bin/ephoto_single_browser.c:1860
+#: src/bin/ephoto_single_browser.c:1862
 msgid "Adjustable Filters"
 msgstr "Настраиваемые фильтры"
 
-#: src/bin/ephoto_single_browser.c:1867
+#: src/bin/ephoto_single_browser.c:1869
 msgid "Color Levels"
 msgstr "Уровни цвета"
 
-#: src/bin/ephoto_single_browser.c:1871
+#: src/bin/ephoto_single_browser.c:1873
 msgid "Quick Filters"
 msgstr "Быстрые фильтры"
 
-#: src/bin/ephoto_single_browser.c:1874
+#: src/bin/ephoto_single_browser.c:1876
 msgid "Auto Equalize"
 msgstr "Автоматическое выравнивание"
 
-#: src/bin/ephoto_single_browser.c:1876
+#: src/bin/ephoto_single_browser.c:1878
 msgid "Black and White"
 msgstr "Чёрно-белое"
 
-#: src/bin/ephoto_single_browser.c:1878
+#: src/bin/ephoto_single_browser.c:1880
 msgid "Blur"
 msgstr "Размытие"
 
-#: src/bin/ephoto_single_browser.c:1880
+#: src/bin/ephoto_single_browser.c:1882
 msgid "Dither"
 msgstr "Сглаживание"
 
-#: src/bin/ephoto_single_browser.c:1882
+#: src/bin/ephoto_single_browser.c:1884
 msgid "Edge Detect"
 msgstr "Обнаружение краёв"
 
-#: src/bin/ephoto_single_browser.c:1884
+#: src/bin/ephoto_single_browser.c:1886
 msgid "Emboss"
 msgstr "Тиснение"
 
-#: src/bin/ephoto_single_browser.c:1886
+#: src/bin/ephoto_single_browser.c:1888
 msgid "Invert Colors"
 msgstr "Инвертировать цвета"
 
-#: src/bin/ephoto_single_browser.c:1888
+#: src/bin/ephoto_single_browser.c:1890
 msgid "Old Photo"
 msgstr "Старая фотография"
 
-#: src/bin/ephoto_single_browser.c:1890
+#: src/bin/ephoto_single_browser.c:1892
 msgid "Painting"
 msgstr "Картина маслом"
 
-#: src/bin/ephoto_single_browser.c:1892
+#: src/bin/ephoto_single_browser.c:1894
 msgid "Posterize"
 msgstr "Постеризация"
 
-#: src/bin/ephoto_single_browser.c:1894
+#: src/bin/ephoto_single_browser.c:1896
 msgid "Sharpen"
 msgstr "Резкость"
 
-#: src/bin/ephoto_single_browser.c:1896
+#: src/bin/ephoto_single_browser.c:1898
 msgid "Sketch"
 msgstr "Набросок карандашом"
 
-#: src/bin/ephoto_single_browser.c:1909 src/bin/ephoto_single_browser.c:1943
-#: src/bin/ephoto_single_browser.c:2587 src/bin/ephoto_single_browser.c:2589
+#: src/bin/ephoto_single_browser.c:1911 src/bin/ephoto_single_browser.c:1945
+#: src/bin/ephoto_single_browser.c:2589 src/bin/ephoto_single_browser.c:2591
 msgid "Save As"
 msgstr "Сохранить как"
 
-#: src/bin/ephoto_single_browser.c:1911 src/bin/ephoto_single_browser.c:1951
-#: src/bin/ephoto_single_browser.c:2594
+#: src/bin/ephoto_single_browser.c:1913 src/bin/ephoto_single_browser.c:1953
+#: src/bin/ephoto_single_browser.c:2606
 msgid "Upload"
 msgstr "Загрузить"
 
-#: src/bin/ephoto_single_browser.c:1913
+#: src/bin/ephoto_single_browser.c:1915
 msgid "Undo"
 msgstr "Отменить"
 
-#: src/bin/ephoto_single_browser.c:1914
+#: src/bin/ephoto_single_browser.c:1916
 msgid "Redo"
 msgstr "Повторить"
 
-#: src/bin/ephoto_single_browser.c:1916
+#: src/bin/ephoto_single_browser.c:1918
 msgid "Close"
 msgstr "Закрыть"
 
-#: src/bin/ephoto_single_browser.c:1938
+#: src/bin/ephoto_single_browser.c:1940
 msgid "File"
 msgstr "Файл"
 
-#: src/bin/ephoto_single_browser.c:1945
+#: src/bin/ephoto_single_browser.c:1947
 msgid "Copy to Clipboard"
 msgstr "Скопировать в буфер обмена"
 
-#: src/bin/ephoto_single_browser.c:1955
+#: src/bin/ephoto_single_browser.c:1957
 msgid "Properties"
 msgstr "Свойства"
 
-#: src/bin/ephoto_single_browser.c:1959
+#: src/bin/ephoto_single_browser.c:1961
 msgid "Zoom Fit"
 msgstr "Уместить"
 
-#: src/bin/ephoto_single_browser.c:1961
+#: src/bin/ephoto_single_browser.c:1963
 msgid "Zoom 1:1"
 msgstr "Масштаб 1:1"
 
-#: src/bin/ephoto_single_browser.c:2457 src/bin/ephoto_single_browser.c:2459
+#: src/bin/ephoto_single_browser.c:2459 src/bin/ephoto_single_browser.c:2461
 msgid "View Thumbnails"
 msgstr "Просмотр эскизов"
 
-#: src/bin/ephoto_single_browser.c:2507 src/bin/ephoto_single_browser.c:2509
+#: src/bin/ephoto_single_browser.c:2509 src/bin/ephoto_single_browser.c:2511
 #: src/bin/ephoto_slideshow.c:928
 msgid "Previous"
 msgstr "Предыдущее"
 
-#: src/bin/ephoto_single_browser.c:2523 src/bin/ephoto_single_browser.c:2525
+#: src/bin/ephoto_single_browser.c:2525 src/bin/ephoto_single_browser.c:2527
 #: src/bin/ephoto_slideshow.c:934
 msgid "Next"
 msgstr "Следующее"
+
+#: src/bin/ephoto_single_browser.c:2608
+#, fuzzy
+msgid "Upload to imgur"
+msgstr "Загрузить изображение"
 
 #: src/bin/ephoto_directory_browser.c:466 src/bin/ephoto_slideshow.c:924
 msgid "Back"
