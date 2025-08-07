@@ -845,9 +845,8 @@ msgid "Next"
 msgstr "Successiva"
 
 #: src/bin/ephoto_single_browser.c:2608
-#, fuzzy
 msgid "Upload to imgur"
-msgstr "Carica immagine"
+msgstr "Carica l'immagine su imgur"
 
 #: src/bin/ephoto_directory_browser.c:466 src/bin/ephoto_slideshow.c:924
 msgid "Back"
