@@ -178,7 +178,7 @@ _reset_crop(void *data, Evas_Object *obj EINA_UNUSED,
 
 static void
 _apply_crop(void *data, Evas_Object *obj EINA_UNUSED,
-            void *event_info EINA_UNUSED)
+            void *event_info EINA_UNUSED, int hist)
 {
    Ephoto_Cropper *ec = data;
    Evas_Object *edje = elm_layout_edje_get(ec->layout);
@@ -223,12 +223,17 @@ _apply_crop(void *data, Evas_Object *obj EINA_UNUSED,
    elm_table_unpack(ec->image_parent, ec->box);
    elm_layout_content_unset(ec->layout, "ephoto.swallow.image");
    elm_table_pack(ec->image_parent, ec->image, 0, 0, 1, 1);
-   ephoto_single_browser_image_data_done(ec->main,
+   if (hist)
+     ephoto_single_browser_image_data_done(ec->main,
+                                         idata_new, nw, nh);
+   else
+     ephoto_single_browser_hist_add(ec->main,
                                          idata_new, nw, nh);
    evas_object_del(ec->cropper);
    evas_object_del(ec->layout);
    evas_object_del(ec->box);
-   ephoto_editor_del(ec->editor, ec->parent);
+   if (hist)
+     ephoto_editor_del(ec->editor, ec->parent);
 }
 
 static void
@@ -602,7 +607,7 @@ static Eina_Bool
 _crop_apply(void *data, int type EINA_UNUSED,
             void *event_info EINA_UNUSED)
 {
-   _apply_crop(data, NULL, NULL);
+   _apply_crop(data, NULL, NULL, 1);
 
    return ECORE_CALLBACK_PASS_ON;
 }
@@ -647,6 +652,8 @@ ephoto_cropper_add(Ephoto *ephoto, Evas_Object *main, Evas_Object *parent,
    ec->image_parent = image_parent;
    ec->image = image;
 
+   _apply_crop(ec, NULL, NULL, 0); // prevents hiding cropper when some apps start
+
    evas_object_image_size_get(image, &w, &h);
 
    ec->box = elm_box_add(image_parent);
@@ -667,12 +674,14 @@ ephoto_cropper_add(Ephoto *ephoto, Evas_Object *main, Evas_Object *parent,
 
    EPHOTO_EXPAND(ec->image);
    EPHOTO_FILL(ec->image);
+
    elm_layout_content_set(ec->layout, "ephoto.swallow.image", ec->image);
    evas_object_show(ec->image);
 
    ec->cropper = edje_object_add(evas_object_evas_get(ec->layout));
    edje_object_file_set(ec->cropper, PACKAGE_DATA_DIR "/themes/ephoto.edj",
                         "ephoto,image,cropper");
+
    edje_object_signal_callback_add(elm_layout_edje_get(ec->layout),
                                    "cropper,changed", "ephoto.swallow.cropper",
                                    _calculate_cropper_size,

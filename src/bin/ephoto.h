@@ -81,6 +81,10 @@ void         ephoto_single_browser_image_data_done(Evas_Object *main,
                                                    unsigned int *image_data,
                                                    Evas_Coord w,
                                                    Evas_Coord h);
+void         ephoto_single_browser_hist_add(Evas_Object *main,
+                                                   unsigned int *image_data,
+                                                   Evas_Coord w,
+                                                   Evas_Coord h);
 void         ephoto_single_browser_cancel_editing(Evas_Object *main);
 void         ephoto_single_browser_slideshow(Evas_Object *obj);
 /* smart callbacks called: "back" - the user wants to go back to the previous

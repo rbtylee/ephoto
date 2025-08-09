@@ -2413,6 +2413,27 @@ ephoto_single_browser_image_data_done(Evas_Object *main,
 }
 
 void
+ephoto_single_browser_hist_add(Evas_Object *main,
+                                      unsigned int *image_data, Evas_Coord w, Evas_Coord h)
+{
+   Ephoto_Single_Browser *sb = evas_object_data_get(main, "single_browser");
+   Ephoto_History *eh;
+
+   if (!image_data)
+     return;
+   if (sb->editing)
+     {
+        eh = calloc(1, sizeof(Ephoto_History));
+        eh->im_data = malloc(sizeof(unsigned int) * w * h);
+        memcpy(eh->im_data, image_data,
+               sizeof(unsigned int) * w * h);
+        sb->history = eina_list_append(sb->history, eh);
+        sb->history_pos = eina_list_count(sb->history) - 1;
+        sb->editing = EINA_FALSE;
+     }
+}
+
+void
 ephoto_single_browser_cancel_editing(Evas_Object *main)
 {
    Ephoto_Single_Browser *sb = evas_object_data_get(main, "single_browser");
