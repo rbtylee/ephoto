@@ -2429,7 +2429,7 @@ ephoto_single_browser_hist_add(Evas_Object *main,
                sizeof(unsigned int) * w * h);
         sb->history = eina_list_append(sb->history, eh);
         sb->history_pos = eina_list_count(sb->history) - 1;
-        sb->editing = EINA_FALSE;
+        sb->editing = EINA_TRUE;
      }
 }
 
