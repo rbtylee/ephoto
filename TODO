@@ -4,6 +4,7 @@ TODO:
 -Implement an Instagram like quick filter panel.
 -Clean up cropper
 -Cropper takes 100% CPU while running // Solved
+-Annotations
 ==Slideshow==
 -Smoother movement
 ==Thumb Browser==
