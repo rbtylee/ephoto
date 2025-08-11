@@ -2428,7 +2428,7 @@ ephoto_single_browser_hist_add(Evas_Object *main,
         memcpy(eh->im_data, image_data,
                sizeof(unsigned int) * w * h);
         sb->history = eina_list_append(sb->history, eh);
-        sb->history_pos = eina_list_count(sb->history) - 1;
+        //~ sb->history_pos = eina_list_count(sb->history) - 1;
         sb->editing = EINA_TRUE;
      }
 }
