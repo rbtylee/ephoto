@@ -178,7 +178,7 @@ _reset_crop(void *data, Evas_Object *obj EINA_UNUSED,
 
 static void
 _apply_crop(void *data, Evas_Object *obj EINA_UNUSED,
-            void *event_info EINA_UNUSED, int hist)
+            void *event_info EINA_UNUSED, Eina_Bool hist)
 {
    Ephoto_Cropper *ec = data;
    Evas_Object *edje = elm_layout_edje_get(ec->layout);
@@ -607,7 +607,7 @@ static Eina_Bool
 _crop_apply(void *data, int type EINA_UNUSED,
             void *event_info EINA_UNUSED)
 {
-   _apply_crop(data, NULL, NULL, 1);
+   _apply_crop(data, NULL, NULL, EINA_TRUE);
 
    return ECORE_CALLBACK_PASS_ON;
 }
@@ -652,7 +652,7 @@ ephoto_cropper_add(Ephoto *ephoto, Evas_Object *main, Evas_Object *parent,
    ec->image_parent = image_parent;
    ec->image = image;
 
-   _apply_crop(ec, NULL, NULL, 0); // prevents hiding cropper when some apps start
+   _apply_crop(ec, NULL, NULL, EINA_FALSE); // prevents hiding cropper when some apps start
 
    evas_object_image_size_get(image, &w, &h);
 
