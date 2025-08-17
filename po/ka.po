@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ephoto 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-05 20:09+0200\n"
+"POT-Creation-Date: 2025-08-17 12:19+0200\n"
 "PO-Revision-Date: 2023-02-10 06:58+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <(nothing)>\n"
@@ -121,7 +121,7 @@ msgid ""
 "Browser Bindings</hilight></b><br/><b>Ctrl++:</b> Zoom In<br/><b>Ctrl+-:</b> "
 "Zoom Out<br/><b>Ctrl+c:</b> Copy Image<br/><b>Ctrl+x:</b> Cut Image<br/"
 "><b>Ctrl+v:</b> Paste Image<br/><b>Ctrl+a:</b> Select All<br/><b>Ctrl+f:</b> "
-"Toggle Search<br/><b>Ctrl+Tab:</b> View Image<br/><b>Ctrl+Delete:</b> Delete "
+"Toggle Search<br/><b>Ctrl+Delete:</b> Delete Image<br/><b>Return:</b> View "
 "Image<br/><b>F2:</b> Rename Image<br/><b>Escape:</b> Clear Selection<br/><br/"
 "><b><hilight>Single Browser Bindings</hilight></b><br/><b>Ctrl+Shift+0:</b> "
 "Zoom 1:1<br/><b>Ctrl++:</b> Zoom In<br/><b>Ctrl+-:</b> Zoom Out<br/"
@@ -225,15 +225,15 @@ msgstr "დართვა"
 msgid "Cancel"
 msgstr "გაუქმება"
 
-#: src/bin/ephoto_cropper.c:705
+#: src/bin/ephoto_cropper.c:714
 msgid "Crop Image"
 msgstr "გამოსახულების ამოჭრა"
 
-#: src/bin/ephoto_cropper.c:715
+#: src/bin/ephoto_cropper.c:724
 msgid "Width"
 msgstr "სიგანე"
 
-#: src/bin/ephoto_cropper.c:728
+#: src/bin/ephoto_cropper.c:737
 msgid "Height"
 msgstr "სიმაღლე"
 
@@ -271,7 +271,7 @@ msgstr "შეცდომა: გამოსახულებას აქ �
 msgid "Image Uploaded"
 msgstr "გამოსახულება ატვირთულია"
 
-#: src/bin/ephoto_file.c:451 src/bin/ephoto_thumb_browser.c:980
+#: src/bin/ephoto_file.c:451 src/bin/ephoto_thumb_browser.c:981
 msgid "Copy"
 msgstr "კოპირება"
 
@@ -317,7 +317,7 @@ msgstr "საქაღალდისთვის სახელის გა�
 msgid "Rename File"
 msgstr "ფაილის გადარქმევა"
 
-#: src/bin/ephoto_file.c:781 src/bin/ephoto_thumb_browser.c:971
+#: src/bin/ephoto_file.c:781 src/bin/ephoto_thumb_browser.c:972
 #: src/bin/ephoto_single_browser.c:1949 src/bin/ephoto_directory_browser.c:689
 msgid "Rename"
 msgstr "გადარქმევა"
@@ -458,7 +458,7 @@ msgstr "ფაილების წაშლა"
 msgid "Are you sure you want to delete these files?"
 msgstr "დარწმუნებული ბრძანდებით, რომ გნებავთ, წაშალოთ ეს ფაილები?"
 
-#: src/bin/ephoto_file.c:1853 src/bin/ephoto_thumb_browser.c:993
+#: src/bin/ephoto_file.c:1853 src/bin/ephoto_thumb_browser.c:994
 #: src/bin/ephoto_directory_browser.c:697
 msgid "Empty Trash"
 msgstr "სანაგვის დაცარიელება"
@@ -510,119 +510,119 @@ msgstr "მორგება"
 msgid "Exit"
 msgstr "გასვლა"
 
-#: src/bin/ephoto_thumb_browser.c:962 src/bin/ephoto_thumb_browser.c:1360
+#: src/bin/ephoto_thumb_browser.c:963 src/bin/ephoto_thumb_browser.c:1361
 msgid "Search"
 msgstr "ძებნა"
 
-#: src/bin/ephoto_thumb_browser.c:964
+#: src/bin/ephoto_thumb_browser.c:965
 msgid "Select All"
 msgstr "ყველაფრის მონიშვნა"
 
-#: src/bin/ephoto_thumb_browser.c:967
+#: src/bin/ephoto_thumb_browser.c:968
 msgid "Select None"
 msgstr "მონიშვნის მოხსნა"
 
-#: src/bin/ephoto_thumb_browser.c:978
+#: src/bin/ephoto_thumb_browser.c:979
 msgid "Cut"
 msgstr "ამოჭრა"
 
-#: src/bin/ephoto_thumb_browser.c:986 src/bin/ephoto_directory_browser.c:691
+#: src/bin/ephoto_thumb_browser.c:987 src/bin/ephoto_directory_browser.c:691
 msgid "Paste"
 msgstr "ჩასმა"
 
-#: src/bin/ephoto_thumb_browser.c:998 src/bin/ephoto_single_browser.c:1951
+#: src/bin/ephoto_thumb_browser.c:999 src/bin/ephoto_single_browser.c:1951
 #: src/bin/ephoto_directory_browser.c:702
 msgid "Delete"
 msgstr "წაშლა"
 
-#: src/bin/ephoto_thumb_browser.c:1082
+#: src/bin/ephoto_thumb_browser.c:1083
 msgid "No images matched your search"
 msgstr "თქვენს ძებნას არც ერთი გამოსახულება არ ემთხვევა"
 
-#: src/bin/ephoto_thumb_browser.c:1085 src/bin/ephoto_thumb_browser.c:1391
+#: src/bin/ephoto_thumb_browser.c:1086 src/bin/ephoto_thumb_browser.c:1392
 msgid "There are no images in this directory"
 msgstr "ამ საქაღალდეში გამოსახულებები არაა"
 
-#: src/bin/ephoto_thumb_browser.c:1087 src/bin/ephoto_thumb_browser.c:1127
+#: src/bin/ephoto_thumb_browser.c:1088 src/bin/ephoto_thumb_browser.c:1128
 msgid "Total"
 msgstr "სულ"
 
-#: src/bin/ephoto_thumb_browser.c:1087 src/bin/ephoto_thumb_browser.c:1127
+#: src/bin/ephoto_thumb_browser.c:1088 src/bin/ephoto_thumb_browser.c:1128
 msgid "image"
 msgid_plural "images"
 msgstr[0] "გამოსახულება"
 msgstr[1] "გამოსახულება"
 
-#: src/bin/ephoto_thumb_browser.c:1087 src/bin/ephoto_thumb_browser.c:1128
+#: src/bin/ephoto_thumb_browser.c:1088 src/bin/ephoto_thumb_browser.c:1129
 msgid "Size"
 msgstr "ზომა"
 
-#: src/bin/ephoto_thumb_browser.c:1088 src/bin/ephoto_thumb_browser.c:1097
+#: src/bin/ephoto_thumb_browser.c:1089 src/bin/ephoto_thumb_browser.c:1098
 #: src/bin/ephoto_single_browser.c:143
 msgid "B"
 msgid_plural "B"
 msgstr[0] "ბ"
 msgstr[1] "ბ"
 
-#: src/bin/ephoto_thumb_browser.c:1104 src/bin/ephoto_single_browser.c:150
+#: src/bin/ephoto_thumb_browser.c:1105 src/bin/ephoto_single_browser.c:150
 msgid "KB"
 msgid_plural "KB"
 msgstr[0] "კბ"
 msgstr[1] "კბ"
 
-#: src/bin/ephoto_thumb_browser.c:1110 src/bin/ephoto_single_browser.c:156
+#: src/bin/ephoto_thumb_browser.c:1111 src/bin/ephoto_single_browser.c:156
 msgid "MB"
 msgid_plural "MB"
 msgstr[0] "მბ"
 msgstr[1] "მბ"
 
-#: src/bin/ephoto_thumb_browser.c:1116 src/bin/ephoto_single_browser.c:162
+#: src/bin/ephoto_thumb_browser.c:1117 src/bin/ephoto_single_browser.c:162
 msgid "GB"
 msgid_plural "GB"
 msgstr[0] "გბ"
 msgstr[1] "გბ"
 
-#: src/bin/ephoto_thumb_browser.c:1121 src/bin/ephoto_single_browser.c:167
+#: src/bin/ephoto_thumb_browser.c:1122 src/bin/ephoto_single_browser.c:167
 msgid "TB"
 msgid_plural "TB"
 msgstr[0] "ტბ"
 msgstr[1] "ტბ"
 
-#: src/bin/ephoto_thumb_browser.c:2073 src/bin/ephoto_thumb_browser.c:2075
+#: src/bin/ephoto_thumb_browser.c:2078 src/bin/ephoto_thumb_browser.c:2080
 msgid "View Image"
 msgstr "სურათის ნახვა"
 
-#: src/bin/ephoto_thumb_browser.c:2091 src/bin/ephoto_thumb_browser.c:2093
-#: src/bin/ephoto_single_browser.c:2477 src/bin/ephoto_single_browser.c:2479
+#: src/bin/ephoto_thumb_browser.c:2096 src/bin/ephoto_thumb_browser.c:2098
+#: src/bin/ephoto_single_browser.c:2498 src/bin/ephoto_single_browser.c:2500
 msgid "Zoom In"
 msgstr "გადიდება"
 
-#: src/bin/ephoto_thumb_browser.c:2107 src/bin/ephoto_thumb_browser.c:2109
-#: src/bin/ephoto_single_browser.c:2493 src/bin/ephoto_single_browser.c:2495
+#: src/bin/ephoto_thumb_browser.c:2112 src/bin/ephoto_thumb_browser.c:2114
+#: src/bin/ephoto_single_browser.c:2514 src/bin/ephoto_single_browser.c:2516
 msgid "Zoom Out"
 msgstr "დაპატარავება"
 
-#: src/bin/ephoto_thumb_browser.c:2117
+#: src/bin/ephoto_thumb_browser.c:2122
 msgid "Alphabetical Ascending"
 msgstr "ანბანური (აღმავალი)"
 
-#: src/bin/ephoto_thumb_browser.c:2120
+#: src/bin/ephoto_thumb_browser.c:2125
 msgid "Alphabetical Descending"
 msgstr "ანბანური (დაღმავალი)"
 
-#: src/bin/ephoto_thumb_browser.c:2123
+#: src/bin/ephoto_thumb_browser.c:2128
 msgid "Modification Time Ascending"
 msgstr "ცვლილების დრო, აღმავალი"
 
-#: src/bin/ephoto_thumb_browser.c:2126
+#: src/bin/ephoto_thumb_browser.c:2131
 msgid "Modification Time Descending"
 msgstr "ცვლილების დრო, დაღმავალი"
 
-#: src/bin/ephoto_thumb_browser.c:2129
+#: src/bin/ephoto_thumb_browser.c:2134
 msgid "Image Simalarity"
 msgstr "გამოსახულების მსგავსება"
 
-#: src/bin/ephoto_thumb_browser.c:2132 src/bin/ephoto_thumb_browser.c:2139
+#: src/bin/ephoto_thumb_browser.c:2137 src/bin/ephoto_thumb_browser.c:2144
 msgid "Sort"
 msgstr "დალაგება"
 
@@ -659,7 +659,7 @@ msgid "Bad Image"
 msgstr "ცუდი სურათი"
 
 #: src/bin/ephoto_single_browser.c:1814 src/bin/ephoto_single_browser.c:1942
-#: src/bin/ephoto_single_browser.c:2573 src/bin/ephoto_single_browser.c:2575
+#: src/bin/ephoto_single_browser.c:2594 src/bin/ephoto_single_browser.c:2596
 msgid "Edit"
 msgstr "ჩასწორება"
 
@@ -675,13 +675,13 @@ msgstr "ამოჭრა"
 msgid "Scale"
 msgstr "გადიდება"
 
-#: src/bin/ephoto_single_browser.c:1854 src/bin/ephoto_single_browser.c:2541
-#: src/bin/ephoto_single_browser.c:2543
+#: src/bin/ephoto_single_browser.c:1854 src/bin/ephoto_single_browser.c:2562
+#: src/bin/ephoto_single_browser.c:2564
 msgid "Rotate Left"
 msgstr "მარცხნივ შებრუნება"
 
-#: src/bin/ephoto_single_browser.c:1856 src/bin/ephoto_single_browser.c:2557
-#: src/bin/ephoto_single_browser.c:2559
+#: src/bin/ephoto_single_browser.c:1856 src/bin/ephoto_single_browser.c:2578
+#: src/bin/ephoto_single_browser.c:2580
 msgid "Rotate Right"
 msgstr "მარჯვნივ შებრუნება"
 
@@ -754,12 +754,12 @@ msgid "Sketch"
 msgstr "ესკიზი"
 
 #: src/bin/ephoto_single_browser.c:1911 src/bin/ephoto_single_browser.c:1945
-#: src/bin/ephoto_single_browser.c:2589 src/bin/ephoto_single_browser.c:2591
+#: src/bin/ephoto_single_browser.c:2610 src/bin/ephoto_single_browser.c:2612
 msgid "Save As"
 msgstr "შენახვა, როგორც"
 
 #: src/bin/ephoto_single_browser.c:1913 src/bin/ephoto_single_browser.c:1953
-#: src/bin/ephoto_single_browser.c:2606
+#: src/bin/ephoto_single_browser.c:2627
 msgid "Upload"
 msgstr "ატვირთვა"
 
@@ -795,21 +795,21 @@ msgstr "გადიდება ჩატევამდე"
 msgid "Zoom 1:1"
 msgstr "გადიდება 1:1"
 
-#: src/bin/ephoto_single_browser.c:2459 src/bin/ephoto_single_browser.c:2461
+#: src/bin/ephoto_single_browser.c:2480 src/bin/ephoto_single_browser.c:2482
 msgid "View Thumbnails"
 msgstr "მინიატურების ნახვა"
 
-#: src/bin/ephoto_single_browser.c:2509 src/bin/ephoto_single_browser.c:2511
+#: src/bin/ephoto_single_browser.c:2530 src/bin/ephoto_single_browser.c:2532
 #: src/bin/ephoto_slideshow.c:928
 msgid "Previous"
 msgstr "წინა"
 
-#: src/bin/ephoto_single_browser.c:2525 src/bin/ephoto_single_browser.c:2527
+#: src/bin/ephoto_single_browser.c:2546 src/bin/ephoto_single_browser.c:2548
 #: src/bin/ephoto_slideshow.c:934
 msgid "Next"
 msgstr "შემდეგი"
 
-#: src/bin/ephoto_single_browser.c:2608
+#: src/bin/ephoto_single_browser.c:2629
 #, fuzzy
 msgid "Upload to imgur"
 msgstr "სურათის ატვირთვა"
