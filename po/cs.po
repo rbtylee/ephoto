@@ -116,7 +116,6 @@ msgid "Copy Link"
 msgstr "Kopírovat link"
 
 #: src/bin/ephoto_config.c:414
-#, fuzzy
 msgid ""
 "<b><hilight>General Bindings</hilight></b><br/><b>F1:</b> Settings Panel<br/"
 "><b>F5:</b> Start Slideshow<br/><b>F11:</b> Toggle Fullscreen<br/"
@@ -150,7 +149,7 @@ msgstr ""
 "Pǐblížit<br/><b>Ctrl+-:</b> Oddálit<br/><b>Ctrl+c:</b> Kopírovat obrázek<br/"
 "><b>Ctrl+x:</b> Vystříhnout obrázek<br/><b>Ctrl+v:</b> Vložiť obrázek<br/"
 "><b>Ctrl+a:</b> Vybrat vše<br/><b>Ctrl+f:</b> Přepnout Vyhledávání<br/"
-"><b>Ctrl+Tab:</b> Zobrazit obrázek<br/><b>Ctrl+Delete:</b> Vymazat "
+"><b>Enter:</b> Zobrazit obrázek<br/><b>Ctrl+Delete:</b> Vymazat "
 "obrázek<br/><b>F2:</b> Přejmenovat Image<br/><b>Escape:</b> Zrušit výběr<br/"
 "><br/><b><hilight>Zkratky pro Okno zobrazení</hilight></b><br/"
 "><b>Ctrl+Shift+0:</b> Přiblížit 1:1<br/><b>Ctrl++:</b> Přiblížit<br/"
