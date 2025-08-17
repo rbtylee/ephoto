@@ -656,7 +656,8 @@ _view_single(void *data, Evas_Object *obj EINA_UNUSED,
              void *event_info EINA_UNUSED)
 {
    Ephoto_Thumb_Browser *tb = data;
-   Elm_Object_Item *it = elm_gengrid_selected_item_get(tb->grid);
+   //~ Elm_Object_Item *it = elm_gengrid_selected_item_get(tb->grid);
+   Elm_Object_Item *it = elm_object_focused_item_get(tb->grid);
    Ephoto_Entry *entry;
    Eina_List *selected, *s;
    Elm_Object_Item *item;
