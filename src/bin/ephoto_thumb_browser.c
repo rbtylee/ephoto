@@ -1832,6 +1832,10 @@ _ephoto_main_key_down(void *data, Evas *e EINA_UNUSED, Evas_Object *obj EINA_UNU
         else
           _grid_menu_clear_cb(tb, NULL, NULL);
      }
+   else if (!strcasecmp(k, "Return"))
+     {
+       _view_single(tb, NULL, NULL);
+     }
    else if (ev->compose && (((ev->compose[0] != '\\')
                              && (ev->compose[0] >= ' ')) || ev->compose[1]))
      {
