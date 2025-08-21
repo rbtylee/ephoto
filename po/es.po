@@ -120,7 +120,6 @@ msgstr "Copiar enlace"
 # Clear: ¿limpiar, anular, cancelar, quitar . . . ?
 # The Single Browser is the view you get when you double click a thumbnail... The view that just has one image full sized... It's a "Single" image rather than the list of thumbnails.
 #: src/bin/ephoto_config.c:414
-#, fuzzy
 msgid ""
 "<b><hilight>General Bindings</hilight></b><br/><b>F1:</b> Settings Panel<br/"
 "><b>F5:</b> Start Slideshow<br/><b>F11:</b> Toggle Fullscreen<br/"
@@ -152,7 +151,7 @@ msgstr ""
 "pantalla competa<br/><b>Ctrl+Supr+f:</b> Alternar seleccionador de "
 "archivos<br/><br/><b><hilight>Atajos del navegador de miniaturas</hilight></"
 "b><br/><b>Ctrl++:</b> Aumentar zoom<br/><b>Ctrl+-:</b> Disminuir zoom<br/"
-"><b>Ctrl+Tab:</b> Ver imagen<br/><b>Ctrl+c:</b> Copiar imagen<br/><b>Ctrl+x:"
+"><b>Enter:</b> Ver imagen<br/><b>Ctrl+c:</b> Copiar imagen<br/><b>Ctrl+x:"
 "</b> Cortar imagen<br/><b>Ctrl+v:</b> Pegar imagen<br/><b>Ctrl+a:</b> "
 "Seleccionar todo<br/><b>Ctrl+f:</b> Alternar búsqueda<br/><b>Ctrl+Supr:</b> "
 "Borrar imagen<br/><b>F2:</b> Renombrar imagen<br/><b>Esc:</b> Limpiar "

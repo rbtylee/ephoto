@@ -114,7 +114,6 @@ msgid "Copy Link"
 msgstr "Copiar ligação"
 
 #: src/bin/ephoto_config.c:414
-#, fuzzy
 msgid ""
 "<b><hilight>General Bindings</hilight></b><br/><b>F1:</b> Settings Panel<br/"
 "><b>F5:</b> Start Slideshow<br/><b>F11:</b> Toggle Fullscreen<br/"
@@ -145,7 +144,7 @@ msgstr ""
 "painel<br/><b>F5:</b> Iniciar apresentação de diapositivos<br/><b>F11:</b> "
 "Ativar ecrã inteiro<br/><b>Ctrl+Shift+f:</b> Ativar seletor de ficheiros<br/"
 "><br/><b><hilight>Miniaturas de atalhos de navegador</hilight></b><br/"
-"><b>Ctrl++:</b> Ampliar<br/><b>Ctrl+-:</b> Reduzir<br/><b>Ctrl+Tab:</b> Ver "
+"><b>Ctrl++:</b> Ampliar<br/><b>Ctrl+-:</b> Reduzir<br/><b>Return:</b> Ver "
 "imagem<br/><b>Ctrl+c:</b> Copiar imagem<br/><b>Ctrl+x:</b> Cortar imagem<br/"
 "><b>Ctrl+v:</b> Colar imagem<br/><b>Ctrl+a:</b> Selecionar tudo<br/"
 "><b>Ctrl+f:</b> Alternar pesquisa<br/><b>Ctrl+Delete:</b> Eliminar imagem<br/"
